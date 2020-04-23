@@ -28,41 +28,38 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef PATTERN_CYCLE_H
-#define	PATTERN_CYCLE_H
+#ifndef XC_HEADER_TEMPLATE_H
+#define	XC_HEADER_TEMPLATE_H
 
-#include "status.h"
+#include "mcc_generated_files/pin_manager.h"
 
-#include <xc.h>
+#include <xc.h> // include processor files - each processor file is guarded.  
 
-// Test if the pattern_cycle input pin has changed state
-// Test for debounce to remove some noise
-const bool PatternCycleInputChanged()
+// setters for L
+#define SET( pin, state )       do { pin = state; } while(0)
+
+enum Light{ L1=1, L2=2, L3=3, L4=4, ERROR=0 };
+
+void SetLight( const enum Light light, const bool state );
+
+// Uses a mapping from light enumeration to pin
+void SetLight( const enum Light light, const bool state )
 {
-    if ( cur_pc_input_state != last_pc_input_state )
+    // important: The switch statement is necessary because the pin# and the Light# are not always in correspondence
+    switch ( light )
     {
-        uint16_t delay_count = 0;
-        
-        while ( delay_count++ < 3 ) // must get n consecutive readings in a row
-        {
-            __delay_ms(10);
-            // otherwise we ditch the reading
-            if( pattern_cycle_GetValue() != cur_pc_input_state )
-            {
-                return false;
-            }
-        }
+        case L1:
+            SET( L1_LAT, state );
+        case L2:
+            SET( L2_LAT, state );
+        case L3:
+            SET( L3_LAT, state );
+        case L4:
+        default:
+            SET( L4_LAT, state );
+            break;
     }
-    else
-        return false;
-    
-    return true;
 }
-// TODO Insert appropriate #include <>
-
-// TODO Insert C++ class definitions if appropriate
-
-// TODO Insert declarations
 
 // Comment a function and leverage automatic documentation with slash star star
 /**

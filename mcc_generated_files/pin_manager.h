@@ -68,12 +68,7 @@
 #define PULL_UP_DISABLED     0
 
 
-enum Light{ L1=1, L2=2, L3=3, L4=4, ERROR=0 };
 
-void SetLight( const enum Light light, const bool state );
-
-// setters for L
-#define SET( pin, state )       do { pin = state; } while(0)
 
 // get/set L1 aliases
 #define L1_TRIS                 TRISCbits.TRISC1

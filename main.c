@@ -11,12 +11,12 @@
  */
 
 #include "mcc_generated_files/mcc.h"
-#include "pattern_cycle.h"
+
+#include "Lights.h"
+#include "PatternSelector.h"
 #include "status.h"
 
 #include <xc.h>
-
-unsigned lights[4];
 
 void SetOutputs( const bool state )
 {
@@ -25,7 +25,7 @@ void SetOutputs( const bool state )
     SetLight( L3, state );
     SetLight( L4, state );
 }
-unsigned int temp = 0;
+
 void setup()
 {
     // initialize the device
@@ -40,6 +40,7 @@ void setup()
     TMR1_Initialize();
     TMR1_StartTimer();
 
+    // initialize pins to 0
     SetOutputs( LOW );
 }
 
