@@ -14,8 +14,8 @@
 "19 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 "44
-[v _PatternCycleInputChanged PatternCycleInputChanged `(uc  1 e 1 0 ]
-"64
+[v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]
+"65
 [v _main main `(v  1 e 1 0 ]
 "52 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -251,10 +251,10 @@
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
-"64 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
+"65 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"105
+"106
 } 0
 "19
 [v _setup setup `(v  1 e 1 0 ]
@@ -309,11 +309,11 @@
 "72
 } 0
 "44 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
-[v _PatternCycleInputChanged PatternCycleInputChanged `(uc  1 e 1 0 ]
+[v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]
 {
 "48
 [v PatternCycleInputChanged@delay_count delay_count `us  1 a 2 4 ]
-"62
+"63
 } 0
 "52 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]

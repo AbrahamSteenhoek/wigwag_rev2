@@ -40,8 +40,8 @@ uint16_t cur_ms = 0;
 uint16_t cur_hsec = 0;
 uint16_t cur_sec = 0;
 
-bool cur_pc_input_state = FALSE;
-bool last_pc_input_state = FALSE;
+bool cur_pc_input_state = false;
+bool last_pc_input_state = false;
 // TODO Insert appropriate #include <>
 
 // TODO Insert C++ class definitions if appropriate

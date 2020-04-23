@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Wed Apr 22 23:09:22 2020
+                                                                                               Wed Apr 22 23:18:41 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	16F18325
@@ -2331,7 +2331,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2317 ;;
   2318 ;; *************** function _main *****************
   2319 ;; Defined at:
-  2320 ;;		line 64 in file "main.c"
+  2320 ;;		line 65 in file "main.c"
   2321 ;; Parameters:    Size  Location     Type
   2322 ;;		None
   2323 ;; Auto vars:     Size  Location     Type
@@ -2372,11 +2372,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2353                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
   2354                           
   2355                           
-  2356                           ;main.c: 66:     setup();
+  2356                           ;main.c: 67:     setup();
   2357  0038  3180  20EE  3180   	fcall	_setup
   2358  003B                     l1263:	
   2359                           
-  2360                           ;main.c: 69:     {;main.c: 70:         cur_pc_input_state = PORTCbits.RC5;
+  2360                           ;main.c: 70:     {;main.c: 71:         cur_pc_input_state = PORTCbits.RC5;
   2361  003B  3000               	movlw	0
   2362  003C  0020               	movlb	0	; select bank0
   2363  003D  1A8E               	btfsc	14,5	;volatile
@@ -2384,7 +2384,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2365  003F  00F8               	movwf	_cur_pc_input_state
   2366  0040                     l1265:	
   2367                           
-  2368                           ;main.c: 75:         if ( PatternCycleInputChanged() )
+  2368                           ;main.c: 76:         if ( PatternCycleInputChanged() )
   2369  0040  3180  2080  3180   	fcall	_PatternCycleInputChanged
   2370  0043  3A00               	xorlw	0
   2371  0044  1903               	skipnz
@@ -2395,7 +2395,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2376  0048                     u330:	
   2377  0048                     l1267:	
   2378                           
-  2379                           ;main.c: 76:         {;main.c: 78:             if ( cur_pc_input_state == 0 )
+  2379                           ;main.c: 77:         {;main.c: 79:             if ( cur_pc_input_state == 0 )
   2380  0048  0878               	movf	_cur_pc_input_state,w
   2381  0049  1D03               	btfss	3,2
   2382  004A  284C               	goto	u341
@@ -2404,45 +2404,45 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2385  004C  2853               	goto	l290
   2386  004D                     u340:	
   2387  004D                     l281:	
-  2388                           ;main.c: 79:             {;main.c: 80:                 do { LATCbits.LATC1 = 1; } while(
+  2388                           ;main.c: 80:             {;main.c: 81:                 do { LATCbits.LATC1 = 1; } while(
       +                          0);
   2389                           
   2390  004D  0022               	movlb	2	; select bank2
   2391  004E  148E               	bsf	14,1	;volatile
   2392  004F                     l283:	
-  2393                           ;main.c: 81:                 do { LATCbits.LATC2 = 1; } while(0);
+  2393                           ;main.c: 82:                 do { LATCbits.LATC2 = 1; } while(0);
   2394                           
   2395  004F  150E               	bsf	14,2	;volatile
   2396  0050                     l285:	
-  2397                           ;main.c: 82:                 do { LATCbits.LATC3 = 1; } while(0);
+  2397                           ;main.c: 83:                 do { LATCbits.LATC3 = 1; } while(0);
   2398                           
   2399  0050  158E               	bsf	14,3	;volatile
   2400  0051                     l287:	
-  2401                           ;main.c: 83:                 do { LATCbits.LATC4 = 1; } while(0);
+  2401                           ;main.c: 84:                 do { LATCbits.LATC4 = 1; } while(0);
   2402                           
   2403  0051  160E               	bsf	14,4	;volatile
   2404  0052  2858               	goto	l1269
   2405  0053                     l290:	
-  2406                           ;main.c: 88:             {;main.c: 89:                 do { LATCbits.LATC1 = 0; } while(
+  2406                           ;main.c: 89:             {;main.c: 90:                 do { LATCbits.LATC1 = 0; } while(
       +                          0);
   2407                           
   2408  0053  0022               	movlb	2	; select bank2
   2409  0054  108E               	bcf	14,1	;volatile
   2410  0055                     l292:	
-  2411                           ;main.c: 90:                 do { LATCbits.LATC2 = 0; } while(0);
+  2411                           ;main.c: 91:                 do { LATCbits.LATC2 = 0; } while(0);
   2412                           
   2413  0055  110E               	bcf	14,2	;volatile
   2414  0056                     l294:	
-  2415                           ;main.c: 91:                 do { LATCbits.LATC3 = 0; } while(0);
+  2415                           ;main.c: 92:                 do { LATCbits.LATC3 = 0; } while(0);
   2416                           
   2417  0056  118E               	bcf	14,3	;volatile
   2418  0057                     l296:	
-  2419                           ;main.c: 92:                 do { LATCbits.LATC4 = 0; } while(0);
+  2419                           ;main.c: 93:                 do { LATCbits.LATC4 = 0; } while(0);
   2420                           
   2421  0057  120E               	bcf	14,4	;volatile
   2422  0058                     l1269:	
   2423                           
-  2424                           ;main.c: 96:         if( cur_ms - temp_ms > 1000 )
+  2424                           ;main.c: 97:         if( cur_ms - temp_ms > 1000 )
   2425  0058  0020               	movlb	0	; select bank0
   2426  0059  0824               	movf	_temp_ms,w
   2427  005A  0279               	subwf	_cur_ms,w
@@ -2463,7 +2463,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2442  0068                     u350:	
   2443  0068                     l1271:	
   2444                           
-  2445                           ;main.c: 97:         {;main.c: 98:             temp_ms = cur_ms;
+  2445                           ;main.c: 98:         {;main.c: 99:             temp_ms = cur_ms;
   2446  0068  087A               	movf	_cur_ms+1,w
   2447  0069  00A5               	movwf	_temp_ms+1
   2448  006A  0879               	movf	_cur_ms,w
@@ -2486,7 +2486,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2465  0078                     u374:	
   2466  0078                     l1275:	
   2467                           
-  2468                           ;main.c: 102:         last_pc_input_state = cur_pc_input_state;
+  2468                           ;main.c: 103:         last_pc_input_state = cur_pc_input_state;
   2469  0078  0878               	movf	_cur_pc_input_state,w
   2470  0079  0020               	movlb	0	; select bank0
   2471  007A  00AA               	movwf	??_main
@@ -3238,7 +3238,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3165 ;; Auto vars:     Size  Location     Type
   3166 ;;  delay_count     2    4[COMMON] unsigned short 
   3167 ;; Return value:  Size  Location     Type
-  3168 ;;                  1    wreg      unsigned char 
+  3168 ;;                  1    wreg      _Bool 
   3169 ;; Registers used:
   3170 ;;		wreg, status,2, status,0
   3171 ;; Tracked objects:
@@ -3288,11 +3288,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3210  0086  01F4               	clrf	PatternCycleInputChanged@delay_count
   3211  0087  01F5               	clrf	PatternCycleInputChanged@delay_count+1
   3212                           
-  3213                           ;main.c: 49:         while ( delay_count++ < 3 )
+  3213                           ;main.c: 50:         while ( delay_count++ < 3 )
   3214  0088  289B               	goto	l1221
   3215  0089                     l1213:	
   3216                           
-  3217                           ;main.c: 50:         {;main.c: 51:             _delay((unsigned long)((10)*(1000000/4000
+  3217                           ;main.c: 51:         {;main.c: 52:             _delay((unsigned long)((10)*(1000000/4000
       +                          .0)));
   3218  0089  3004               	movlw	4
   3219  008A  00F2               	movwf	??_PatternCycleInputChanged
@@ -3304,7 +3304,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3225  008F  288C               	goto	u387
   3226  0090                     l1215:	
   3227                           
-  3228                           ;main.c: 52:             if( PORTCbits.RC5 != cur_pc_input_state )
+  3228                           ;main.c: 53:             if( PORTCbits.RC5 != cur_pc_input_state )
   3229  0090  0020               	movlb	0	; select bank0
   3230  0091  0E0E               	swapf	14,w	;volatile
   3231  0092  0C89               	rrf	9,f
@@ -3318,12 +3318,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3239  0099                     u210:	
   3240  0099                     l1217:	
   3241                           
-  3242                           ;main.c: 53:             {;main.c: 54:                 return 0;
+  3242                           ;main.c: 54:             {;main.c: 55:                 return 0;
   3243  0099  3000               	movlw	0
   3244  009A  28AC               	goto	l271
   3245  009B                     l1221:	
   3246                           
-  3247                           ;main.c: 49:         while ( delay_count++ < 3 )
+  3247                           ;main.c: 50:         while ( delay_count++ < 3 )
   3248  009B  0875               	movf	PatternCycleInputChanged@delay_count+1,w
   3249  009C  00F3               	movwf	??_PatternCycleInputChanged+1
   3250  009D  0874               	movf	PatternCycleInputChanged@delay_count,w
@@ -3344,7 +3344,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3265  00AB                     u220:	
   3266  00AB                     l1227:	
   3267                           
-  3268                           ;main.c: 61:     return 1;
+  3268                           ;main.c: 62:     return 1;
   3269  00AB  3001               	movlw	1
   3270  00AC                     l271:	
   3271  00AC  0008               	return
@@ -4168,7 +4168,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Wed Apr 22 23:09:22 2020
+Symbol Table                                                                                   Wed Apr 22 23:18:41 2020
 
                                __CFG_CP$OFF 0000                                          l52 0145  
                                         l55 0166                                          l49 011F  

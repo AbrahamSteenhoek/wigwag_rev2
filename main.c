@@ -41,17 +41,18 @@ void setup()
     L4_SetLow();
 }
 
-uint8_t PatternCycleInputChanged()
+const bool PatternCycleInputChanged()
 {
     if ( cur_pc_input_state != last_pc_input_state )
     {
         uint16_t delay_count = 0;
-        while ( delay_count++ < 3 )
+        
+        while ( delay_count++ < 3 ) // must get n consecutive readings in a row, otherwise we ditch the reading
         {
             __delay_ms(10);
             if( pattern_cycle_GetValue() != cur_pc_input_state )
             {
-                return FALSE;
+                return false;
             }
         }
     }
