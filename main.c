@@ -11,16 +11,25 @@
  */
 
 #include "mcc_generated_files/mcc.h"
+#include "pattern_cycle.h"
 #include "status.h"
 
 #include <xc.h>
 
+unsigned lights[4];
 
+void SetOutputs( const bool state )
+{
+    SetLight( L1, state );
+    SetLight( L2, state );
+    SetLight( L3, state );
+    SetLight( L4, state );
+}
+unsigned int temp = 0;
 void setup()
 {
     // initialize the device
     SYSTEM_Initialize();
-    
     // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();
 
@@ -30,36 +39,8 @@ void setup()
     // initialize the timer
     TMR1_Initialize();
     TMR1_StartTimer();
-    
-//    L1_SetHigh();
-//    L2_SetHigh();
-//    L3_SetHigh();
-//    L4_SetHigh();
-    L1_SetLow();
-    L2_SetLow();
-    L3_SetLow();
-    L4_SetLow();
-}
 
-const bool PatternCycleInputChanged()
-{
-    if ( cur_pc_input_state != last_pc_input_state )
-    {
-        uint16_t delay_count = 0;
-        
-        while ( delay_count++ < 3 ) // must get n consecutive readings in a row, otherwise we ditch the reading
-        {
-            __delay_ms(10);
-            if( pattern_cycle_GetValue() != cur_pc_input_state )
-            {
-                return false;
-            }
-        }
-    }
-    else
-        return false;
-    
-    return true;
+    SetOutputs( LOW );
 }
 
 void main(void)
@@ -78,28 +59,17 @@ void main(void)
             // gone from released to pressed
             if ( cur_pc_input_state == LOW )
             {
-                L1_SetHigh();
-                L2_SetHigh();
-                L3_SetHigh();
-                L4_SetHigh();
-                
+                SetOutputs( HIGH );
+                //SetOutputs( HIGH );
             }
             // if we have gone from PRESSED to RELEASED (using reverse logic)
             else
             {
-                L1_SetLow();
-                L2_SetLow();
-                L3_SetLow();
-                L4_SetLow();
+                SetOutputs( LOW );
+                //SetOutputs( LOW );
             }
         }
-        
-        if( cur_ms - temp_ms > 1000 )
-        {
-            temp_ms = cur_ms;
-            L1_Toggle();
-        }
-        
+                
         last_pc_input_state = cur_pc_input_state;
     }
     return;
