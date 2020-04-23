@@ -11,6 +11,7 @@
  */
 
 #include "mcc_generated_files/mcc.h"
+#include "status.h"
 
 #include <xc.h>
 
@@ -43,10 +44,12 @@ void main(void)
     
     while(1)
     {
-        if ( pattern_cycle_GetValue() == HIGH )
-            L1_SetHigh();
-        else
-            L1_SetLow();
+        
+        if( cur_ms - temp_ms > 1000 )
+        {
+            temp_ms = cur_ms;
+            L1_Toggle();
+        }
     }
     return;
 }
