@@ -160,7 +160,9 @@ void TMR1_ISR(void)
     // Clear the TMR1 interrupt flag
     PIR1bits.TMR1IF = 0;
     TMR1_WriteTimer(timer1ReloadVal);
-    count++;
+    
+    cur_ms++;
+    
     if(TMR1_InterruptHandler)
     {
         TMR1_InterruptHandler();

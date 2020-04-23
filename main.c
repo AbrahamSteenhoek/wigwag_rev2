@@ -31,10 +31,10 @@ void setup()
     TMR1_StartTimer();
     
     
-    L1_SetHigh();
-    L2_SetHigh();
-    L3_SetHigh();
-    L4_SetHigh();
+    L1_SetLow();
+    L2_SetLow();
+    L3_SetLow();
+    L4_SetLow();
 }
 
 void main(void)
@@ -42,14 +42,7 @@ void main(void)
     setup();
     while(1)
     {
-        if ( count - temp > 1000 )
-        {
-            temp = count;
-            L1_Toggle();
-            L2_Toggle();
-            L3_Toggle();
-            L4_Toggle();
-        }
+
     }
     return;
 }
