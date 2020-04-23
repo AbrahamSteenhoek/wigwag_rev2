@@ -28,20 +28,10 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef STATUS_H
-#define	STATUS_H
+#ifndef PATTERN_CYCLE_H
+#define	PATTERN_CYCLE_H
 
-#include "mcc_generated_files/pin_manager.h"
 #include <xc.h> // include processor files - each processor file is guarded.  
-
-uint16_t temp_ms = 0;
-
-uint16_t cur_ms = 0;
-uint16_t cur_hsec = 0;
-uint16_t cur_sec = 0;
-
-bool cur_pc_input_state = FALSE;
-bool last_pc_input_state = FALSE;
 // TODO Insert appropriate #include <>
 
 // TODO Insert C++ class definitions if appropriate

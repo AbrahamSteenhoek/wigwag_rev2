@@ -53,6 +53,9 @@
 
 #include <xc.h>
 
+#define TRUE    1
+#define FALSE   0
+
 #define INPUT   1
 #define OUTPUT  0
 
