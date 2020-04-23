@@ -40,9 +40,13 @@ void setup()
 void main(void)
 {
     setup();
+    
     while(1)
     {
-
+        if ( pattern_cycle_GetValue() == HIGH )
+            L1_SetHigh();
+        else
+            L1_SetLow();
     }
     return;
 }

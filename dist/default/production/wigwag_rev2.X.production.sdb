@@ -25,8 +25,16 @@
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "80
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"55 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"122
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"134
+[v _IOCCF0_ISR IOCCF0_ISR `(v  1 e 1 0 ]
+"149
+[v _IOCCF0_SetInterruptHandler IOCCF0_SetInterruptHandler `(v  1 e 1 0 ]
+"156
+[v _IOCCF0_DefaultInterruptHandler IOCCF0_DefaultInterruptHandler `(v  1 e 1 0 ]
 "64 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 "93
@@ -35,19 +43,37 @@
 [v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
 "157
 [v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
-"173
+"171
 [v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
-"177
+"175
 [v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
-[s S26 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S212 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "364 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18325.h
-[u S31 . 1 `S26 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES31  1 e 1 @11 ]
-[s S163 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S217 . 1 `S212 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES217  1 e 1 @11 ]
+[s S464 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+]
+"449
+[u S471 . 1 `S464 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES471  1 e 1 @14 ]
+[s S198 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"497
+[u S203 . 1 `S198 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES203  1 e 1 @16 ]
+[s S246 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 BCL1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -57,15 +83,15 @@
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "534
-[u S172 . 1 `S163 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES172  1 e 1 @17 ]
+[u S255 . 1 `S246 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES255  1 e 1 @17 ]
 "1206
 [v _TMR1L TMR1L `VEuc  1 e 1 @25 ]
 "1226
 [v _TMR1H TMR1H `VEuc  1 e 1 @26 ]
 "1246
 [v _T1CON T1CON `VEuc  1 e 1 @27 ]
-[s S250 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S342 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 T1SOSC 1 0 :1:3 
@@ -73,17 +99,17 @@
 `uc 1 TMR1CS 1 0 :2:6 
 ]
 "1268
-[s S257 . 1 `uc 1 . 1 0 :4:0 
+[s S349 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 `uc 1 TMR1CS0 1 0 :1:6 
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
-[u S263 . 1 `S250 1 . 1 0 `S257 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES263  1 e 1 @27 ]
+[u S355 . 1 `S342 1 . 1 0 `S349 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES355  1 e 1 @27 ]
 "1318
 [v _T1GCON T1GCON `VEuc  1 e 1 @28 ]
-[s S280 . 1 `uc 1 T1GSS 1 0 :2:0 
+[s S372 . 1 `uc 1 T1GSS 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -92,16 +118,24 @@
 `uc 1 TMR1GE 1 0 :1:7 
 ]
 "1338
-[s S288 . 1 `uc 1 T1GSS0 1 0 :1:0 
+[s S380 . 1 `uc 1 T1GSS0 1 0 :1:0 
 `uc 1 T1GSS1 1 0 :1:1 
 ]
-[u S291 . 1 `S280 1 . 1 0 `S288 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES291  1 e 1 @28 ]
+[u S383 . 1 `S372 1 . 1 0 `S380 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES383  1 e 1 @28 ]
 "1499
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1544
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S142 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S136 . 1 `uc 1 INTE 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"1607
+[u S141 . 1 `S136 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES141  1 e 1 @144 ]
+[s S225 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 BCL1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -111,15 +145,15 @@
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1644
-[u S151 . 1 `S142 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES151  1 e 1 @145 ]
+[u S234 . 1 `S225 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES234  1 e 1 @145 ]
 "1875
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "2191
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2236
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S47 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S447 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -127,8 +161,8 @@
 `uc 1 LATC5 1 0 :1:5 
 ]
 "2251
-[u S54 . 1 `S47 1 . 1 0 ]
-[v _LATCbits LATCbits `VES54  1 e 1 @270 ]
+[u S454 . 1 `S447 1 . 1 0 ]
+[v _LATCbits LATCbits `VES454  1 e 1 @270 ]
 "2779
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2824
@@ -149,6 +183,36 @@
 [v _INLVLA INLVLA `VEuc  1 e 1 @908 ]
 "6906
 [v _INLVLC INLVLC `VEuc  1 e 1 @910 ]
+[s S109 . 1 `uc 1 IOCCP0 1 0 :1:0 
+`uc 1 IOCCP1 1 0 :1:1 
+`uc 1 IOCCP2 1 0 :1:2 
+`uc 1 IOCCP3 1 0 :1:3 
+`uc 1 IOCCP4 1 0 :1:4 
+`uc 1 IOCCP5 1 0 :1:5 
+]
+"7121
+[u S116 . 1 `S109 1 . 1 0 ]
+[v _IOCCPbits IOCCPbits `VES116  1 e 1 @919 ]
+[s S92 . 1 `uc 1 IOCCN0 1 0 :1:0 
+`uc 1 IOCCN1 1 0 :1:1 
+`uc 1 IOCCN2 1 0 :1:2 
+`uc 1 IOCCN3 1 0 :1:3 
+`uc 1 IOCCN4 1 0 :1:4 
+`uc 1 IOCCN5 1 0 :1:5 
+]
+"7171
+[u S99 . 1 `S92 1 . 1 0 ]
+[v _IOCCNbits IOCCNbits `VES99  1 e 1 @920 ]
+[s S75 . 1 `uc 1 IOCCF0 1 0 :1:0 
+`uc 1 IOCCF1 1 0 :1:1 
+`uc 1 IOCCF2 1 0 :1:2 
+`uc 1 IOCCF3 1 0 :1:3 
+`uc 1 IOCCF4 1 0 :1:4 
+`uc 1 IOCCF5 1 0 :1:5 
+]
+"7221
+[u S82 . 1 `S75 1 . 1 0 ]
+[v _IOCCFbits IOCCFbits `VES82  1 e 1 @921 ]
 "11575
 [v _PMD0 PMD0 `VEuc  1 e 1 @2321 ]
 "11620
@@ -171,16 +235,16 @@
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2334 ]
 "12268
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
+"54 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
+[v _IOCCF0_InterruptHandler IOCCF0_InterruptHandler `*.37(v  1 e 2 0 ]
 "57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
-"63 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/tmr1.h
-[v _cur_ms cur_ms `ui  1 e 2 0 ]
 "40 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"48
+"52
 } 0
 "18
 [v _setup setup `(v  1 e 1 0 ]
@@ -207,21 +271,27 @@
 {
 "91
 } 0
-"173
+"171
 [v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
-"175
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"173
 } 0
 "80 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
 "94
 } 0
-"55 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"105
+"120
+} 0
+"149
+[v _IOCCF0_SetInterruptHandler IOCCF0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCCF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"151
 } 0
 "60 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -231,12 +301,12 @@
 "52 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"70
+"74
 } 0
 "157 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/tmr1.c
 [v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
 {
-"170
+"168
 } 0
 "120
 [v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
@@ -244,8 +314,23 @@
 [v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
 "140
 } 0
-"177
+"175
 [v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"180
+"178
+} 0
+"122 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+{
+"129
+} 0
+"134
+[v _IOCCF0_ISR IOCCF0_ISR `(v  1 e 1 0 ]
+{
+"144
+} 0
+"156
+[v _IOCCF0_DefaultInterruptHandler IOCCF0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"159
 } 0

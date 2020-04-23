@@ -60,8 +60,8 @@
 
 #endif
 
-unsigned int cur_ms = 0;
-unsigned int temp_ms = 0;
+uint16_t cur_ms = 0;
+uint16_t temp_ms = 0;
 /**
   Section: TMR1 APIs
 */
@@ -420,6 +420,8 @@ extern void (*TMR1_InterruptHandler)(void);
     None
 */
 void TMR1_DefaultInterruptHandler(void);
+
+void Tick(void);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
