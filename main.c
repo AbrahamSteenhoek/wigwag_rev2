@@ -61,13 +61,11 @@ void main(void)
             if ( cur_pc_input_state == LOW )
             {
                 SetOutputs( HIGH );
-                //SetOutputs( HIGH );
             }
             // if we have gone from PRESSED to RELEASED (using reverse logic)
             else
             {
                 SetOutputs( LOW );
-                //SetOutputs( LOW );
             }
         }
                 
