@@ -54,14 +54,14 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+#include "../status.h"
+
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     extern "C" {
 
 #endif
 
-unsigned int cur_ms = 0;
-unsigned int temp_ms = 0;
 /**
   Section: TMR1 APIs
 */

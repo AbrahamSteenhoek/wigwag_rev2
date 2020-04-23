@@ -71,8 +71,8 @@ void TMR1_Initialize(void)
     //TMR1H 255; 
     TMR1H = 0xFF;
 
-    //TMR1L 6; 
-    TMR1L = 0x06;
+    //TMR1L 0; 
+    TMR1L = 0x00;
 
     // Clearing IF flag before enabling the interrupt.
     PIR1bits.TMR1IF = 0;
@@ -160,13 +160,13 @@ void TMR1_ISR(void)
     // Clear the TMR1 interrupt flag
     PIR1bits.TMR1IF = 0;
     TMR1_WriteTimer(timer1ReloadVal);
-    
+
     cur_ms++;
-    
-    if(TMR1_InterruptHandler)
-    {
-        TMR1_InterruptHandler();
-    }
+//    
+//    if(TMR1_InterruptHandler)
+//    {
+//        TMR1_InterruptHandler();
+//    }
 }
 
 

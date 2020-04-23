@@ -50,6 +50,8 @@
 /**
   Section: Included Files
 */
+#include <stdint.h>
+#include <stdbool.h>
 
 #include <xc.h>
 
@@ -64,6 +66,9 @@
 
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
+
+
+
 
 // get/set L1 aliases
 #define L1_TRIS                 TRISCbits.TRISC1
@@ -145,6 +150,46 @@
 #define L4_SetAnalogMode()      do { ANSELCbits.ANSC4 = 1; } while(0)
 #define L4_SetDigitalMode()     do { ANSELCbits.ANSC4 = 0; } while(0)
 
+// get/set pattern_cycle aliases
+#define pattern_cycle_TRIS                 TRISCbits.TRISC5
+#define pattern_cycle_LAT                  LATCbits.LATC5
+#define pattern_cycle_PORT                 PORTCbits.RC5
+#define pattern_cycle_WPU                  WPUCbits.WPUC5
+#define pattern_cycle_OD                   ODCONCbits.ODCC5
+#define pattern_cycle_ANS                  ANSELCbits.ANSC5
+#define pattern_cycle_SetHigh()            do { LATCbits.LATC5 = 1; } while(0)
+#define pattern_cycle_SetLow()             do { LATCbits.LATC5 = 0; } while(0)
+#define pattern_cycle_Toggle()             do { LATCbits.LATC5 = ~LATCbits.LATC5; } while(0)
+#define pattern_cycle_GetValue()           PORTCbits.RC5
+#define pattern_cycle_SetDigitalInput()    do { TRISCbits.TRISC5 = 1; } while(0)
+#define pattern_cycle_SetDigitalOutput()   do { TRISCbits.TRISC5 = 0; } while(0)
+#define pattern_cycle_SetPullup()          do { WPUCbits.WPUC5 = 1; } while(0)
+#define pattern_cycle_ResetPullup()        do { WPUCbits.WPUC5 = 0; } while(0)
+#define pattern_cycle_SetPushPull()        do { ODCONCbits.ODCC5 = 0; } while(0)
+#define pattern_cycle_SetOpenDrain()       do { ODCONCbits.ODCC5 = 1; } while(0)
+#define pattern_cycle_SetAnalogMode()      do { ANSELCbits.ANSC5 = 1; } while(0)
+#define pattern_cycle_SetDigitalMode()     do { ANSELCbits.ANSC5 = 0; } while(0)
+
+// get/set turn_signal aliases
+#define turn_signal_TRIS                 TRISCbits.TRISC0
+#define turn_signal_LAT                  LATCbits.LATC0
+#define turn_signal_PORT                 PORTCbits.RC0
+#define turn_signal_WPU                  WPUCbits.WPUC0
+#define turn_signal_OD                   ODCONCbits.ODCC0
+#define turn_signal_ANS                  ANSELCbits.ANSC0
+#define turn_signal_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define turn_signal_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define turn_signal_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define turn_signal_GetValue()           PORTCbits.RC0
+#define turn_signal_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define turn_signal_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define turn_signal_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
+#define turn_signal_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
+#define turn_signal_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
+#define turn_signal_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
+#define turn_signal_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
+#define turn_signal_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
+
 /**
    @Param
     none
@@ -170,6 +215,88 @@ void PIN_MANAGER_Initialize (void);
 void PIN_MANAGER_IOC(void);
 
 
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Interrupt on Change Handler for the IOCCF0 pin functionality
+ * @Example
+    IOCCF0_ISR();
+ */
+void IOCCF0_ISR(void);
+
+/**
+  @Summary
+    Interrupt Handler Setter for IOCCF0 pin interrupt-on-change functionality
+
+  @Description
+    Allows selecting an interrupt handler for IOCCF0 at application runtime
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    InterruptHandler function pointer.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCCF0_SetInterruptHandler(MyInterruptHandler);
+
+*/
+void IOCCF0_SetInterruptHandler(void (* InterruptHandler)(void));
+
+/**
+  @Summary
+    Dynamic Interrupt Handler for IOCCF0 pin
+
+  @Description
+    This is a dynamic interrupt handler to be used together with the IOCCF0_SetInterruptHandler() method.
+    This handler is called every time the IOCCF0 ISR is executed and allows any function to be registered at runtime.
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCCF0_SetInterruptHandler(IOCCF0_InterruptHandler);
+
+*/
+extern void (*IOCCF0_InterruptHandler)(void);
+
+/**
+  @Summary
+    Default Interrupt Handler for IOCCF0 pin
+
+  @Description
+    This is a predefined interrupt handler to be used together with the IOCCF0_SetInterruptHandler() method.
+    This handler is called every time the IOCCF0 ISR is executed. 
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCCF0_SetInterruptHandler(IOCCF0_DefaultInterruptHandler);
+
+*/
+void IOCCF0_DefaultInterruptHandler(void);
 
 #endif // PIN_MANAGER_H
 /**
