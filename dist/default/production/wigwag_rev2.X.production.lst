@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Thu Apr 23 13:07:25 2020
+                                                                                               Thu Apr 23 13:21:13 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	16F18325
@@ -2774,16 +2774,16 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2755  00D7  3001               	movlw	1
   2756  00D8  3180  20E8  3180   	fcall	_SetOutputs
   2757                           
-  2758                           ;main.c: 65:             }
+  2758                           ;main.c: 64:             }
   2759  00DB  28E0               	goto	l1299
   2760  00DC                     l1297:	
   2761                           
-  2762                           ;main.c: 68:             {;main.c: 69:                 SetOutputs( 0 );
+  2762                           ;main.c: 67:             {;main.c: 68:                 SetOutputs( 0 );
   2763  00DC  3000               	movlw	0
   2764  00DD  3180  20E8  3180   	fcall	_SetOutputs
   2765  00E0                     l1299:	
   2766                           
-  2767                           ;main.c: 74:         last_pc_input_state = cur_pc_input_state;
+  2767                           ;main.c: 72:         last_pc_input_state = cur_pc_input_state;
   2768  00E0  087B               	movf	_cur_pc_input_state,w
   2769  00E1  0020               	movlb	0	; select bank0
   2770  00E2  00AC               	movwf	??_main
@@ -3009,10 +3009,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2974 ;; Defined at:
   2975 ;;		line 46 in file "./Lights.h"
   2976 ;; Parameters:    Size  Location     Type
-  2977 ;;  light           1    wreg     const enum E6370
+  2977 ;;  light           1    wreg     const enum E6371
   2978 ;;  state           1    2[COMMON] const _Bool 
   2979 ;; Auto vars:     Size  Location     Type
-  2980 ;;  light           1    5[COMMON] const enum E6370
+  2980 ;;  light           1    5[COMMON] const enum E6371
   2981 ;; Return value:  Size  Location     Type
   2982 ;;                  1    wreg      void 
   2983 ;; Registers used:
@@ -3796,7 +3796,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3707  0071                     u40:	
   3708  0071                     l1049:	
   3709                           
-  3710                           ;PatternSelector.c: 13:     {;PatternSelector.c: 14:         uint16_t delay_count = 0;
+  3710                           ;PatternSelector.c: 13:     {;PatternSelector.c: 14:         uint delay_count = 0;
   3711  0071  01F4               	clrf	PatternCycleInputChanged@delay_count
   3712  0072  01F5               	clrf	PatternCycleInputChanged@delay_count+1
   3713                           
@@ -4696,7 +4696,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Thu Apr 23 13:07:25 2020
+Symbol Table                                                                                   Thu Apr 23 13:21:13 2020
 
                                __CFG_CP$OFF 0000                                          l52 0178  
                                         l55 0199                                          l49 0151  

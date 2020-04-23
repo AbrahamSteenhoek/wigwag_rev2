@@ -34,14 +34,18 @@
 #include "mcc_generated_files/pin_manager.h"
 #include <xc.h> // include processor files - each processor file is guarded.  
 
-uint16_t temp_ms = 0;
+typedef uint16_t uint;
 
-uint16_t cur_ms = 0;
-uint16_t cur_hsec = 0;
-uint16_t cur_sec = 0;
+uint temp_ms = 0;
+
+uint cur_ms = 0;
+uint cur_hsec = 0;
+uint cur_sec = 0;
 
 bool cur_pc_input_state = false;
 bool last_pc_input_state = false;
+
+
 // TODO Insert appropriate #include <>
 
 // TODO Insert C++ class definitions if appropriate

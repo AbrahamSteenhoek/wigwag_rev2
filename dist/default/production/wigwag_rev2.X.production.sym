@@ -378,7 +378,7 @@ cstackCOMMON 70 7B COMMON 70 1
 bssBANK0 20 2C BANK0 20 1
 %locals
 dist/default/production\wigwag_rev2.X.production.o
-C:\Users\abrah\AppData\Local\Temp\s5c8.s
+C:\Users\abrah\AppData\Local\Temp\ss9g.s
 4971 2A 0 CODE 0
 4974 2A 0 CODE 0
 5004 2A 0 CODE 0
@@ -403,9 +403,9 @@ main.c
 58 CA 0 CODE 0
 61 D2 0 CODE 0
 63 D7 0 CODE 0
-65 DB 0 CODE 0
-69 DC 0 CODE 0
-74 E0 0 CODE 0
+64 DB 0 CODE 0
+68 DC 0 CODE 0
+72 E0 0 CODE 0
 29 132 0 CODE 0
 32 132 0 CODE 0
 34 135 0 CODE 0

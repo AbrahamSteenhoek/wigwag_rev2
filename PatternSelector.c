@@ -11,7 +11,7 @@ const bool PatternCycleInputChanged()
 {
     if ( cur_pc_input_state != last_pc_input_state )
     {
-        uint16_t delay_count = 0;
+        uint delay_count = 0;
         
         while ( delay_count++ < 3 ) // must get n consecutive readings in a row
         {

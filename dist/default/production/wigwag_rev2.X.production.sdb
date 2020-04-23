@@ -4,7 +4,7 @@
 [d chip 16F18325 ]
 [d frameptr 6 ]
 "46 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Lights.h
-[e E6370 Light `uc
+[e E6371 Light `uc
 L1 1
 L2 2
 L3 3
@@ -60,11 +60,11 @@ ERROR 0
 [v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
 "10 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
 [v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]
-"39 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/status.h
+"41 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/status.h
 [v _cur_ms cur_ms `us  1 e 2 0 ]
-"43
+"45
 [v _cur_pc_input_state cur_pc_input_state `a  1 e 1 0 ]
-"44
+"46
 [v _last_pc_input_state last_pc_input_state `a  1 e 1 0 ]
 [s S216 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
@@ -263,7 +263,7 @@ ERROR 0
 "47 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"77
+"75
 } 0
 "29
 [v _setup setup `(v  1 e 1 0 ]
@@ -287,10 +287,10 @@ ERROR 0
 "46 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Lights.h
 [v _SetLight SetLight `(v  1 e 1 0 ]
 {
-[v SetLight@light light `DCE6370  1 a 1 wreg ]
-[v SetLight@light light `DCE6370  1 a 1 wreg ]
+[v SetLight@light light `DCE6371  1 a 1 wreg ]
+[v SetLight@light light `DCE6371  1 a 1 wreg ]
 [v SetLight@state state `DCa  1 p 1 2 ]
-[v SetLight@light light `DCE6370  1 a 1 5 ]
+[v SetLight@light light `DCE6371  1 a 1 5 ]
 "62
 } 0
 "50 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/mcc.c
