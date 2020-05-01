@@ -32,6 +32,7 @@
 #define	PATTERN_H
 
 #include "Lights.h"
+#include "Time.h"
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
@@ -40,7 +41,7 @@ enum PatternName{ WIGWAG, XSTROBE, UPPER_LOWER, LOWER };
 struct stage {
     enum Light light_states[4];
     uint time;
-    stage* next;
+    struct stage* next;
 };
 
 struct Pattern {

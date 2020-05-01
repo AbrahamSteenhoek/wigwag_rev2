@@ -61,14 +61,14 @@ ERROR 0
 [v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]
 "11 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
 [v _TripTurnSignal TripTurnSignal `(v  1 e 1 0 ]
-"40 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Time.h
-[v _cur_ms cur_ms `us  1 e 2 0 ]
 "42 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/TurnSignal.h
 [v _ts_trigger ts_trigger `VEa  1 e 1 0 ]
 "39 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/PatternSelector.h
 [v _cur_pc_input_state cur_pc_input_state `a  1 e 1 0 ]
 "40
 [v _last_pc_input_state last_pc_input_state `a  1 e 1 0 ]
+"40 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Time.h
+[v _cur_ms cur_ms `us  1 e 2 0 ]
 [s S217 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
