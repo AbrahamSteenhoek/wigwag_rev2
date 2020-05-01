@@ -28,15 +28,16 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef PATTERN_CYCLE_H
-#define	PATTERN_CYCLE_H
+#ifndef PATTERNSELECTOR_H
+#define	PATTERNSELECTOR_H
 
 #include "mcc_generated_files/mcc.h"
-#include "status.h"
 
 #include <xc.h>
 
-enum Pattern{ WIGWAG, XSTROBE, UPPER_LOWER, LOWER };
+
+bool cur_pc_input_state = false;
+bool last_pc_input_state = false;
 
 // Test if the pattern_cycle input pin has changed state
 // Test for debounce to remove some noise

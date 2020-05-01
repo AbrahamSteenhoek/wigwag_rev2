@@ -109,8 +109,10 @@ void PIN_MANAGER_Initialize(void)
 
 
     // register default IOC callback functions at runtime; use these methods to register a custom function
-    IOCCF0_SetInterruptHandler(IOCCF0_DefaultInterruptHandler);
-   
+    //IOCCF0_SetInterruptHandler(IOCCF0_DefaultInterruptHandler);
+    
+    // use my turn signal interrupt handler instead of DefaultInterruptHandler
+    IOCCF0_SetInterruptHandler(TripTurnSignal); 
     // Enable IOCI interrupt 
     PIE0bits.IOCIE = 1; 
     
@@ -129,9 +131,7 @@ void PIN_MANAGER_IOC(void)
    IOCCF0 Interrupt Service Routine
 */
 void IOCCF0_ISR(void) {
-
-    // Add custom IOCCF0 code
-
+    
     // Call the interrupt handler for the callback registered at runtime
     if(IOCCF0_InterruptHandler)
     {

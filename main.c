@@ -14,17 +14,13 @@
 
 #include "Lights.h"
 #include "PatternSelector.h"
-#include "status.h"
+#include "Pattern.h"
+#include "Time.h"
+#include "TurnSignal.h"
 
 #include <xc.h>
 
-void SetOutputs( const bool state )
-{
-    SetLight( L1, state );
-    SetLight( L2, state );
-    SetLight( L3, state );
-    SetLight( L4, state );
-}
+
 
 void setup()
 {
