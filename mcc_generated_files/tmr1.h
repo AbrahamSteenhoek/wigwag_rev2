@@ -54,7 +54,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#include "../status.h"
+#include "../Time.h"
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

@@ -53,6 +53,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "../TurnSignal.h"
+
 #include <xc.h>
 
 #define INPUT   1

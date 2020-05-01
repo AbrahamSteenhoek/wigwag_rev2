@@ -13,9 +13,11 @@
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
         <itemPath>mcc_generated_files/tmr1.h</itemPath>
       </logicalFolder>
-      <itemPath>status.h</itemPath>
       <itemPath>PatternSelector.h</itemPath>
       <itemPath>Lights.h</itemPath>
+      <itemPath>TurnSignal.h</itemPath>
+      <itemPath>Time.h</itemPath>
+      <itemPath>Pattern.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -35,6 +37,9 @@
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>PatternSelector.c</itemPath>
+      <itemPath>Lights.c</itemPath>
+      <itemPath>TurnSignal.c</itemPath>
+      <itemPath>Pattern.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -45,6 +50,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../../Downloads</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -213,6 +219,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1fff"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/debug/default/wigwag_rev2_ptg"/>
         <property key="programmerToGoImageName" value="wigwag_rev2_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

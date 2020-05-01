@@ -38,28 +38,16 @@
 // setters for L
 #define SET( pin, state )       do { pin = state; } while(0)
 
+#define ON      true
+#define OFF     false
+
+typedef bool state;
+
 enum Light{ L1=1, L2=2, L3=3, L4=4, ERROR=0 };
 
 void SetLight( const enum Light light, const bool state );
+void SetOutputs( const bool state );
 
-// Uses a mapping from light enumeration to pin
-void SetLight( const enum Light light, const bool state )
-{
-    // important: The switch statement is necessary because the pin# and the Light# are not always in correspondence
-    switch ( light )
-    {
-        case L1:
-            SET( L1_LAT, state );
-        case L2:
-            SET( L2_LAT, state );
-        case L3:
-            SET( L3_LAT, state );
-        case L4:
-        default:
-            SET( L4_LAT, state );
-            break;
-    }
-}
 
 // Comment a function and leverage automatic documentation with slash star star
 /**
