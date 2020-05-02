@@ -35,31 +35,37 @@
 #include "Lights.h"
 #include "Time.h"
 
-#include <xc.h> // include processor files - each processor file is guarded.  
-
-enum { MAX_STAGES = 100 };
+enum { NUM_LIGHTS = 4 };
+enum { MAX_STAGES = 40 };
 enum PatternName{ WIGWAG, XSTROBE, UPPER_LOWER, LOWER };
 
-struct StageData {
-    enum Light light_states[4];
-    uint time_ms; // time in milliseconds
-};
-
 struct Stage {
-    struct StageData *data;
+    bool light_states[ NUM_LIGHTS ];
+    uint time_ms; // time in milliseconds
     struct Stage* next;
 };
 
 struct Stage stage_stash[ MAX_STAGES ];
+uint stage_list_iter = 0;
 
 struct Pattern {
     enum PatternName name;
-    struct Stage stage_list[12]; // need a statically allocated memory instead of dynamic
+    struct Stage* stage_list; // points to the beginning of the stage list for this pattern
 };
+
+void AssignLightStates( struct Stage* stage, const bool states[4] );
+
+static struct Stage* NewStage();
+
+static struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms );
+
+static void InitStageList( struct Stage* head, struct Stage* first_stage );
 
 static void AppendStage( struct Stage* head, struct Stage* new_stage );
 
 struct Pattern Wigwag;
+
+static void InitWigwagPattern( struct Pattern* pattern );
 
 // Comment a function and leverage automatic documentation with slash star star
 /**
