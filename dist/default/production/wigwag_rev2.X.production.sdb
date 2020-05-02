@@ -11,6 +11,37 @@ L3 3
 L4 4
 ERROR 0
 ]
+"53 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+[e E6339 Light `uc
+L1 1
+L2 2
+L3 3
+L4 4
+ERROR 0
+]
+"62
+[e E6357 PatternName `uc
+WIGWAG 0
+XSTROBE 1
+UPPER_LOWER 2
+LOWER 3
+]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\_Exit.c
+[v __Exit _Exit `(v  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\abort.c
+[v _abort abort `(v  1 e 1 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\assert.c
+[v ___assert_fail __assert_fail `(v  1 e 1 0 ]
+"17 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atexit.c
+[v ___funcs_on_exit __funcs_on_exit `(v  1 e 1 0 ]
+"27
+[v ___cxa_atexit __cxa_atexit `(i  1 e 2 0 ]
+"45
+[v _call call `(v  1 s 1 call ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\exit.c
+[v _exit exit `(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
@@ -23,7 +54,7 @@ ERROR 0
 [v _SetLight SetLight `(v  1 e 1 0 ]
 "30
 [v _SetOutputs SetOutputs `(v  1 e 1 0 ]
-"25 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
+"24 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 "43
 [v _main main `(v  1 e 1 0 ]
@@ -37,14 +68,16 @@ ERROR 0
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "80
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"54 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"121
+"122
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
-"133
+"134
 [v _IOCCF0_ISR IOCCF0_ISR `(v  1 e 1 0 ]
-"146
+"149
 [v _IOCCF0_SetInterruptHandler IOCCF0_SetInterruptHandler `(v  1 e 1 0 ]
+"156
+[v _IOCCF0_DefaultInterruptHandler IOCCF0_DefaultInterruptHandler `(v  1 e 1 0 ]
 "64 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 "93
@@ -59,25 +92,27 @@ ERROR 0
 [v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
 "10 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
 [v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]
-"11 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
-[v _TripTurnSignal TripTurnSignal `(v  1 e 1 0 ]
 "42 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/TurnSignal.h
 [v _ts_trigger ts_trigger `VEa  1 e 1 0 ]
+[s S571 StageData 6 `[4]E6339 1 light_states 4 0 `us 1 time_ms 2 4 ]
+"53 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+[s S574 Stage 2 `*.1S571 1 data 1 0 `*.1S574 1 next 1 1 ]
+[v _stage_stash stage_stash `[100]S574  1 e 200 @8670 ]
 "39 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/PatternSelector.h
 [v _cur_pc_input_state cur_pc_input_state `a  1 e 1 0 ]
 "40
 [v _last_pc_input_state last_pc_input_state `a  1 e 1 0 ]
 "40 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Time.h
 [v _cur_ms cur_ms `us  1 e 2 0 ]
-[s S217 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S216 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "364 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18325.h
-[u S222 . 1 `S217 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES222  1 e 1 @11 ]
-[s S460 . 1 `uc 1 RC0 1 0 :1:0 
+[u S221 . 1 `S216 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES221  1 e 1 @11 ]
+[s S459 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -85,17 +120,17 @@ ERROR 0
 `uc 1 RC5 1 0 :1:5 
 ]
 "449
-[u S467 . 1 `S460 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES467  1 e 1 @14 ]
-[s S203 . 1 `uc 1 INTF 1 0 :1:0 
+[u S466 . 1 `S459 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES466  1 e 1 @14 ]
+[s S202 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "497
-[u S208 . 1 `S203 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES208  1 e 1 @16 ]
-[s S251 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S207 . 1 `S202 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES207  1 e 1 @16 ]
+[s S250 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 BCL1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -105,15 +140,15 @@ ERROR 0
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "534
-[u S260 . 1 `S251 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES260  1 e 1 @17 ]
+[u S259 . 1 `S250 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES259  1 e 1 @17 ]
 "1206
 [v _TMR1L TMR1L `VEuc  1 e 1 @25 ]
 "1226
 [v _TMR1H TMR1H `VEuc  1 e 1 @26 ]
 "1246
 [v _T1CON T1CON `VEuc  1 e 1 @27 ]
-[s S350 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S349 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 T1SOSC 1 0 :1:3 
@@ -121,17 +156,17 @@ ERROR 0
 `uc 1 TMR1CS 1 0 :2:6 
 ]
 "1268
-[s S357 . 1 `uc 1 . 1 0 :4:0 
+[s S356 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 `uc 1 TMR1CS0 1 0 :1:6 
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
-[u S363 . 1 `S350 1 . 1 0 `S357 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES363  1 e 1 @27 ]
+[u S362 . 1 `S349 1 . 1 0 `S356 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES362  1 e 1 @27 ]
 "1318
 [v _T1GCON T1GCON `VEuc  1 e 1 @28 ]
-[s S380 . 1 `uc 1 T1GSS 1 0 :2:0 
+[s S379 . 1 `uc 1 T1GSS 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -140,24 +175,24 @@ ERROR 0
 `uc 1 TMR1GE 1 0 :1:7 
 ]
 "1338
-[s S388 . 1 `uc 1 T1GSS0 1 0 :1:0 
+[s S387 . 1 `uc 1 T1GSS0 1 0 :1:0 
 `uc 1 T1GSS1 1 0 :1:1 
 ]
-[u S391 . 1 `S380 1 . 1 0 `S388 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES391  1 e 1 @28 ]
+[u S390 . 1 `S379 1 . 1 0 `S387 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES390  1 e 1 @28 ]
 "1499
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1544
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S140 . 1 `uc 1 INTE 1 0 :1:0 
+[s S139 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "1607
-[u S145 . 1 `S140 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES145  1 e 1 @144 ]
-[s S230 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[u S144 . 1 `S139 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES144  1 e 1 @144 ]
+[s S229 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 BCL1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -167,15 +202,15 @@ ERROR 0
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1644
-[u S239 . 1 `S230 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES239  1 e 1 @145 ]
+[u S238 . 1 `S229 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES238  1 e 1 @145 ]
 "1875
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "2191
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2236
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S534 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S533 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -183,8 +218,8 @@ ERROR 0
 `uc 1 LATC5 1 0 :1:5 
 ]
 "2251
-[u S541 . 1 `S534 1 . 1 0 ]
-[v _LATCbits LATCbits `VES541  1 e 1 @270 ]
+[u S540 . 1 `S533 1 . 1 0 ]
+[v _LATCbits LATCbits `VES540  1 e 1 @270 ]
 "2779
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2824
@@ -257,7 +292,10 @@ ERROR 0
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2334 ]
 "12268
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
-"51 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
+"13 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\atexit.c
+[s S1127 fl 130 `*.39S1127 1 next 2 0 `[32]*.37(v 1 f 64 2 `[32]*.39v 1 a 64 66 ]
+[v _builtin builtin `S1127  1 s 130 builtin ]
+"54 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
 [v _IOCCF0_InterruptHandler IOCCF0_InterruptHandler `*.37(v  1 e 2 0 ]
 "57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
@@ -268,7 +306,7 @@ ERROR 0
 {
 "71
 } 0
-"25
+"24
 [v _setup setup `(v  1 e 1 0 ]
 {
 "41
@@ -322,16 +360,16 @@ ERROR 0
 {
 "94
 } 0
-"54 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"119
+"120
 } 0
-"146
+"149
 [v _IOCCF0_SetInterruptHandler IOCCF0_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v IOCCF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
-"148
+"151
 } 0
 "60 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -361,18 +399,18 @@ ERROR 0
 [v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
 "140
 } 0
-"121 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
+"122 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
-"128
+"129
 } 0
-"133
+"134
 [v _IOCCF0_ISR IOCCF0_ISR `(v  1 e 1 0 ]
 {
-"141
+"144
 } 0
-"11 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
-[v _TripTurnSignal TripTurnSignal `(v  1 e 1 0 ]
+"156
+[v _IOCCF0_DefaultInterruptHandler IOCCF0_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"15
+"159
 } 0

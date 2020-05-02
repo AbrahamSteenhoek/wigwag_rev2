@@ -14,16 +14,16 @@
 
 #include "Lights.h"
 #include "PatternSelector.h"
-#include "Pattern.h"
+//#include "Pattern.h"
 #include "Time.h"
 #include "TurnSignal.h"
 
+#include "assert.h"
 #include <xc.h>
-
-
 
 void setup()
 {
+    //assert( 1 == 0 );
     // initialize the device
     SYSTEM_Initialize();
     // Enable the Global Interrupts

@@ -48,6 +48,9 @@
 
 #include "pin_manager.h"
 
+
+
+
 void (*IOCCF0_InterruptHandler)(void);
 
 
@@ -69,7 +72,7 @@ void PIN_MANAGER_Initialize(void)
     ANSELx registers
     */
     ANSELC = 0x00;
-    ANSELA = 0x37;
+    ANSELA = 0x33;
 
     /**
     WPUx registers
@@ -109,10 +112,8 @@ void PIN_MANAGER_Initialize(void)
 
 
     // register default IOC callback functions at runtime; use these methods to register a custom function
-    //IOCCF0_SetInterruptHandler(IOCCF0_DefaultInterruptHandler);
-    
-    // use my turn signal interrupt handler instead of DefaultInterruptHandler
-    IOCCF0_SetInterruptHandler(TripTurnSignal); 
+    IOCCF0_SetInterruptHandler(IOCCF0_DefaultInterruptHandler);
+   
     // Enable IOCI interrupt 
     PIE0bits.IOCIE = 1; 
     
@@ -131,7 +132,9 @@ void PIN_MANAGER_IOC(void)
    IOCCF0 Interrupt Service Routine
 */
 void IOCCF0_ISR(void) {
-    
+
+    // Add custom IOCCF0 code
+
     // Call the interrupt handler for the callback registered at runtime
     if(IOCCF0_InterruptHandler)
     {

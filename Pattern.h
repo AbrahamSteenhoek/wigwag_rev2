@@ -31,25 +31,35 @@
 #ifndef PATTERN_H
 #define	PATTERN_H
 
+#include "assert.h"
 #include "Lights.h"
 #include "Time.h"
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
+enum { MAX_STAGES = 100 };
 enum PatternName{ WIGWAG, XSTROBE, UPPER_LOWER, LOWER };
 
-struct stage {
+struct StageData {
     enum Light light_states[4];
-    uint time;
-    struct stage* next;
+    uint time_ms; // time in milliseconds
 };
+
+struct Stage {
+    struct StageData *data;
+    struct Stage* next;
+};
+
+struct Stage stage_stash[ MAX_STAGES ];
 
 struct Pattern {
     enum PatternName name;
-    struct stage* current_stage;
+    struct Stage stage_list[12]; // need a statically allocated memory instead of dynamic
 };
 
-void UpdatePattern();
+static void AppendStage( struct Stage* head, struct Stage* new_stage );
+
+struct Pattern Wigwag;
 
 // Comment a function and leverage automatic documentation with slash star star
 /**
