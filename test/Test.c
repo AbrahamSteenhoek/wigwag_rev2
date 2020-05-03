@@ -10,11 +10,16 @@ void FlushStageStash( void )
 
 void CompareStage( const struct Stage* stage1, const struct Stage* stage2 )
 {
-    //CU_ASSERT_PTR_EQUAL( stage1, stage2 );
     for( int i = 0; i < NUM_LIGHTS; i++ )
         CU_ASSERT( stage1->light_states[i] == stage2->light_states[i] );
     CU_ASSERT( stage1->time_ms == stage2->time_ms );
     CU_ASSERT_PTR_EQUAL( stage1->next, stage2->next );
+}
+
+void StagesAreSame( const struct Stage* stage1, const struct Stage* stage2 )
+{
+    CU_ASSERT_PTR_EQUAL( stage1, stage2 );
+    CompareStage( stage1, stage2 );
 }
 
 int setupPatternTestSuite(void) {
@@ -108,9 +113,20 @@ void testAppendStage( void )
     struct Stage* head = NewStage();
     CU_ASSERT_PTR_NULL( head->next );
 
-    bool temp_states[NUM_LIGHTS] = { ON, ON, ON, ON };
-    struct Stage *stage2 = ConstructStage( temp_states, 100, NULL );
+    bool states2[NUM_LIGHTS] = { ON, ON, ON, ON };
+    struct Stage *stage2 = ConstructStage( states2, 100, NULL );
 
     AppendStage( head, stage2 );
-    CompareStage( head->next, stage2 );
+    CU_ASSERT_PTR_EQUAL( head->next, stage2 );
+    CU_ASSERT_PTR_EQUAL( stage2->next, head );
+    StagesAreSame( head->next, stage2 );
+
+    bool states3[NUM_LIGHTS] = { ON, OFF, ON, OFF };
+    struct Stage* stage3 = ConstructStage( states3, 178, NULL );
+
+    AppendStage( head, stage3 );
+    CU_ASSERT_PTR_EQUAL( stage3->next, head );
+
+    StagesAreSame( head->next, stage2 );
+    StagesAreSame( stage2->next, stage3);
 }

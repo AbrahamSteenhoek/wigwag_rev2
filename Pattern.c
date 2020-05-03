@@ -58,7 +58,7 @@ void AppendStage( struct Stage* head, struct Stage* new_stage )
     else // if the stage list has more than 1 stage
     {
         struct Stage* last_stage = head->next;
-        while( last_stage->next != NULL ) // iterate over to the last stage
+        while( last_stage->next != head ) // iterate over to the last stage
             last_stage = last_stage->next;
 
         // now last_stage points to the last stage in the list
