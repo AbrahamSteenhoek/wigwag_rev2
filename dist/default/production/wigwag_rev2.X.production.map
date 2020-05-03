@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\wigwag_rev2.X.production.sym \
   --cmf=dist/default/production\wigwag_rev2.X.production.cmf -z -Q16F18325 \
-  -oC:\Users\abrah\AppData\Local\Temp\sm5c.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\abrah\AppData\Local\Temp\s6s0.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/wigwag_rev2.X.production.map -E1 -ver=XC8 \
-  --acfsm=1493 -ASTACK=0201Ah-0222Dh -pstack=STACK -ACODE=00h-07FFhx4 \
+  --acfsm=1493 -ASTACK=0201Ah-022AFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
   -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh -ABANK3=01A0h-01EFh \
@@ -32,7 +32,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\abrah\AppData\Local\Temp\sm5c.o \
+  C:\Users\abrah\AppData\Local\Temp\s6s0.o \
   dist/default/production\wigwag_rev2.X.production.o 
 
 Object code version is 3.11
@@ -42,84 +42,73 @@ Machine type is 16F18325
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\abrah\AppData\Local\Temp\sm5c.o
+C:\Users\abrah\AppData\Local\Temp\s6s0.o
                 end_init                             28       28        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        4    1000E       0
 dist/default/production\wigwag_rev2.X.production.o
-                cinit                                2A       2A       2F        8       0
+                cinit                                2A       2A       2D        8       0
                 intentry                              4        4       24        8       0
-                text19                              23B      23B        1      414       0
-                text18                              1C6      1C6        F      2DE       0
-                text17                              213      213        9      414       0
-                text16                              186      186       11      2DE       0
-                text15                              1B7      1B7        F      2DE       0
-                text13                               8B       8B       2D        8       0
-                text12                              20A      20A        9      414       0
-                text11                              22A      22A        6      414       0
-                text10                               B8       B8       2A        8       0
-                text9                               21C      21C        8      414       0
-                text8                               224      224        6      414       0
-                text7                               16F      16F       17      2DE       0
-                text6                               234      234        4      414       0
-                text5                               1A7      1A7       10      2DE       0
-                text4                                59       59       32        8       0
-                text3                               108      108       26        8       0
-                text2                               238      238        3      414       0
-                text1                               197      197       10      2DE       0
-                maintext                             E2       E2       26        8       0
+                text19                              1CF      1CF        1        8       0
+                text18                              183      183        F        8       0
+                text17                              1A7      1A7        9        8       0
+                text16                              143      143       11        8       0
+                text15                              174      174        F        8       0
+                text13                               89       89       2D        8       0
+                text12                              19E      19E        9        8       0
+                text11                              1BE      1BE        6        8       0
+                text10                               B6       B6       2A        8       0
+                text9                               1B0      1B0        8        8       0
+                text8                               1B8      1B8        6        8       0
+                text7                               12C      12C       17        8       0
+                text6                               1C8      1C8        4        8       0
+                text5                               164      164       10        8       0
+                text4                                57       57       32        8       0
+                text3                               106      106       26        8       0
+                text2                               1CC      1CC        3        8       0
+                text1                               154      154       10        8       0
+                maintext                             E0       E0       26        8       0
                 cstackBANK0                          38       38        2       20       1
                 cstackCOMMON                         70       70        7       70       1
-                clrtext                             1E1      1E1        C      3C2       0
+                clrtext                             192      192        C        8       0
                 dataBANK0                            34       34        4       20       1
-                bssBANK0                             20       20        E       20       1
-                bssCOMMON                            77       77        5       70       1
-                stringtext6                         201      201        9      3DA       0
-                stringtext5                         1F7      1F7        A      3DA       0
-                stringtext4                         1ED      1ED        A      3DA       0
-                stringtext3                         1D5      1D5        C      3AA       0
-                stringtext2                         151      151       1E      25C       0
-                stringtext1                         12E      12E       23      25C       0
-                nvBANK0                              2E       2E        6       20       1
-                idataBANK0                          230      230        4      414       0
+                bssBANK0                             20       20       10       20       1
+                bssCOMMON                            77       77        3       70       1
+                nvBANK0                              30       30        4       20       1
+                nvCOMMON                             7A       7A        2       70       1
+                idataBANK0                          1C4      1C4        4        8       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 end_init                             28       28        2         0
-                cinit                                2A       2A       2F         0
+                cinit                                2A       2A       2D         0
                 intentry                              4        4       24         0
                 reset_vec                             0        0        2         0
-                text19                              23B      23B        1         0
-                text18                              1C6      1C6        F         0
-                text17                              213      213        9         0
-                text16                              186      186       11         0
-                text15                              1B7      1B7        F         0
-                text13                               8B       8B       2D         0
-                text12                              20A      20A        9         0
-                text11                              22A      22A        6         0
-                text10                               B8       B8       2A         0
-                text9                               21C      21C        8         0
-                text8                               224      224        6         0
-                text7                               16F      16F       17         0
-                text6                               234      234        4         0
-                text5                               1A7      1A7       10         0
-                text4                                59       59       32         0
-                text3                               108      108       26         0
-                text2                               238      238        3         0
-                text1                               197      197       10         0
-                maintext                             E2       E2       26         0
-                clrtext                             1E1      1E1        C         0
-                idataBANK0                          230      230        4         0
+                text19                              1CF      1CF        1         0
+                text18                              183      183        F         0
+                text17                              1A7      1A7        9         0
+                text16                              143      143       11         0
+                text15                              174      174        F         0
+                text13                               89       89       2D         0
+                text12                              19E      19E        9         0
+                text11                              1BE      1BE        6         0
+                text10                               B6       B6       2A         0
+                text9                               1B0      1B0        8         0
+                text8                               1B8      1B8        6         0
+                text7                               12C      12C       17         0
+                text6                               1C8      1C8        4         0
+                text5                               164      164       10         0
+                text4                                57       57       32         0
+                text3                               106      106       26         0
+                text2                               1CC      1CC        3         0
+                text1                               154      154       10         0
+                maintext                             E0       E0       26         0
+                clrtext                             192      192        C         0
+                idataBANK0                          1C4      1C4        4         0
 
         CLASS   STRCODE        
-                stringtext6                         201      201        9         0
-                stringtext5                         1F7      1F7        A         0
-                stringtext4                         1ED      1ED        A         0
-                stringtext3                         1D5      1D5        C         0
-                stringtext2                         151      151       1E         0
-                stringtext1                         12E      12E       23         0
 
         CLASS   STRING         
 
@@ -129,13 +118,14 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   COMMON         
                 cstackCOMMON                         70       70        7         1
-                bssCOMMON                            77       77        5         1
+                bssCOMMON                            77       77        3         1
+                nvCOMMON                             7A       7A        2         1
 
         CLASS   BANK0          
                 cstackBANK0                          38       38        2         1
                 dataBANK0                            34       34        4         1
-                bssBANK0                             20       20        E         1
-                nvBANK0                              2E       2E        6         1
+                bssBANK0                             20       20       10         1
+                nvBANK0                              30       30        4         1
 
         CLASS   BANK1          
 
@@ -167,15 +157,12 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   ABS1           
                 abs_s1                               7E       7E        2         1
-                abs_s1                              36E      36E        2         1
-                abs_s1                              3A0      3A0       50         1
-                abs_s1                              420      420       50         1
+                abs_s1                              450      450       20         1
                 abs_s1                              4A0      4A0       50         1
                 abs_s1                              520      520       50         1
                 abs_s1                              5A0      5A0       50         1
                 abs_s1                              620      620       30         1
-                abs_s1                             222E     222E        0         1
-                abs_s1                             236E     236E        0         1
+                abs_s1                             22B0     22B0        0         1
 
         CLASS   SFR0           
 
@@ -291,15 +278,9 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  00012A  00012E         8       0  CODE        2
+                intentry                       000004  0001CC  0001D0         8       0  CODE        2
                 bssBANK0                       000020  00001A  00003A        20       1  BANK0       1
                 cstackCOMMON                   000070  00000C  00007C        70       1  COMMON      1
-                stringtext1                    00012E  000041  00016F       25C       0  STRCODE     2
-                text7                          00016F  000066  0001D5       2DE       0  CODE        2
-                stringtext3                    0001D5  00000C  0001E1       3AA       0  STRCODE     2
-                clrtext                        0001E1  00000C  0001ED       3C2       0  CODE        2
-                stringtext4                    0001ED  00001D  00020A       3DA       0  STRCODE     2
-                text12                         00020A  000032  00023C       414       0  CODE        2
                 config                         008007  000004  00800B     1000E       0  CONFIG      2
 
 
@@ -312,16 +293,18 @@ UNUSED ADDRESS RANGES
         BANK3            001A0-001EF              50           1
         BANK4            00220-0026F              50           1
         BANK5            002A0-002EF              50           1
-        BANK6            00320-0036D              4E           1
+        BANK6            00320-0036F              50           1
+        BANK7            003A0-003EF              50           1
+        BANK8            00420-0044F              30           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
-                         0023C-01FFF             800
+                         001D0-01FFF             800
         COMMON           0007C-0007D               2           1
         CONST            00002-00003               2           2
-                         0023C-01FFF             100
+                         001D0-01FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00002-00003               2           2
-                         0023C-01FFF             100
+                         001D0-01FFF             100
         IDLOC            08000-08003               4           2
         RAM              0003A-0006F              36           1
                          000A0-000EF              50
@@ -329,7 +312,9 @@ UNUSED ADDRESS RANGES
                          001A0-001EF              50
                          00220-0026F              50
                          002A0-002EF              50
-                         00320-0036D              4E
+                         00320-0036F              50
+                         003A0-003EF              50
+                         00420-0044F              30
         SFR0             00000-0001F              20           1
         SFR1             00080-0009F              20           1
         SFR10            00500-0051F              20           1
@@ -362,16 +347,16 @@ UNUSED ADDRESS RANGES
         SFR7             00380-0039F              20           1
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
-        STACK            0201A-0222D             214           1
+        STACK            0201A-022AF             296           1
         STRCODE          00002-00003               2           2
-                         0023C-01FFF            1DC4
+                         001D0-01FFF            1E30
         STRING           00002-00003               2           2
-                         0023C-01FFF             100
+                         001D0-01FFF             100
 
                                   Symbol Table
 
 IOCCF0_SetInterruptHandler@InterruptHandler cstackCOMMON 00072
-InitWigwagPattern@F6407                     dataBANK0    00034
+InitWigwagPattern@F101                      dataBANK0    00034
 PatternCycleInputChanged@delay_count        cstackCOMMON 00074
 SetLight@light                              cstackCOMMON 00075
 SetLight@state                              cstackCOMMON 00072
@@ -384,10 +369,10 @@ _INLVLA                                     (abs)        0038C
 _INLVLC                                     (abs)        0038E
 _INTCONbits                                 (abs)        0000B
 _INTERRUPT_InterruptManager                 intentry     00004
-_IOCCF0_DefaultInterruptHandler             text19       0023B
-_IOCCF0_ISR                                 text18       001C6
+_IOCCF0_DefaultInterruptHandler             text19       001CF
+_IOCCF0_ISR                                 text18       00183
 _IOCCF0_InterruptHandler                    nvBANK0      00032
-_IOCCF0_SetInterruptHandler                 text11       0022A
+_IOCCF0_SetInterruptHandler                 text11       001BE
 _IOCCFbits                                  (abs)        00399
 _IOCCNbits                                  (abs)        00398
 _IOCCPbits                                  (abs)        00397
@@ -400,12 +385,12 @@ _OSCCON1                                    (abs)        00919
 _OSCCON3                                    (abs)        0091B
 _OSCEN                                      (abs)        0091D
 _OSCFRQ                                     (abs)        0091F
-_OSCILLATOR_Initialize                      text12       0020A
+_OSCILLATOR_Initialize                      text12       0019E
 _OSCTUNE                                    (abs)        0091E
 _PIE0bits                                   (abs)        00090
 _PIE1bits                                   (abs)        00091
-_PIN_MANAGER_IOC                            text17       00213
-_PIN_MANAGER_Initialize                     text10       000B8
+_PIN_MANAGER_IOC                            text17       001A7
+_PIN_MANAGER_Initialize                     text10       000B6
 _PIR0bits                                   (abs)        00010
 _PIR1bits                                   (abs)        00011
 _PMD0                                       (abs)        00911
@@ -414,14 +399,14 @@ _PMD2                                       (abs)        00913
 _PMD3                                       (abs)        00914
 _PMD4                                       (abs)        00915
 _PMD5                                       (abs)        00916
-_PMD_Initialize                             text9        0021C
+_PMD_Initialize                             text9        001B0
 _PORTCbits                                  (abs)        0000E
-_PatternCycleInputChanged                   text13       0008B
+_PatternCycleInputChanged                   text13       00089
 _SLRCONA                                    (abs)        0030C
 _SLRCONC                                    (abs)        0030E
-_SYSTEM_Initialize                          text5        001A7
-_SetLight                                   text4        00059
-_SetOutputs                                 text3        00108
+_SYSTEM_Initialize                          text5        00164
+_SetLight                                   text4        00057
+_SetOutputs                                 text3        00106
 _T1CON                                      (abs)        0001B
 _T1CONbits                                  (abs)        0001B
 _T1GCON                                     (abs)        0001C
@@ -429,16 +414,16 @@ _T1GCONbits                                 (abs)        0001C
 _TMR1H                                      (abs)        0001A
 _TMR1L                                      (abs)        00019
 _TMR1_DefaultInterruptHandler               (abs)        00000
-_TMR1_ISR                                   text15       001B7
-_TMR1_Initialize                            text7        0016F
-_TMR1_InterruptHandler                      nvBANK0      0002E
-_TMR1_SetInterruptHandler                   text8        00224
-_TMR1_StartTimer                            text2        00238
-_TMR1_WriteTimer                            text16       00186
+_TMR1_ISR                                   text15       00174
+_TMR1_Initialize                            text7        0012C
+_TMR1_InterruptHandler                      nvBANK0      00030
+_TMR1_SetInterruptHandler                   text8        001B8
+_TMR1_StartTimer                            text2        001CC
+_TMR1_WriteTimer                            text16       00143
 _TRISA                                      (abs)        0008C
 _TRISC                                      (abs)        0008E
 _WDTCON                                     (abs)        00097
-_WDT_Initialize                             text6        00234
+_WDT_Initialize                             text6        001C8
 _WPUA                                       (abs)        0020C
 _WPUC                                       (abs)        0020E
 __CFG_BOREN$ON                              (abs)        00000
@@ -495,7 +480,7 @@ __Hbank9                                    bank9        00000
 __Hbigram                                   bigram       00000
 __HbssBANK0                                 bssBANK0     00000
 __HbssCOMMON                                bssCOMMON    00000
-__Hcinit                                    cinit        00059
+__Hcinit                                    cinit        00057
 __Hclrtext                                  clrtext      00000
 __Hcode                                     code         00000
 __Hcommon                                   common       00000
@@ -512,6 +497,7 @@ __Hinit                                     init         00028
 __Hintentry                                 intentry     00028
 __Hmaintext                                 maintext     00000
 __HnvBANK0                                  nvBANK0      00000
+__HnvCOMMON                                 nvCOMMON     00000
 __Hpowerup                                  powerup      00000
 __Hram                                      ram          00000
 __Hreset_vec                                reset_vec    00002
@@ -553,13 +539,6 @@ __Hspace_2                                  (abs)        00000
 __Hspace_3                                  (abs)        00000
 __Hstack                                    stack        00000
 __Hstrings                                  strings      00000
-__Hstringtext1                              stringtext1  00000
-__Hstringtext2                              stringtext2  00000
-__Hstringtext3                              stringtext3  00000
-__Hstringtext4                              stringtext4  00000
-__Hstringtext5                              stringtext5  00000
-__Hstringtext6                              stringtext6  00000
-__Hstringtext7                              stringtext7  00000
 __Htext                                     text         00000
 __Labs1                                     abs1         00000
 __Lbank0                                    bank0        00000
@@ -614,6 +593,7 @@ __Linit                                     init         00028
 __Lintentry                                 intentry     00004
 __Lmaintext                                 maintext     00000
 __LnvBANK0                                  nvBANK0      00000
+__LnvCOMMON                                 nvCOMMON     00000
 __Lpowerup                                  powerup      00000
 __Lram                                      ram          00000
 __Lreset_vec                                reset_vec    00000
@@ -655,13 +635,6 @@ __Lspace_2                                  (abs)        00000
 __Lspace_3                                  (abs)        00000
 __Lstack                                    stack        00000
 __Lstrings                                  strings      00000
-__Lstringtext1                              stringtext1  00000
-__Lstringtext2                              stringtext2  00000
-__Lstringtext3                              stringtext3  00000
-__Lstringtext4                              stringtext4  00000
-__Lstringtext5                              stringtext5  00000
-__Lstringtext6                              stringtext6  00000
-__Lstringtext7                              stringtext7  00000
 __Ltext                                     text         00000
 __S0                                        (abs)        0800B
 __S1                                        (abs)        0007C
@@ -670,65 +643,59 @@ __S3                                        (abs)        00000
 ___int_sp                                   stack        00000
 ___latbits                                  (abs)        00002
 ___sp                                       stack        00000
-___stackhi                                  (abs)        0222D
+___stackhi                                  (abs)        022AF
 ___stacklo                                  (abs)        0201A
 __end_of_INTERRUPT_InterruptManager         intentry     00028
-__end_of_IOCCF0_DefaultInterruptHandler     text19       0023C
-__end_of_IOCCF0_ISR                         text18       001D5
-__end_of_IOCCF0_SetInterruptHandler         text11       00230
-__end_of_OSCILLATOR_Initialize              text12       00213
-__end_of_PIN_MANAGER_IOC                    text17       0021C
-__end_of_PIN_MANAGER_Initialize             text10       000E2
-__end_of_PMD_Initialize                     text9        00224
-__end_of_PatternCycleInputChanged           text13       000B8
-__end_of_SYSTEM_Initialize                  text5        001B7
-__end_of_SetLight                           text4        0008B
-__end_of_SetOutputs                         text3        0012E
-__end_of_TMR1_ISR                           text15       001C6
-__end_of_TMR1_Initialize                    text7        00186
-__end_of_TMR1_SetInterruptHandler           text8        0022A
-__end_of_TMR1_StartTimer                    text2        0023B
-__end_of_TMR1_WriteTimer                    text16       00197
-__end_of_WDT_Initialize                     text6        00238
-__end_of__initialization                    cinit        00055
-__end_of_main                               maintext     00108
-__end_of_setup                              text1        001A7
+__end_of_IOCCF0_DefaultInterruptHandler     text19       001D0
+__end_of_IOCCF0_ISR                         text18       00192
+__end_of_IOCCF0_SetInterruptHandler         text11       001C4
+__end_of_OSCILLATOR_Initialize              text12       001A7
+__end_of_PIN_MANAGER_IOC                    text17       001B0
+__end_of_PIN_MANAGER_Initialize             text10       000E0
+__end_of_PMD_Initialize                     text9        001B8
+__end_of_PatternCycleInputChanged           text13       000B6
+__end_of_SYSTEM_Initialize                  text5        00174
+__end_of_SetLight                           text4        00089
+__end_of_SetOutputs                         text3        0012C
+__end_of_TMR1_ISR                           text15       00183
+__end_of_TMR1_Initialize                    text7        00143
+__end_of_TMR1_SetInterruptHandler           text8        001BE
+__end_of_TMR1_StartTimer                    text2        001CF
+__end_of_TMR1_WriteTimer                    text16       00154
+__end_of_WDT_Initialize                     text6        001CC
+__end_of__initialization                    cinit        00053
+__end_of_main                               maintext     00106
+__end_of_setup                              text1        00164
 __initialization                            cinit        0002A
 __pbssBANK0                                 bssBANK0     00020
-__pbssBIGRAM                                (abs)        0222E
+__pbssBIGRAM                                (abs)        022B0
 __pbssCOMMON                                bssCOMMON    00077
 __pcstackBANK0                              cstackBANK0  00038
 __pcstackCOMMON                             cstackCOMMON 00070
 __pdataBANK0                                dataBANK0    00034
-__pidataBANK0                               idataBANK0   00230
+__pidataBANK0                               idataBANK0   001C4
 __pintentry                                 intentry     00004
-__pmaintext                                 maintext     000E2
-__pnvBANK0                                  nvBANK0      0002E
-__pstringtext1                              stringtext1  0012E
-__pstringtext2                              stringtext2  00151
-__pstringtext3                              stringtext3  001D5
-__pstringtext4                              stringtext4  001ED
-__pstringtext5                              stringtext5  001F7
-__pstringtext6                              stringtext6  00201
-__pstringtext7                              stringtext7  00000
-__ptext1                                    text1        00197
-__ptext10                                   text10       000B8
-__ptext11                                   text11       0022A
-__ptext12                                   text12       0020A
-__ptext13                                   text13       0008B
-__ptext15                                   text15       001B7
-__ptext16                                   text16       00186
-__ptext17                                   text17       00213
-__ptext18                                   text18       001C6
-__ptext19                                   text19       0023B
-__ptext2                                    text2        00238
-__ptext3                                    text3        00108
-__ptext4                                    text4        00059
-__ptext5                                    text5        001A7
-__ptext6                                    text6        00234
-__ptext7                                    text7        0016F
-__ptext8                                    text8        00224
-__ptext9                                    text9        0021C
+__pmaintext                                 maintext     000E0
+__pnvBANK0                                  nvBANK0      00030
+__pnvCOMMON                                 nvCOMMON     0007A
+__ptext1                                    text1        00154
+__ptext10                                   text10       000B6
+__ptext11                                   text11       001BE
+__ptext12                                   text12       0019E
+__ptext13                                   text13       00089
+__ptext15                                   text15       00174
+__ptext16                                   text16       00143
+__ptext17                                   text17       001A7
+__ptext18                                   text18       00183
+__ptext19                                   text19       001CF
+__ptext2                                    text2        001CC
+__ptext3                                    text3        00106
+__ptext4                                    text4        00057
+__ptext5                                    text5        00164
+__ptext6                                    text6        001C8
+__ptext7                                    text7        0012C
+__ptext8                                    text8        001B8
+__ptext9                                    text9        001B0
 __size_of_INTERRUPT_InterruptManager        (abs)        00000
 __size_of_IOCCF0_DefaultInterruptHandler    (abs)        00000
 __size_of_IOCCF0_ISR                        (abs)        00000
@@ -749,22 +716,18 @@ __size_of_TMR1_WriteTimer                   (abs)        00000
 __size_of_WDT_Initialize                    (abs)        00000
 __size_of_main                              (abs)        00000
 __size_of_setup                             (abs)        00000
-_builtin                                    (abs)        0236E
-_call                                       (abs)        00000
-_cur_ms                                     bssBANK0     0002A
-_cur_pc_input_state                         bssCOMMON    0007A
-_head                                       bssBANK0     00022
-_last_pc_input_state                        bssCOMMON    00079
-_main                                       maintext     000E2
-_setup                                      text1        00197
-_slot                                       bssBANK0     00020
-_stage_list_iter                            bssCOMMON    00077
-_stage_stash                                (abs)        0222E
-_timer1ReloadVal                            nvBANK0      00030
-_ts_trigger                                 bssCOMMON    0007B
+_cur_ms                                     bssBANK0     0002C
+_cur_pc_input_state                         bssCOMMON    00078
+_last_pc_input_state                        bssCOMMON    00077
+_main                                       maintext     000E0
+_setup                                      text1        00154
+_stage_list_iter                            bssBANK0     00026
+_stage_stash                                (abs)        022B0
+_timer1ReloadVal                            nvCOMMON     0007A
+_ts_trigger                                 bssCOMMON    00079
 btemp                                       (abs)        0007E
-clear_ram0                                  clrtext      001E1
-end_of_initialization                       cinit        00055
+clear_ram0                                  clrtext      00192
+end_of_initialization                       cinit        00053
 int$flags                                   (abs)        0007E
 intlevel0                                   functab      00000
 intlevel1                                   functab      00000
@@ -909,10 +872,10 @@ Total ram usage:        2 bytes
  Defined at:
 		line 12 in file "Lights.c"
  Parameters:    Size  Location     Type
-  light           1    wreg     const enum E6333
+  light           1    wreg     const enum E39
   state           1    2[COMMON] const _Bool 
  Auto vars:     Size  Location     Type
-  light           1    5[COMMON] const enum E6333
+  light           1    5[COMMON] const enum E39
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -1400,8 +1363,8 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 Lights.c
-		_SetOutputs    		CODE           	0108	0000	39
-		_SetLight      		CODE           	0059	0000	51
+		_SetOutputs    		CODE           	0106	0000	39
+		_SetLight      		CODE           	0057	0000	51
 
 Lights.c estimated size: 90
 
@@ -1411,44 +1374,44 @@ mcc_generated_files/interrupt_manager.c
 mcc_generated_files/interrupt_manager.c estimated size: 37
 
 mcc_generated_files/pin_manager.c
-		_IOCCF0_DefaultInterruptHandler		CODE           	023B	0000	2
-		_PIN_MANAGER_Initialize		CODE           	00B8	0000	43
-		_IOCCF0_ISR    		CODE           	01C6	0000	16
-		_IOCCF0_SetInterruptHandler		CODE           	022A	0000	7
-		_PIN_MANAGER_IOC		CODE           	0213	0000	10
+		_IOCCF0_DefaultInterruptHandler		CODE           	01CF	0000	2
+		_PIN_MANAGER_Initialize		CODE           	00B6	0000	43
+		_IOCCF0_ISR    		CODE           	0183	0000	16
+		_IOCCF0_SetInterruptHandler		CODE           	01BE	0000	7
+		_PIN_MANAGER_IOC		CODE           	01A7	0000	10
 
 mcc_generated_files/pin_manager.c estimated size: 78
 
 shared
-		__initialization		CODE           	002A	0000	44
+		__initialization		CODE           	002A	0000	42
 
-shared estimated size: 44
+shared estimated size: 42
 
 mcc_generated_files/mcc.c
-		_WDT_Initialize		CODE           	0234	0000	5
-		_PMD_Initialize		CODE           	021C	0000	9
-		_OSCILLATOR_Initialize		CODE           	020A	0000	10
-		_SYSTEM_Initialize		CODE           	01A7	0000	17
+		_WDT_Initialize		CODE           	01C8	0000	5
+		_PMD_Initialize		CODE           	01B0	0000	9
+		_OSCILLATOR_Initialize		CODE           	019E	0000	10
+		_SYSTEM_Initialize		CODE           	0164	0000	17
 
 mcc_generated_files/mcc.c estimated size: 41
 
 mcc_generated_files/tmr1.c
-		_TMR1_Initialize		CODE           	016F	0000	24
-		_TMR1_SetInterruptHandler		CODE           	0224	0000	7
-		_TMR1_WriteTimer		CODE           	0186	0000	18
-		_TMR1_StartTimer		CODE           	0238	0000	4
-		_TMR1_ISR      		CODE           	01B7	0000	16
+		_TMR1_Initialize		CODE           	012C	0000	24
+		_TMR1_SetInterruptHandler		CODE           	01B8	0000	7
+		_TMR1_WriteTimer		CODE           	0143	0000	18
+		_TMR1_StartTimer		CODE           	01CC	0000	4
+		_TMR1_ISR      		CODE           	0174	0000	16
 
 mcc_generated_files/tmr1.c estimated size: 69
 
 main.c
-		_main          		CODE           	00E2	0000	39
-		_setup         		CODE           	0197	0000	17
+		_main          		CODE           	00E0	0000	39
+		_setup         		CODE           	0154	0000	17
 
 main.c estimated size: 56
 
 PatternSelector.c
-		_PatternCycleInputChanged		CODE           	008B	0000	46
+		_PatternCycleInputChanged		CODE           	0089	0000	46
 
 PatternSelector.c estimated size: 46
 

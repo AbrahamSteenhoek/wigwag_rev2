@@ -28,18 +28,37 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef TIME_H
-#define	TIME_H
+#ifndef TYPES_H
+#define	TYPES_H
 
-#include "Types.h"
+#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
 
-#include <xc.h> // include processor files - each processor file is guarded.  
+typedef uint16_t uint;
+typedef bool state;
 
-uint temp_ms = 0;
+enum Light{ L1=0, L2=1, L3=2, L4=3, ERROR=0 };
 
-uint cur_ms = 0;
-uint cur_hsec = 0;
-uint cur_sec = 0;
+#define DEFAULT_INTERVAL    80
+
+#define ON      true
+#define OFF     false
+
+#define HIGH    1
+#define LOW     0
+
+#define INPUT   1
+#define OUTPUT  0
+
+#define HIGH    1
+#define LOW     0
+
+#define ANALOG      1
+#define DIGITAL     0
+
+#define PULL_UP_ENABLED      1
+#define PULL_UP_DISABLED     0
 
 // Comment a function and leverage automatic documentation with slash star star
 /**
@@ -76,5 +95,5 @@ extern "C" {
 }
 #endif /* __cplusplus */
 
-#endif	/* XC_HEADER_TEMPLATE_H */
+#endif
 

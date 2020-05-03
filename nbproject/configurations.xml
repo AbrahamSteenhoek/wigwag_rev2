@@ -18,6 +18,7 @@
       <itemPath>TurnSignal.h</itemPath>
       <itemPath>Time.h</itemPath>
       <itemPath>Pattern.h</itemPath>
+      <itemPath>Types.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

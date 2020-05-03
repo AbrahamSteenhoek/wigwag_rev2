@@ -32,18 +32,11 @@
 #define	XC_HEADER_TEMPLATE_H
 
 #include "mcc_generated_files/pin_manager.h"
-
-#include <xc.h> // include processor files - each processor file is guarded.  
+#include "Types.h"
+//#include <xc.h> // include processor files - each processor file is guarded.  
 
 // setters for L
 #define SET( pin, state )       do { pin = state; } while(0)
-
-#define ON      true
-#define OFF     false
-
-typedef bool state;
-
-enum Light{ L1=1, L2=2, L3=3, L4=4, ERROR=0 };
 
 void SetLight( const enum Light light, const bool state );
 void SetOutputs( const bool state );

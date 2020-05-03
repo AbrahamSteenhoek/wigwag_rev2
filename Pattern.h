@@ -31,9 +31,8 @@
 #ifndef PATTERN_H
 #define	PATTERN_H
 
-#include "assert.h"
-#include "Lights.h"
-#include "Time.h"
+#include "Types.h"
+
 
 enum { NUM_LIGHTS = 4 };
 enum { MAX_STAGES = 40 };
@@ -46,26 +45,26 @@ struct Stage {
 };
 
 struct Stage stage_stash[ MAX_STAGES ];
-uint stage_list_iter = 0;
+uint stage_list_iter;
 
 struct Pattern {
     enum PatternName name;
     struct Stage* stage_list; // points to the beginning of the stage list for this pattern
 };
 
-void AssignLightStates( struct Stage* stage, const bool states[4] );
-
-static struct Stage* NewStage();
-
-static struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms );
-
-static void InitStageList( struct Stage* head, struct Stage* first_stage );
-
-static void AppendStage( struct Stage* head, struct Stage* new_stage );
-
 struct Pattern Wigwag;
 
-static void InitWigwagPattern( struct Pattern* pattern );
+void AssignLightStates( struct Stage* stage, const bool states[4] );
+
+struct Stage* NewStage();
+
+struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms );
+
+void InitStageList( struct Stage* head, struct Stage* first_stage );
+
+void AppendStage( struct Stage* head, struct Stage* new_stage );
+
+void InitWigwagPattern( struct Pattern* pattern );
 
 // Comment a function and leverage automatic documentation with slash star star
 /**
