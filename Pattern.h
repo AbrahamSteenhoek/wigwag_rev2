@@ -49,7 +49,7 @@ uint stage_list_iter;
 
 struct Pattern {
     enum PatternName name;
-    struct Stage* stage_list; // points to the beginning of the stage list for this pattern
+    struct Stage* first_stage; // points to the beginning of the stage list for this pattern
 };
 
 struct Pattern Wigwag;
@@ -58,48 +58,13 @@ void AssignLightStates( struct Stage* stage, const bool states[4] );
 
 struct Stage* NewStage();
 
-struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms );
+struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms, struct Stage* next );
 
-void InitStageList( struct Stage* head, struct Stage* first_stage );
+void CopyStage( struct Stage* dest, struct Stage* source );
 
 void AppendStage( struct Stage* head, struct Stage* new_stage );
 
 void InitWigwagPattern( struct Pattern* pattern );
-
-// Comment a function and leverage automatic documentation with slash star star
-/**
-    <p><b>Function prototype:</b></p>
-  
-    <p><b>Summary:</b></p>
-
-    <p><b>Description:</b></p>
-
-    <p><b>Precondition:</b></p>
-
-    <p><b>Parameters:</b></p>
-
-    <p><b>Returns:</b></p>
-
-    <p><b>Example:</b></p>
-    <code>
- 
-    </code>
-
-    <p><b>Remarks:</b></p>
- */
-// TODO Insert declarations or function prototypes (right here) to leverage 
-// live documentation
-
-#ifdef	__cplusplus
-extern "C" {
-#endif /* __cplusplus */
-
-    // TODO If C++ is being used, regular C code needs function names to have C 
-    // linkage so the functions can be used by the c code. 
-
-#ifdef	__cplusplus
-}
-#endif /* __cplusplus */
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

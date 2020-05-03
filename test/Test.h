@@ -7,8 +7,13 @@
 
 int setupPatternTestSuite(void);
 
-void testPatternCreation( void );
 int initPatternTestSuite(void);
 int cleanPatternTestSuite(void);
+
+void testNewStageOverflow( void );
+void testStageInitialization( void );
+void testStageConstruction( void );
+void testCopyStage( void );
+void testAppendStage( void );
 
 #endif

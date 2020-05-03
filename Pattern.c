@@ -19,27 +19,32 @@ void AssignLightStates( struct Stage* stage, const bool states[ NUM_LIGHTS ] )
 
 struct Stage* NewStage() // returns the address of the next empty stage available in the stash
 {
+    if ( stage_list_iter >= MAX_STAGES )
+        return NULL;
+
     struct Stage* new_stage = &stage_stash[ stage_list_iter++ ];
     bool temp_states[NUM_LIGHTS] = { OFF, OFF, OFF, OFF };
     AssignLightStates( new_stage, temp_states );
     new_stage->time_ms = DEFAULT_INTERVAL;
-    
+
     return new_stage;
 }
 
-struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms )
+struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms, struct Stage* next )
 {
     struct Stage* new_stage = NewStage();
     AssignLightStates( new_stage, states );
     new_stage->time_ms = time_ms;
-    new_stage->next = NULL;
+    new_stage->next = next;
     return new_stage;
 }
 
-void InitStageList( struct Stage* head, struct Stage* first_stage )
+void CopyStage( struct Stage* dest, struct Stage* source )
 {
-    head = first_stage;
-    head->next = NULL;
+    for( int i = 0; i < NUM_LIGHTS; i++ )
+        dest->light_states[i] = source->light_states[i];
+    dest->time_ms = source->time_ms;
+    dest->next = source->next;
 }
 
 void AppendStage( struct Stage* head, struct Stage* new_stage )
@@ -64,19 +69,17 @@ void AppendStage( struct Stage* head, struct Stage* new_stage )
 void InitWigwagPattern( struct Pattern* pattern )
 {
     pattern->name = WIGWAG;
-    
+
     bool temp_states[NUM_LIGHTS] = { ON, OFF, ON, OFF };
-    struct Stage *stage1 = ConstructStage( temp_states, 100 );
-    InitStageList( pattern->stage_list, stage1 );
-    
+    struct Stage *stage1 = ConstructStage( temp_states, 100, NULL );
+    CopyStage( pattern->first_stage, stage1 );
+
     struct Stage *stage2 = NewStage();
     (void)stage2;
     (void)AppendStage(NULL, NULL);
     //stage1->light_states = { OFF, OFF, OFF, OFF };
-    
+
     for ( uint i = 0; i < 3 ; i++ )
     {
     }
-    
-    
 }
