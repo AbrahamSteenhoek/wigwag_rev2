@@ -5,6 +5,10 @@
 
 #include "Pattern.h"
 
+// testing helper functions
+void FlushStageStash( void );
+void CompareStage( const struct Stage* stage1, const struct Stage* stage2 );
+
 int setupPatternTestSuite(void);
 
 int initPatternTestSuite(void);

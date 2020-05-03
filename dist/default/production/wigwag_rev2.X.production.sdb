@@ -22,6 +22,10 @@ LOWER 3
 [e E45 . `uc
 NUM_LIGHTS 4
 ]
+"22
+[e E47 . `uc
+MAX_STAGES 40
+]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
@@ -77,12 +81,12 @@ NUM_LIGHTS 4
 [s S565 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S565 1 next 2 6 ]
 [v _NewStage NewStage `(*.39S565  1 e 1 0 ]
 "41 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
-"30 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
+"34 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
 [s S565 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S565 1 next 2 6 ]
 [v _ConstructStage ConstructStage `(*.39S565  1 e 1 0 ]
-"39
-[v _InitStageList InitStageList `(v  1 e 1 0 ]
-"45
+"43
+[v _CopyStage CopyStage `(v  1 e 1 0 ]
+"51
 [v _AppendStage AppendStage `(v  1 e 1 0 ]
 "10 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
 [v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]

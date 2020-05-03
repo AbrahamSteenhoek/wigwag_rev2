@@ -1,5 +1,22 @@
 #include "Test.h"
 
+void FlushStageStash( void )
+{
+    stage_list_iter = 0;
+    while( NewStage() != NULL )
+        ;
+    stage_list_iter = 0;
+}
+
+void CompareStage( const struct Stage* stage1, const struct Stage* stage2 )
+{
+    //CU_ASSERT_PTR_EQUAL( stage1, stage2 );
+    for( int i = 0; i < NUM_LIGHTS; i++ )
+        CU_ASSERT( stage1->light_states[i] == stage2->light_states[i] );
+    CU_ASSERT( stage1->time_ms == stage2->time_ms );
+    CU_ASSERT_PTR_EQUAL( stage1->next, stage2->next );
+}
+
 int setupPatternTestSuite(void) {
     CU_pSuite pSuite = NULL;
     pSuite = CU_add_suite("Pattern Test Suite", initPatternTestSuite, cleanPatternTestSuite);
@@ -68,7 +85,7 @@ void testStageConstruction( void )
 
 void testCopyStage( void )
 {
-    stage_list_iter = 0;
+    FlushStageStash();
     struct Stage* stage1 = NewStage();
     CU_ASSERT_PTR_NULL( stage1->next );
 
@@ -80,17 +97,20 @@ void testCopyStage( void )
     for( int i = 0; i < NUM_LIGHTS; i++ )
         CU_ASSERT( stage1->light_states[i] != stage2->light_states[i] );
     CU_ASSERT( stage1->time_ms != stage2->time_ms );
-    CU_ASSERT_PTR_NOT_EQUAL( stage1->next, stage2->next );
 
     CopyStage( stage1, stage2 );
-    for( int i = 0; i < NUM_LIGHTS; i++ )
-        CU_ASSERT( stage1->light_states[i] == stage2->light_states[i] );
-    CU_ASSERT( stage1->time_ms == stage2->time_ms );
-    CU_ASSERT_PTR_NOT_NULL( stage1->next );
-    CU_ASSERT_PTR_EQUAL( stage1->next, stage2->next );
+    CompareStage( stage1, stage2 );
 }
 
 void testAppendStage( void )
 {
-}
+    FlushStageStash();
+    struct Stage* head = NewStage();
+    CU_ASSERT_PTR_NULL( head->next );
 
+    bool temp_states[NUM_LIGHTS] = { ON, ON, ON, ON };
+    struct Stage *stage2 = ConstructStage( temp_states, 100, NULL );
+
+    AppendStage( head, stage2 );
+    CompareStage( head->next, stage2 );
+}

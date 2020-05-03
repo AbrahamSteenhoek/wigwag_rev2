@@ -23,9 +23,10 @@ struct Stage* NewStage() // returns the address of the next empty stage availabl
         return NULL;
 
     struct Stage* new_stage = &stage_stash[ stage_list_iter++ ];
-    bool temp_states[NUM_LIGHTS] = { OFF, OFF, OFF, OFF };
-    AssignLightStates( new_stage, temp_states );
+    bool init_states[NUM_LIGHTS] = { OFF, OFF, OFF, OFF };
+    AssignLightStates( new_stage, init_states );
     new_stage->time_ms = DEFAULT_INTERVAL;
+    new_stage->next = NULL;
 
     return new_stage;
 }
@@ -49,7 +50,7 @@ void CopyStage( struct Stage* dest, struct Stage* source )
 
 void AppendStage( struct Stage* head, struct Stage* new_stage )
 {
-    if ( head->next == 0  ) // if the list of stages is only the first stage (adding the first item to the list)
+    if ( head->next == NULL  ) // if the list of stages is only the first stage (adding the first item to the list)
     {
         head->next = new_stage;
         new_stage->next = head;
@@ -57,7 +58,7 @@ void AppendStage( struct Stage* head, struct Stage* new_stage )
     else // if the stage list has more than 1 stage
     {
         struct Stage* last_stage = head->next;
-        while( last_stage->next != 0 ) // iterate over to the last stage
+        while( last_stage->next != NULL ) // iterate over to the last stage
             last_stage = last_stage->next;
 
         // now last_stage points to the last stage in the list
