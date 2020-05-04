@@ -5,6 +5,7 @@
  * Created on May 1, 2020, 6:49 PM
  */
 
+#include <stdio.h>
 #include "Pattern.h"
 
 uint stage_list_iter = 0;
@@ -40,12 +41,19 @@ struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms,
     return new_stage;
 }
 
-void CopyStage( struct Stage* dest, struct Stage* source )
+struct Stage* CopyStage( struct Stage* dest, struct Stage* source )
+{
+    CopyStageData( dest, source );
+    dest->next = source->next;
+    return dest;
+}
+
+struct Stage* CopyStageData( struct Stage* dest, struct Stage* source )
 {
     for( int i = 0; i < NUM_LIGHTS; i++ )
         dest->light_states[i] = source->light_states[i];
-    dest->time_ms = source->time_ms;
-    dest->next = source->next;
+    dest->time_ms = source->time_ms;    
+    return dest;
 }
 
 void AppendStage( struct Stage* head, struct Stage* new_stage )
@@ -71,11 +79,31 @@ void InitWigwagPattern( struct Pattern* pattern )
 {
     pattern->name = WIGWAG;
 
-    bool temp_states[NUM_LIGHTS] = { ON, OFF, ON, OFF };
-    struct Stage *stage1 = ConstructStage( temp_states, 100, NULL );
-    CopyStage( pattern->first_stage, stage1 );
+    // Stage that turns on the Left Side
+    bool left_side_states[NUM_LIGHTS] = { ON, OFF, ON, OFF };
+    struct Stage* left_side_on = ConstructStage( left_side_states, DEFAULT_INTERVAL, NULL );
+    // Stage that turns on the Right Side
+    bool right_side_states[NUM_LIGHTS] = { OFF, ON, OFF, ON };
+    struct Stage* right_side_on = ConstructStage( right_side_states, DEFAULT_INTERVAL, NULL );
+    // Stage that turns off all lights
+    struct Stage* off = NewStage();    
 
-    struct Stage *stage2 = NewStage();
-    (void)stage2;
-    (void)AppendStage(NULL, NULL);
+    pattern->first_stage = NewStage();
+    struct Stage* head = pattern->first_stage;
+
+    // add 2 more repetitions of this
+    for( int i = 0; i < 3; i++ )
+    {
+        AppendStage( head, CopyStageData( NewStage(), left_side_on ) );
+        AppendStage( head, CopyStageData( NewStage(), off ) );
+    }
+
+    AppendStage( head, CopyStageData( NewStage(), off ) );
+    // now add 3 repetitions of flashing the right side
+    for( int i = 0; i < 3; i++ )
+    {
+        AppendStage( head, CopyStageData( NewStage(), right_side_on ) );
+        AppendStage( head, CopyStageData( NewStage(), off ) );
+    }
+
 }

@@ -14,7 +14,7 @@
 
 #include "Lights.h"
 #include "PatternSelector.h"
-//#include "Pattern.h"
+#include "Pattern.h"
 #include "Time.h"
 #include "TurnSignal.h"
 
@@ -38,6 +38,8 @@ void setup()
 
     // initialize pins to 0
     SetOutputs( LOW );
+    
+    InitWigwagPattern( Wigwag );
 }
 
 void main(void)

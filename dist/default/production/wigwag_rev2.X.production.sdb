@@ -12,18 +12,18 @@ L4 3
 ERROR 0
 ]
 "55 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
-[e E49 PatternName `uc
+[e E367 PatternName `uc
 WIGWAG 0
 XSTROBE 1
 UPPER_LOWER 2
 LOWER 3
 ]
-"14 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[e E45 . `uc
+"15 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
+[e E363 . `uc
 NUM_LIGHTS 4
 ]
-"22
-[e E47 . `uc
+"23
+[e E365 . `uc
 MAX_STAGES 40
 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
@@ -74,19 +74,21 @@ MAX_STAGES 40
 [v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
 "177
 [v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
-"12 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
+"13 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
 [v _AssignLightStates AssignLightStates `(v  1 e 1 0 ]
 "41 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
-"20 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
+"21 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
 [s S565 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S565 1 next 2 6 ]
 [v _NewStage NewStage `(*.39S565  1 e 1 0 ]
 "41 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
-"34 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
+"35 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
 [s S565 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S565 1 next 2 6 ]
 [v _ConstructStage ConstructStage `(*.39S565  1 e 1 0 ]
-"43
-[v _CopyStage CopyStage `(v  1 e 1 0 ]
-"51
+"41 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+"51 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
+[s S565 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S565 1 next 2 6 ]
+[v _CopyStageData CopyStageData `(*.39S565  1 e 1 0 ]
+"59
 [v _AppendStage AppendStage `(v  1 e 1 0 ]
 "10 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
 [v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]
@@ -295,7 +297,7 @@ MAX_STAGES 40
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
-"10 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
+"11 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
 [v _stage_list_iter stage_list_iter `us  1 e 2 0 ]
 "43 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 [v _main main `(v  1 e 1 0 ]

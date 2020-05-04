@@ -60,7 +60,9 @@ struct Stage* NewStage();
 
 struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms, struct Stage* next );
 
-void CopyStage( struct Stage* dest, struct Stage* source );
+struct Stage* CopyStage( struct Stage* dest, struct Stage* source );
+
+struct Stage* CopyStageData( struct Stage* dest, struct Stage* source );
 
 void AppendStage( struct Stage* head, struct Stage* new_stage );
 
