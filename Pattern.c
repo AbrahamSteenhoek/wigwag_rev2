@@ -78,9 +78,4 @@ void InitWigwagPattern( struct Pattern* pattern )
     struct Stage *stage2 = NewStage();
     (void)stage2;
     (void)AppendStage(NULL, NULL);
-    //stage1->light_states = { OFF, OFF, OFF, OFF };
-
-    for ( uint i = 0; i < 3 ; i++ )
-    {
-    }
 }

@@ -1,5 +1,20 @@
 #include "Test.h"
 
+int setupPatternTestSuite(void) {
+    CU_pSuite pSuite = NULL;
+    pSuite = CU_add_suite("Pattern Test Suite", initPatternTestSuite, cleanPatternTestSuite);
+    if (NULL == pSuite)
+        return -1;
+    CU_add_test( pSuite, "testNewStageOverflow()", testNewStageOverflow );
+    CU_add_test( pSuite, "testStageInitialization()", testStageInitialization );
+    CU_add_test( pSuite, "testStageConstruction()", testStageConstruction );
+    CU_add_test( pSuite, "testCopyStage()", testCopyStage );
+    CU_add_test( pSuite, "testAppendStage()", testAppendStage );
+    CU_add_test( pSuite, "testInitWigwagPattern()", testInitWigwagPattern );
+
+    return 0;
+}
+
 void FlushStageStash( void )
 {
     stage_list_iter = 0;
@@ -22,18 +37,13 @@ void StagesAreSame( const struct Stage* stage1, const struct Stage* stage2 )
     CompareStage( stage1, stage2 );
 }
 
-int setupPatternTestSuite(void) {
-    CU_pSuite pSuite = NULL;
-    pSuite = CU_add_suite("Pattern Test Suite", initPatternTestSuite, cleanPatternTestSuite);
-    if (NULL == pSuite)
-        return -1;
-    CU_add_test( pSuite, "testNewStageOverflow()", testNewStageOverflow );
-    CU_add_test( pSuite, "testStageInitialization()", testStageInitialization );
-    CU_add_test( pSuite, "testStageConstruction()", testStageConstruction );
-    CU_add_test( pSuite, "testCopyStage()", testCopyStage );
-    CU_add_test( pSuite, "testAppendStage()", testAppendStage );
+struct Stage* GetStage( struct Stage* head, uint num )
+{
+    struct Stage* get_stage = head;
+    for( int i = 1; i < num; i++ )
+        get_stage = get_stage->next;
 
-    return 0;
+    return get_stage;
 }
 
 int initPatternTestSuite(void)
@@ -129,4 +139,23 @@ void testAppendStage( void )
 
     StagesAreSame( head->next, stage2 );
     StagesAreSame( stage2->next, stage3);
+
+    struct Stage* stage4 = NewStage();
+    CopyStage( stage4, stage2 );
+    AppendStage( head, stage4 );
+    
+    CU_ASSERT_PTR_EQUAL( head->next, stage2 );
+    CU_ASSERT_PTR_EQUAL( stage2->next, stage3 );
+    CU_ASSERT_PTR_EQUAL( stage3->next, stage4 );
+    CU_ASSERT_PTR_EQUAL( stage4->next, head );
+
+    for( int i = 0; i < NUM_LIGHTS; i++ )
+        CU_ASSERT( stage4->light_states[i] == stage2->light_states[i] );
+    CU_ASSERT( stage4->time_ms == stage2->time_ms );
+
+    CU_ASSERT_PTR_EQUAL( stage3, GetStage( head, 2 ) );
+}
+
+void testInitWigwagPattern( void )
+{
 }
