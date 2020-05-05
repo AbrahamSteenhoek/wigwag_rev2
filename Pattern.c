@@ -75,6 +75,15 @@ void AppendStage( struct Stage* head, struct Stage* new_stage )
     }
 }
 
+struct Stage* GetStage( struct Stage* head, uint num )
+{
+    struct Stage* get_stage = head;
+    for( int i = 1; i < num; i++ )
+        get_stage = get_stage->next;
+
+    return get_stage;
+}
+
 void InitWigwagPattern( struct Pattern* pattern )
 {
     pattern->name = WIGWAG;

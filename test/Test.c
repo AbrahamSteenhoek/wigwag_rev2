@@ -44,15 +44,6 @@ void StagesAreSame( const struct Stage* stage1, const struct Stage* stage2 )
     CompareStage( stage1, stage2 );
 }
 
-struct Stage* GetStage( struct Stage* head, uint num )
-{
-    struct Stage* get_stage = head;
-    for( int i = 1; i < num; i++ )
-        get_stage = get_stage->next;
-
-    return get_stage;
-}
-
 int initPatternTestSuite(void)
 {
     return 0;

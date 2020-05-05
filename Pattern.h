@@ -66,6 +66,8 @@ struct Stage* CopyStageData( struct Stage* dest, struct Stage* source );
 
 void AppendStage( struct Stage* head, struct Stage* new_stage );
 
+struct Stage* GetStage( struct Stage* head, uint num );
+
 void InitWigwagPattern( struct Pattern* pattern );
 
 #endif	/* XC_HEADER_TEMPLATE_H */
