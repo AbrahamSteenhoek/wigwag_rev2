@@ -50,6 +50,7 @@ uint stage_list_iter;
 struct Pattern {
     enum PatternName name;
     struct Stage* first_stage; // points to the beginning of the stage list for this pattern
+    struct Stage* current_stage;
 };
 
 struct Pattern Wigwag;

@@ -43,27 +43,6 @@ bool last_pc_input_state = false;
 // Test for debounce to remove some noise
 const bool PatternCycleInputChanged();
 
-/**
-    <p><b>Function prototype:</b></p>
-  
-    <p><b>Summary:</b></p>
-
-    <p><b>Description:</b></p>
-
-    <p><b>Precondition:</b></p>
-
-    <p><b>Parameters:</b></p>
-
-    <p><b>Returns:</b></p>
-
-    <p><b>Example:</b></p>
-    <code>
- 
-    </code>
-
-    <p><b>Remarks:</b></p>
- */
-
 #ifdef	__cplusplus
 extern "C" {
 #endif /* __cplusplus */

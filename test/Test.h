@@ -10,7 +10,7 @@ void FlushStageStash( void );
 void CompareStage( const struct Stage* stage1, const struct Stage* stage2 );
 void CompareStageData( const struct Stage* stage1, const struct Stage* stage2 );
 void StagesAreSame( const struct Stage* stage1, const struct Stage* stage2 );
-struct Stage* GetStage( struct Stage* head, uint num );
+
 
 int setupPatternTestSuite(void);
 
