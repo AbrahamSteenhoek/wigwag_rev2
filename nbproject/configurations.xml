@@ -19,6 +19,7 @@
       <itemPath>Time.h</itemPath>
       <itemPath>Pattern.h</itemPath>
       <itemPath>Types.h</itemPath>
+      <itemPath>PatternFlasher.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

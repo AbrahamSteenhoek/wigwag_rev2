@@ -39,7 +39,7 @@ void setup()
     // initialize pins to 0
     SetOutputs( LOW );
     
-    InitWigwagPattern( Wigwag );
+    InitWigwagPattern( &Wigwag );
 }
 
 void main(void)
