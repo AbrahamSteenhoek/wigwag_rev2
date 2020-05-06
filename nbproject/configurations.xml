@@ -42,6 +42,7 @@
       <itemPath>Lights.c</itemPath>
       <itemPath>TurnSignal.c</itemPath>
       <itemPath>Pattern.c</itemPath>
+      <itemPath>PatternFlasher.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

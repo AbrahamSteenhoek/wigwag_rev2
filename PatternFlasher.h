@@ -31,12 +31,17 @@
 #ifndef PATTERNFLASHER_H
 #define	PATTERNFLASHER_H
 
-#include <xc.h> // include processor files - each processor file is guarded.  
+#include "Lights.h"
+#include "Pattern.h"
+#include "PatternSelector.h"
+#include "Types.h"
 
-void FlashPattern( const Pattern& pattern )
-{
+struct Stage* current_stage;
 
-}
+bool update_stage = false;
 
+uint start_time = 0;
+
+void FlashPattern( struct Pattern* pattern );
 
 #endif

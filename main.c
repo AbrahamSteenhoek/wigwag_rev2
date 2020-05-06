@@ -13,6 +13,7 @@
 #include "mcc_generated_files/mcc.h"
 
 #include "Lights.h"
+#include "PatternFlasher.h"
 #include "PatternSelector.h"
 #include "Pattern.h"
 #include "Time.h"
@@ -23,7 +24,6 @@
 
 void setup()
 {
-    //assert( 1 == 0 );
     // initialize the device
     SYSTEM_Initialize();
     // Enable the Global Interrupts
@@ -40,6 +40,7 @@ void setup()
     SetOutputs( LOW );
     
     InitWigwagPattern( &Wigwag );
+    current_stage = Wigwag.first_stage;
 }
 
 void main(void)
@@ -55,19 +56,21 @@ void main(void)
         // should trigger on button release
         if ( PatternCycleInputChanged() )
         {
-            // gone from released to pressed
-            if ( cur_pc_input_state == LOW )
-            {
-                SetOutputs( HIGH );
-            }
-            // if we have gone from PRESSED to RELEASED (using reverse logic)
-            else
-            {
-                SetOutputs( LOW );
-            }
+//            // gone from released to pressed
+//            if ( cur_pc_input_state == LOW )
+//            {
+//                SetOutputs( HIGH );
+//            }
+//            // if we have gone from PRESSED to RELEASED (using reverse logic)
+//            else
+//            {
+//                SetOutputs( LOW );
+//            }
         }
                 
         last_pc_input_state = cur_pc_input_state;
+        
+        FlashPattern( &Wigwag );
     }
     return;
 }

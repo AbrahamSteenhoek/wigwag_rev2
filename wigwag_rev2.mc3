@@ -9,12 +9,12 @@
          <string>class com.microchip.mcc.mcu8.systemManager.osc.Osc</string>
       </entry>
       <entry>
-         <string>PMD</string>
-         <string>class com.microchip.mcc.mcu8.systemManager.pmd.PMD</string>
-      </entry>
-      <entry>
          <string>WDT</string>
          <string>class com.microchip.mcc.mcu8.systemManager.wdt.WDT</string>
+      </entry>
+      <entry>
+         <string>PMD</string>
+         <string>class com.microchip.mcc.mcu8.systemManager.pmd.PMD</string>
       </entry>
       <entry>
          <string>Pin Module</string>
@@ -3636,16 +3636,16 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>bbf7d9cd5613459825e8ce42e886e521c84fce744c8314c528c8386895fd72a6</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\mcc.h</file>
          <hash>4cd391499a6c468e321c1a54db9197f02f9b49774099035bdcf6c1d70356db02</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\device_config.h</file>
          <hash>f07052df22e3e3e3f2023a1049a26e491d7c35482c4d4cedbba3cf876fdcd862</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>bbf7d9cd5613459825e8ce42e886e521c84fce744c8314c528c8386895fd72a6</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\tmr1.h</file>
@@ -3668,12 +3668,12 @@
          <hash>33ef66bc28cfa6fd945d65d1548d9e41c53eb91b2761a83eff73630e24402407</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\mcc.c</file>
-         <hash>c0f5ed9b212a5006c837ead54878e8f7cc76613b9aed597e3ed75e509d8a4453</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
          <hash>dbcf562f8b47d5837c9362a90a3a667d559e0ef17fad13033af7de3a4dc6853a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.c</file>
+         <hash>c0f5ed9b212a5006c837ead54878e8f7cc76613b9aed597e3ed75e509d8a4453</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>

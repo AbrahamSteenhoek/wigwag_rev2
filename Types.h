@@ -40,7 +40,7 @@ typedef bool state;
 
 enum Light{ L1=0, L2=1, L3=2, L4=3, ERROR=0 };
 
-#define DEFAULT_INTERVAL    80
+#define DEFAULT_INTERVAL    120
 
 #define ON      true
 #define OFF     false
