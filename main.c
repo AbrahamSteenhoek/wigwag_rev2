@@ -1,26 +1,14 @@
-/*
- * File:   main.c
- * Author: Abraham
- *
- * Created on April 22, 2020, 1:02 PM
- */
-
-
-/*
-                         Main application
- */
-
 #include "mcc_generated_files/mcc.h"
 
 #include "Lights.h"
+#include "PatternFlasher.h"
 #include "PatternSelector.h"
 #include "Pattern.h"
 #include "Time.h"
 #include "TurnSignal.h"
 
+#include "assert.h"
 #include <xc.h>
-
-
 
 void setup()
 {
@@ -38,6 +26,9 @@ void setup()
 
     // initialize pins to 0
     SetOutputs( LOW );
+    
+    InitWigwagPattern( &Wigwag );
+    current_stage = Wigwag.first_stage;
 }
 
 void main(void)
@@ -56,16 +47,24 @@ void main(void)
             // gone from released to pressed
             if ( cur_pc_input_state == LOW )
             {
-                SetOutputs( HIGH );
+//                SetOutputs( HIGH );
+//                SetLight(L1, HIGH);
+//                SetLight(L2, HIGH);
+//                L1_Toggle();
+//                L2_Toggle();
             }
             // if we have gone from PRESSED to RELEASED (using reverse logic)
             else
             {
-                SetOutputs( LOW );
+//                SetOutputs( LOW );
+//                SetLight(L1, LOW);
+//                SetLight(L2, LOW);
             }
         }
                 
         last_pc_input_state = cur_pc_input_state;
+        
+        FlashPattern( &Wigwag );
     }
     return;
 }

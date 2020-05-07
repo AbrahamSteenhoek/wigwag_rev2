@@ -28,20 +28,60 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef PATTERNSELECTOR_H
-#define	PATTERNSELECTOR_H
+#ifndef TYPES_H
+#define	TYPES_H
 
-#include "mcc_generated_files/mcc.h"
+#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
 
-#include <xc.h>
+typedef uint16_t uint;
+typedef bool state;
+
+enum Light{ L1=0, L2=1, L3=2, L4=3, ERROR=0 };
 
 
-bool cur_pc_input_state = false;
-bool last_pc_input_state = false;
+#define ON      true
+#define OFF     false
 
-// Test if the pattern_cycle input pin has changed state
-// Test for debounce to remove some noise
-const bool PatternCycleInputChanged();
+#define HIGH    1
+#define LOW     0
+
+#define INPUT   1
+#define OUTPUT  0
+
+#define HIGH    1
+#define LOW     0
+
+#define ANALOG      1
+#define DIGITAL     0
+
+#define PULL_UP_ENABLED      1
+#define PULL_UP_DISABLED     0
+
+// Comment a function and leverage automatic documentation with slash star star
+/**
+    <p><b>Function prototype:</b></p>
+  
+    <p><b>Summary:</b></p>
+
+    <p><b>Description:</b></p>
+
+    <p><b>Precondition:</b></p>
+
+    <p><b>Parameters:</b></p>
+
+    <p><b>Returns:</b></p>
+
+    <p><b>Example:</b></p>
+    <code>
+ 
+    </code>
+
+    <p><b>Remarks:</b></p>
+ */
+// TODO Insert declarations or function prototypes (right here) to leverage 
+// live documentation
 
 #ifdef	__cplusplus
 extern "C" {
@@ -54,5 +94,5 @@ extern "C" {
 }
 #endif /* __cplusplus */
 
-#endif	/* XC_HEADER_TEMPLATE_H */
+#endif
 

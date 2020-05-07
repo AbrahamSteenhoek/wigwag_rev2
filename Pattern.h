@@ -31,60 +31,45 @@
 #ifndef PATTERN_H
 #define	PATTERN_H
 
-#include "Lights.h"
-#include "Time.h"
+#include "Types.h"
 
-#include <xc.h> // include processor files - each processor file is guarded.  
+#define DEFAULT_INTERVAL    160UL
 
+enum { NUM_LIGHTS = 4 };
+enum { MAX_STAGES = 40 };
 enum PatternName{ WIGWAG, XSTROBE, UPPER_LOWER, LOWER };
 
-struct stage {
-    enum Light light_states[4];
-    uint time;
-    struct stage* next;
+struct Stage {
+    bool light_states[ NUM_LIGHTS ];
+    uint time_ms; // time in milliseconds
+    struct Stage* next;
 };
+
+struct Stage stage_stash[ MAX_STAGES ];
+uint stage_list_iter;
 
 struct Pattern {
     enum PatternName name;
-    struct stage* current_stage;
+    struct Stage* first_stage; // points to the beginning of the stage list for this pattern
 };
 
-void UpdatePattern();
+struct Pattern Wigwag;
 
-// Comment a function and leverage automatic documentation with slash star star
-/**
-    <p><b>Function prototype:</b></p>
-  
-    <p><b>Summary:</b></p>
+void AssignLightStates( struct Stage* stage, const bool states[4] );
 
-    <p><b>Description:</b></p>
+struct Stage* NewStage();
 
-    <p><b>Precondition:</b></p>
+struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms, struct Stage* next );
 
-    <p><b>Parameters:</b></p>
+struct Stage* CopyStage( struct Stage* dest, struct Stage* source );
 
-    <p><b>Returns:</b></p>
+struct Stage* CopyStageData( struct Stage* dest, struct Stage* source );
 
-    <p><b>Example:</b></p>
-    <code>
- 
-    </code>
+void AppendStage( struct Stage* head, struct Stage* new_stage );
 
-    <p><b>Remarks:</b></p>
- */
-// TODO Insert declarations or function prototypes (right here) to leverage 
-// live documentation
+struct Stage* GetStage( struct Stage* head, uint num );
 
-#ifdef	__cplusplus
-extern "C" {
-#endif /* __cplusplus */
-
-    // TODO If C++ is being used, regular C code needs function names to have C 
-    // linkage so the functions can be used by the c code. 
-
-#ifdef	__cplusplus
-}
-#endif /* __cplusplus */
+void InitWigwagPattern( struct Pattern* pattern );
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

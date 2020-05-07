@@ -4,14 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/mcc_generated_files/pin_manager.c</file>
-            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/PatternSelector.h</file>
-            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/TurnSignal.h</file>
+            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/Pattern.h</file>
             <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/Time.h</file>
-            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/Lights.c</file>
-            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/mcc_generated_files/mcc.h</file>
-            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/Lights.h</file>
-            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/TurnSignal.c</file>
-            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/main.c</file>
+            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/PatternFlasher.c</file>
+            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/Types.h</file>
+            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/Pattern.c</file>
+            <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/PatternFlasher.h</file>
             <file>file:/C:/Users/abrah/MPLABXProjects/wigwag_rev2.X/mcc_generated_files/pin_manager.h</file>
         </group>
     </open-files>

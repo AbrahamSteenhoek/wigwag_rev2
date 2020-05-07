@@ -32,11 +32,10 @@
 #define	TURNSIGNAL_H
 
 #include "Lights.h"
+#include "Types.h"
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
-#define HIGH    1
-#define LOW     0
 
 #define TS_WAIT = 1500;
 volatile bool ts_trigger = LOW;

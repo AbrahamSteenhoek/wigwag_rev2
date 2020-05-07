@@ -31,15 +31,15 @@
 #ifndef TIME_H
 #define	TIME_H
 
-#include <xc.h> // include processor files - each processor file is guarded.  
+#include "Types.h"
 
-typedef uint16_t uint;
+#include <xc.h> // include processor files - each processor file is guarded.  
 
 uint temp_ms = 0;
 
-uint cur_ms = 0;
-uint cur_hsec = 0;
-uint cur_sec = 0;
+volatile uint cur_ms = 0;
+volatile uint cur_hsec = 0;
+volatile uint cur_sec = 0;
 
 // Comment a function and leverage automatic documentation with slash star star
 /**
