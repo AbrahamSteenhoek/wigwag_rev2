@@ -33,11 +33,12 @@
 
 #include "Types.h"
 
-#define DEFAULT_INTERVAL    160UL
+#define DEFAULT_INTERVAL    80UL
 
 enum { NUM_LIGHTS = 4 };
 enum { MAX_STAGES = 96 };
-enum PatternName{ WIGWAG, XSTROBE, UPPER_LOWER, LOWER };
+enum { MAX_PATTERNS = MAX_STAGES/16 }; // each pattern uses at most 16 stages, so 6 patterns
+enum PatternName{ WIGWAG = 0, XSTROBE = 1, UPPER_LOWER = 2, LOWER = 3, LAST = LOWER }; // for now, at most 6 patterns. (96/16=6);
 
 struct Stage {
     bool light_states[ NUM_LIGHTS ];
@@ -45,15 +46,19 @@ struct Stage {
     struct Stage* next;
 };
 
-struct Stage stage_stash[ MAX_STAGES ];
-uint stage_list_iter;
 
 struct Pattern {
     enum PatternName name;
     struct Stage* first_stage; // points to the beginning of the stage list for this pattern
 };
 
-struct Pattern Wigwag;
+struct Stage stage_stash[ MAX_STAGES ];
+uint stage_list_iter;
+
+struct Pattern pattern_stash[ MAX_PATTERNS ];
+uint pattern_list_iter;
+
+struct Pattern* NewPattern();
 
 void AssignLightStates( struct Stage* stage, const bool states[4] );
 
@@ -61,14 +66,16 @@ struct Stage* NewStage();
 
 struct Stage* ConstructStage( const bool states[NUM_LIGHTS], const uint time_ms, struct Stage* next );
 
-struct Stage* CopyStage( struct Stage* dest, struct Stage* source );
-
 struct Stage* CopyStageData( struct Stage* dest, struct Stage* source );
 
 void AppendStage( struct Stage* head, struct Stage* new_stage );
 
-struct Stage* GetStage( struct Stage* head, uint num );
-
 void InitWigwagPattern( struct Pattern* pattern );
+
+void InitXStrobePattern( struct Pattern* pattern );
+
+void InitUpperLowerPattern( struct Pattern* pattern );
+
+void InitLowerPattern( struct Pattern* pattern );
 
 #endif

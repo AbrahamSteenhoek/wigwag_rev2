@@ -7,24 +7,44 @@
 
 #include "PatternSelector.h"
 
-const bool PatternCycleInputChanged()
+#include <stdio.h>
+
+void InitPatternSelector( struct PatternSelector* p_selector )
 {
-    if ( cur_pc_input_state != last_pc_input_state )
+    // Initialize all patterns as blank
+    for ( int i = 0; i < MAX_PATTERNS; i++ )
     {
-        uint delay_count = 0;
-        
-        while ( delay_count++ < 3 ) // must get n consecutive readings in a row
-        {
-            __delay_ms(10);
-            // otherwise we ditch the reading
-            if( pattern_cycle_GetValue() != cur_pc_input_state )
-            {
-                return false;
-            }
-        }
+        p_selector->patterns[i] = NewPattern();
     }
-    else
-        return false;
+    p_selector->active = WIGWAG;
     
-    return true;
+    InitWigwagPattern( p_selector->patterns[WIGWAG] );
+    InitXStrobePattern( p_selector->patterns[XSTROBE] );
+    InitUpperLowerPattern( p_selector->patterns[UPPER_LOWER] );
+    InitLowerPattern( p_selector->patterns[LOWER] );
+    p_selector->current_stage = p_selector->patterns[ p_selector->active ]->first_stage;
+}
+
+struct Pattern* NextPattern( struct PatternSelector* p_selector )
+{
+    switch( p_selector->active )
+    {
+        case WIGWAG:
+            p_selector->active = XSTROBE;
+            break;
+        case XSTROBE:
+            p_selector->active = UPPER_LOWER;
+            break;
+        case UPPER_LOWER:
+            p_selector->active = LOWER;
+            break;
+        case LOWER:
+            p_selector->active = WIGWAG;
+            break;
+        default:
+            p_selector->active = WIGWAG;
+            break;
+    }
+    
+    return p_selector->patterns[ p_selector->active ];
 }
