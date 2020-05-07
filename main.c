@@ -27,9 +27,7 @@ void setup()
     // initialize pins to 0
     SetOutputs( LOW );
     
-//    InitPatternSelector();
-    InitWigwagPattern( &Wigwag );
-    current_stage = Wigwag.first_stage;
+    InitPatternSelector( &pattern_selector );
 }
 
 void main(void)
@@ -65,7 +63,7 @@ void main(void)
                 
         last_pc_input_state = cur_pc_input_state;
         
-        FlashPattern( &Wigwag );
+        FlashPattern( pattern_selector.patterns[0] );
     }
     return;
 }

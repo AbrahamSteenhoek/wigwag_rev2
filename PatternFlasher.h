@@ -6,7 +6,7 @@
 #include "PatternSelector.h"
 #include "Types.h"
 
-struct Stage* current_stage;
+//struct Stage* current_stage;
 
 bool update_stage = false;
 
