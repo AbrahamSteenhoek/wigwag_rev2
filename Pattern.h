@@ -33,6 +33,7 @@
 
 #include "Types.h"
 
+#define DEFAULT_INTERVAL    160UL
 
 enum { NUM_LIGHTS = 4 };
 enum { MAX_STAGES = 40 };

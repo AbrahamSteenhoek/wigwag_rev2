@@ -87,7 +87,7 @@ void TMR1_Initialize(void)
     TMR1_SetInterruptHandler(TMR1_DefaultInterruptHandler);
 
     // T1CKPS 1:1; T1SOSC T1CKI_enabled; T1SYNC synchronize; TMR1CS FOSC/4; TMR1ON enabled; 
-    T1CON = 0x01;
+//    T1CON = 0x01;
 }
 
 void TMR1_StartTimer(void)
@@ -161,12 +161,11 @@ void TMR1_ISR(void)
     PIR1bits.TMR1IF = 0;
     TMR1_WriteTimer(timer1ReloadVal);
 
-    cur_ms++;
-//    
-//    if(TMR1_InterruptHandler)
-//    {
-//        TMR1_InterruptHandler();
-//    }
+    
+    if(TMR1_InterruptHandler)
+    {
+        TMR1_InterruptHandler();
+    }
 }
 
 
@@ -175,6 +174,7 @@ void TMR1_SetInterruptHandler(void (* InterruptHandler)(void)){
 }
 
 void TMR1_DefaultInterruptHandler(void){
+    cur_ms++;
     // add your TMR1 interrupt custom code
     // or set custom function using TMR1_SetInterruptHandler()
 }

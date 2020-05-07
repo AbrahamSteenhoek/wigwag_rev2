@@ -37,9 +37,9 @@
 
 uint temp_ms = 0;
 
-uint cur_ms = 0;
-uint cur_hsec = 0;
-uint cur_sec = 0;
+volatile uint cur_ms = 0;
+volatile uint cur_hsec = 0;
+volatile uint cur_sec = 0;
 
 // Comment a function and leverage automatic documentation with slash star star
 /**
