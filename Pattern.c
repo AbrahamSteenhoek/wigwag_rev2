@@ -100,7 +100,7 @@ struct Stage* GetStage( struct Stage* head, uint num )
 
 void InitWigwagPattern( struct Pattern* pattern )
 {
-//    pattern = NewPattern();
+    // pattern = NewPattern();
     pattern->name = WIGWAG;
 
     // Stage that turns on the Left Side
