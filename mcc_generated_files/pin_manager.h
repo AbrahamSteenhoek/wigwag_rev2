@@ -47,9 +47,6 @@
 #ifndef PIN_MANAGER_H
 #define PIN_MANAGER_H
 
-/**
-  Section: Included Files
-*/
 #include <stdint.h>
 #include <stdbool.h>
 
@@ -58,6 +55,25 @@
 #include <xc.h>
 
 
+// get/set turn_signal aliases
+#define turn_signal_TRIS                 TRISCbits.TRISC0
+#define turn_signal_LAT                  LATCbits.LATC0
+#define turn_signal_PORT                 PORTCbits.RC0
+#define turn_signal_WPU                  WPUCbits.WPUC0
+#define turn_signal_OD                   ODCONCbits.ODCC0
+#define turn_signal_ANS                  ANSELCbits.ANSC0
+#define turn_signal_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define turn_signal_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define turn_signal_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define turn_signal_GetValue()           PORTCbits.RC0
+#define turn_signal_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define turn_signal_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define turn_signal_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
+#define turn_signal_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
+#define turn_signal_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
+#define turn_signal_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
+#define turn_signal_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
+#define turn_signal_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
 
 // get/set L1 aliases
 #define L1_TRIS                 TRISCbits.TRISC1
@@ -158,26 +174,6 @@
 #define pattern_cycle_SetOpenDrain()       do { ODCONCbits.ODCC5 = 1; } while(0)
 #define pattern_cycle_SetAnalogMode()      do { ANSELCbits.ANSC5 = 1; } while(0)
 #define pattern_cycle_SetDigitalMode()     do { ANSELCbits.ANSC5 = 0; } while(0)
-
-// get/set turn_signal aliases
-#define turn_signal_TRIS                 TRISCbits.TRISC0
-#define turn_signal_LAT                  LATCbits.LATC0
-#define turn_signal_PORT                 PORTCbits.RC0
-#define turn_signal_WPU                  WPUCbits.WPUC0
-#define turn_signal_OD                   ODCONCbits.ODCC0
-#define turn_signal_ANS                  ANSELCbits.ANSC0
-#define turn_signal_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
-#define turn_signal_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
-#define turn_signal_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
-#define turn_signal_GetValue()           PORTCbits.RC0
-#define turn_signal_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
-#define turn_signal_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
-#define turn_signal_SetPullup()          do { WPUCbits.WPUC0 = 1; } while(0)
-#define turn_signal_ResetPullup()        do { WPUCbits.WPUC0 = 0; } while(0)
-#define turn_signal_SetPushPull()        do { ODCONCbits.ODCC0 = 0; } while(0)
-#define turn_signal_SetOpenDrain()       do { ODCONCbits.ODCC0 = 1; } while(0)
-#define turn_signal_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
-#define turn_signal_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
 
 /**
    @Param
@@ -286,6 +282,8 @@ extern void (*IOCCF0_InterruptHandler)(void);
 
 */
 void IOCCF0_DefaultInterruptHandler(void);
+
+
 
 #endif // PIN_MANAGER_H
 /**

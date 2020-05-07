@@ -15,14 +15,22 @@ void SetLight( const enum Light light, const bool state )
     switch ( light )
     {
         case L1:
-            SET( L1_LAT, state );
+            if ( L1_GetValue() != state )
+                L1_Toggle();
+            break;
         case L2:
-            SET( L2_LAT, state );
+            if ( L2_GetValue() != state )
+                L2_Toggle();
+            break;
         case L3:
-            SET( L3_LAT, state );
+            if ( L3_GetValue() != state )
+                L3_Toggle();
+            break;
         case L4:
         default:
-            SET( L4_LAT, state );
+            if ( L4_GetValue() != state )
+                L4_Toggle();
+            break;
             break;
     }
 }
