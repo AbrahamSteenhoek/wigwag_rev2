@@ -33,10 +33,11 @@
 
 #include "Types.h"
 
-#define DEFAULT_INTERVAL    160UL
+#define DEFAULT_INTERVAL    80UL
 
 enum { NUM_LIGHTS = 4 };
 enum { MAX_STAGES = 96 };
+enum { MAX_PATTERNS = MAX_STAGES/16 }; // each pattern uses at most 16 stages
 enum PatternName{ WIGWAG, XSTROBE, UPPER_LOWER, LOWER };
 
 struct Stage {
@@ -45,15 +46,21 @@ struct Stage {
     struct Stage* next;
 };
 
-struct Stage stage_stash[ MAX_STAGES ];
-uint stage_list_iter;
 
 struct Pattern {
     enum PatternName name;
     struct Stage* first_stage; // points to the beginning of the stage list for this pattern
 };
 
+struct Stage stage_stash[ MAX_STAGES ];
+uint stage_list_iter;
+
+struct Pattern pattern_stash[ MAX_PATTERNS ];
+uint pattern_list_iter;
+
 struct Pattern Wigwag;
+
+struct Pattern* NewPattern();
 
 void AssignLightStates( struct Stage* stage, const bool states[4] );
 

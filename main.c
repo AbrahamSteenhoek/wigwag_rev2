@@ -27,6 +27,7 @@ void setup()
     // initialize pins to 0
     SetOutputs( LOW );
     
+//    InitPatternSelector();
     InitWigwagPattern( &Wigwag );
     current_stage = Wigwag.first_stage;
 }

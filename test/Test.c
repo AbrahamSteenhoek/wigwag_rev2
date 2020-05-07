@@ -10,7 +10,9 @@ int setupPatternTestSuite(void) {
     CU_add_test( pSuite, "testStageConstruction()", testStageConstruction );
     CU_add_test( pSuite, "testCopyStage()", testCopyStage );
     CU_add_test( pSuite, "testAppendStage()", testAppendStage );
+    CU_add_test( pSuite, "testNewPattern()", testNewPattern );
     CU_add_test( pSuite, "testInitWigwagPattern()", testInitWigwagPattern );
+    CU_add_test( pSuite, "testInitPatternSelector()", testInitPatternSelector );
 
     return 0;
 }
@@ -154,6 +156,15 @@ void testAppendStage( void )
     CU_ASSERT_PTR_EQUAL( stage3, GetStage( head, 3 ) );
 }
 
+void testNewPattern( void )
+{
+    FlushStageStash();
+    struct Pattern* wigwag = NewPattern();
+    CompareStageData( wigwag->first_stage, NewStage() );
+    CU_ASSERT( wigwag->name == WIGWAG );
+    CU_ASSERT_PTR_NULL( wigwag->first_stage->next );
+}
+
 void testInitWigwagPattern( void )
 {
     FlushStageStash();
@@ -228,4 +239,35 @@ void testInitWigwagPattern( void )
     current_stage = current_stage->next;
     CU_ASSERT_PTR_EQUAL( current_stage, wigwag.first_stage );
 
+}
+
+void testInitPatternSelector( void )
+{
+    FlushStageStash();
+    struct PatternSelector p;
+    InitPatternSelector( &p );
+
+    struct Pattern* wigwag = p.patterns[0];
+
+    bool left_side_states[NUM_LIGHTS] = { ON, OFF, ON, OFF };
+    struct Stage* left_side_on = ConstructStage( left_side_states, DEFAULT_INTERVAL, NULL );
+    bool right_side_states[NUM_LIGHTS] = { OFF, ON, OFF, ON };
+    struct Stage* right_side_on = ConstructStage( right_side_states, DEFAULT_INTERVAL, NULL );
+    struct Stage* off = NewStage();
+
+    CompareStageData( GetStage( wigwag->first_stage, 1  ), off );
+    CompareStageData( GetStage( wigwag->first_stage, 2  ), left_side_on );
+    CompareStageData( GetStage( wigwag->first_stage, 3  ), off );
+    CompareStageData( GetStage( wigwag->first_stage, 4  ), left_side_on );
+    CompareStageData( GetStage( wigwag->first_stage, 5  ), off );
+    CompareStageData( GetStage( wigwag->first_stage, 6  ), left_side_on );
+    CompareStageData( GetStage( wigwag->first_stage, 7  ), off );
+    CompareStageData( GetStage( wigwag->first_stage, 8  ), off );
+    CompareStageData( GetStage( wigwag->first_stage, 9  ), right_side_on );
+    CompareStageData( GetStage( wigwag->first_stage, 10 ), off );
+    CompareStageData( GetStage( wigwag->first_stage, 11 ), right_side_on );
+    CompareStageData( GetStage( wigwag->first_stage, 12 ), off );
+    CompareStageData( GetStage( wigwag->first_stage, 13 ), right_side_on );
+    CompareStageData( GetStage( wigwag->first_stage, 14 ), off );
+    CU_ASSERT_PTR_EQUAL( GetStage( wigwag->first_stage, 14 )->next, wigwag->first_stage );
 }

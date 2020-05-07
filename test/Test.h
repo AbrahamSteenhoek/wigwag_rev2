@@ -4,6 +4,7 @@
 #include <CUnit/Basic.h>
 
 #include "Pattern.h"
+#include "PatternSelector.h"
 
 // testing helper functions
 void FlushStageStash( void );
@@ -22,6 +23,8 @@ void testStageInitialization( void );
 void testStageConstruction( void );
 void testCopyStage( void );
 void testAppendStage( void );
+void testNewPattern( void );
 void testInitWigwagPattern( void );
+void testInitPatternSelector( void );
 
 #endif

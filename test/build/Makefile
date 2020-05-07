@@ -1,4 +1,4 @@
-CFILES =  ../../Pattern.c ../Test.c ../main.c
+CFILES =  ../../Pattern.c ../../PatternSelector.c ../Test.c ../main.c
 OBJFILES = $(CFILES:.c=.o)
 OUT = test
 

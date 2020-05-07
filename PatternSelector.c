@@ -7,24 +7,8 @@
 
 #include "PatternSelector.h"
 
-const bool PatternCycleInputChanged()
+void InitPatternSelector( struct PatternSelector* p_selector )
 {
-    if ( cur_pc_input_state != last_pc_input_state )
-    {
-        uint delay_count = 0;
-        
-        while ( delay_count++ < 3 ) // must get n consecutive readings in a row
-        {
-            __delay_ms(10);
-            // otherwise we ditch the reading
-            if( pattern_cycle_GetValue() != cur_pc_input_state )
-            {
-                return false;
-            }
-        }
-    }
-    else
-        return false;
-    
-    return true;
+    InitWigwagPattern( p_selector->patterns[0] );
+    p_selector->current_stage = p_selector->patterns[0]->first_stage;
 }

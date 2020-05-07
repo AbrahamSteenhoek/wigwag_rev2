@@ -12,6 +12,8 @@ void FlashPattern( struct Pattern* pattern )
 {
     uint current_time = cur_ms;
     
+//    struct Stage* current_stage= pattern->current_stage;
+    
     if ( current_time - start_time > current_stage->time_ms )
     {
         current_stage = current_stage->next;

@@ -31,16 +31,26 @@
 #ifndef TURNSIGNAL_H
 #define	TURNSIGNAL_H
 
+#include "mcc_generated_files/mcc.h"
+
 #include "Lights.h"
+#include "Time.h"
 #include "Types.h"
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
 
 #define TS_WAIT = 1500;
-volatile bool ts_trigger = LOW;
+volatile bool ts_trigger;
+
+bool cur_pc_input_state;
+bool last_pc_input_state;
 
 void TripTurnSignal();
+
+// Test if the pattern_cycle input pin has changed state
+// Test for debounce to remove some noise
+const bool PatternCycleInputChanged();
 
 // Comment a function and leverage automatic documentation with slash star star
 /**

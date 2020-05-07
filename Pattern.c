@@ -9,6 +9,20 @@
 #include "Pattern.h"
 
 uint stage_list_iter = 0;
+uint pattern_list_iter = 0;
+
+struct Pattern* NewPattern()
+{
+    if ( pattern_list_iter >= MAX_PATTERNS )
+    {
+        return NULL;
+    }
+    struct Pattern* new_pattern = &pattern_stash[ pattern_list_iter++ ];
+    new_pattern->name = WIGWAG;
+    new_pattern->first_stage = NewStage();
+    
+    return new_pattern;
+}
 
 void AssignLightStates( struct Stage* stage, const bool states[ NUM_LIGHTS ] )
 {
@@ -86,6 +100,7 @@ struct Stage* GetStage( struct Stage* head, uint num )
 
 void InitWigwagPattern( struct Pattern* pattern )
 {
+//    pattern = NewPattern();
     pattern->name = WIGWAG;
 
     // Stage that turns on the Left Side
@@ -100,19 +115,20 @@ void InitWigwagPattern( struct Pattern* pattern )
     pattern->first_stage = NewStage();
     struct Stage* head = pattern->first_stage;
 
-    // add 2 more repetitions of this
+    // add 3 flashes on the left side
     for( int i = 0; i < 3; i++ )
     {
         AppendStage( head, CopyStageData( NewStage(), left_side_on ) );
         AppendStage( head, CopyStageData( NewStage(), off ) );
     }
 
+    // add a rest before switching to the right side
     AppendStage( head, CopyStageData( NewStage(), off ) );
-    // now add 3 repetitions of flashing the right side
+
+    // now add 3 flashes on the right side
     for( int i = 0; i < 3; i++ )
     {
         AppendStage( head, CopyStageData( NewStage(), right_side_on ) );
         AppendStage( head, CopyStageData( NewStage(), off ) );
     }
-
 }
