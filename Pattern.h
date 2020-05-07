@@ -36,7 +36,7 @@
 #define DEFAULT_INTERVAL    160UL
 
 enum { NUM_LIGHTS = 4 };
-enum { MAX_STAGES = 40 };
+enum { MAX_STAGES = 96 };
 enum PatternName{ WIGWAG, XSTROBE, UPPER_LOWER, LOWER };
 
 struct Stage {
@@ -71,5 +71,4 @@ struct Stage* GetStage( struct Stage* head, uint num );
 
 void InitWigwagPattern( struct Pattern* pattern );
 
-#endif	/* XC_HEADER_TEMPLATE_H */
-
+#endif

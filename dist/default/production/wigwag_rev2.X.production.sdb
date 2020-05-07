@@ -31,7 +31,7 @@ NUM_LIGHTS 4
 ]
 "23
 [e E365 . `uc
-MAX_STAGES 40
+MAX_STAGES 96
 ]
 "56 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 [e E6350 PatternName `uc
@@ -128,7 +128,7 @@ ERROR 0
 [v _ts_trigger ts_trigger `VEa  1 e 1 0 ]
 "48 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 [s S444 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S444 1 next 2 6 ]
-[v _stage_stash stage_stash `[40]S444  1 e 320 @8880 ]
+[v _stage_stash stage_stash `[96]S444  1 e 768 @8432 ]
 "49
 [v _stage_list_iter stage_list_iter `us  1 e 2 0 ]
 "56

@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\wigwag_rev2.X.production.sym \
   --cmf=dist/default/production\wigwag_rev2.X.production.cmf -z -Q16F18325 \
-  -oC:\Users\abrah\AppData\Local\Temp\svr8.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\abrah\AppData\Local\Temp\s4kc.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/wigwag_rev2.X.production.map -E1 -ver=XC8 \
-  --acfsm=1493 -ASTACK=0206Ch-022AFh -pstack=STACK -ACODE=00h-07FFhx4 \
+  --acfsm=1493 -ASTACK=0206Ch-020EFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
   -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh -ABANK3=01A0h-01EFh \
@@ -32,7 +32,7 @@ Linker command line:
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\abrah\AppData\Local\Temp\svr8.o \
+  C:\Users\abrah\AppData\Local\Temp\s4kc.o \
   dist/default/production\wigwag_rev2.X.production.o 
 
 Object code version is 3.11
@@ -42,7 +42,7 @@ Machine type is 16F18325
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\abrah\AppData\Local\Temp\svr8.o
+C:\Users\abrah\AppData\Local\Temp\s4kc.o
                 end_init                             28       28        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        4    1000E       0
@@ -179,12 +179,17 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   ABS1           
                 abs_s1                               7E       7E        2         1
-                abs_s1                              450      450       20         1
+                abs_s1                              1A0      1A0       50         1
+                abs_s1                              220      220       50         1
+                abs_s1                              2A0      2A0       50         1
+                abs_s1                              320      320       50         1
+                abs_s1                              3A0      3A0       50         1
+                abs_s1                              420      420       50         1
                 abs_s1                              4A0      4A0       50         1
                 abs_s1                              520      520       50         1
                 abs_s1                              5A0      5A0       50         1
                 abs_s1                              620      620       30         1
-                abs_s1                             22B0     22B0        0         1
+                abs_s1                             20F0     20F0        0         1
 
         CLASS   SFR0           
 
@@ -313,12 +318,6 @@ UNUSED ADDRESS RANGES
         BANK0            0005E-0006F              12           1
         BANK1            000BC-000EF              34           1
         BANK2            00120-0016F              50           1
-        BANK3            001A0-001EF              50           1
-        BANK4            00220-0026F              50           1
-        BANK5            002A0-002EF              50           1
-        BANK6            00320-0036F              50           1
-        BANK7            003A0-003EF              50           1
-        BANK8            00420-0044F              30           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
                          00509-01FFF             800
@@ -332,12 +331,6 @@ UNUSED ADDRESS RANGES
         RAM              0005E-0006F              12           1
                          000BC-000EF              34
                          00120-0016F              50
-                         001A0-001EF              50
-                         00220-0026F              50
-                         002A0-002EF              50
-                         00320-0036F              50
-                         003A0-003EF              50
-                         00420-0044F              30
         SFR0             00000-0001F              20           1
         SFR1             00080-0009F              20           1
         SFR10            00500-0051F              20           1
@@ -370,7 +363,7 @@ UNUSED ADDRESS RANGES
         SFR7             00380-0039F              20           1
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
-        STACK            0206C-022AF             244           1
+        STACK            0206C-020EF              84           1
         STRCODE          00002-00003               2           2
                          00509-01FFF            1AF7
         STRING           00002-00003               2           2
@@ -709,7 +702,7 @@ __S3                                        (abs)        00000
 ___int_sp                                   stack        00000
 ___latbits                                  (abs)        00002
 ___sp                                       stack        00000
-___stackhi                                  (abs)        022AF
+___stackhi                                  (abs)        020EF
 ___stacklo                                  (abs)        0206C
 __end_of_AppendStage                        text17       002DC
 __end_of_AssignLightStates                  text16       0040E
@@ -743,7 +736,7 @@ __end_of_setup                              text1        0044D
 __initialization                            cinit        0002A
 __pbssBANK0                                 bssBANK0     00041
 __pbssBANK1                                 bssBANK1     000B4
-__pbssBIGRAM                                (abs)        022B0
+__pbssBIGRAM                                (abs)        020F0
 __pbssCOMMON                                bssCOMMON    0007A
 __pcstackBANK0                              cstackBANK0  00020
 __pcstackBANK1                              cstackBANK1  000A0
@@ -818,7 +811,7 @@ _last_pc_input_state                        bssCOMMON    0007A
 _main                                       maintext     0044D
 _setup                                      text1        00430
 _stage_list_iter                            bssBANK0     00045
-_stage_stash                                (abs)        022B0
+_stage_stash                                (abs)        020F0
 _start_time                                 bssBANK0     00041
 _timer1ReloadVal                            nvBANK0      00056
 _ts_trigger                                 bssBANK0     00050
@@ -1225,13 +1218,13 @@ Total ram usage:        0 bytes
   right_side_s    4    4[BANK1 ] _Bool [4]
   left_side_st    4    0[BANK1 ] _Bool [4]
   head            2   18[BANK1 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
   off             2   16[BANK1 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
   right_side_o    2   10[BANK1 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
   left_side_on    2    8[BANK1 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -1263,9 +1256,9 @@ Total ram usage:       23 bytes
 		line 51 in file "Pattern.c"
  Parameters:    Size  Location     Type
   dest            2   12[BANK0 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
   source          2   14[BANK0 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
  Auto vars:     Size  Location     Type
   i               2   19[BANK0 ] int 
  Return value:  Size  Location     Type
@@ -1305,7 +1298,7 @@ Total ram usage:        9 bytes
   states          1   15[BANK0 ] PTR const _Bool 
 		 -> InitWigwagPattern@right_side_states(4), InitWigwagPattern@left_side_states(4), 
   new_stage       2   16[BANK0 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
  Return value:  Size  Location     Type
                   2   12[BANK0 ] PTR struct Stage
  Registers used:
@@ -1338,7 +1331,7 @@ Total ram usage:        7 bytes
  Auto vars:     Size  Location     Type
   init_states     4    6[BANK0 ] _Bool [4]
   new_stage       2   10[BANK0 ] PTR struct Stage
-		 -> stage_stash(320), 
+		 -> stage_stash(768), 
  Return value:  Size  Location     Type
                   2    7[COMMON] PTR struct Stage
  Registers used:
@@ -1368,7 +1361,7 @@ Total ram usage:       10 bytes
 		line 13 in file "Pattern.c"
  Parameters:    Size  Location     Type
   stage           2    2[COMMON] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
   states          1    4[COMMON] PTR const _Bool 
 		 -> InitWigwagPattern@right_side_states(4), InitWigwagPattern@left_side_states(4), NewStage@init_states(4), 
  Auto vars:     Size  Location     Type
@@ -1402,12 +1395,12 @@ Total ram usage:        9 bytes
 		line 59 in file "Pattern.c"
  Parameters:    Size  Location     Type
   head            2   21[BANK0 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
   new_stage       2   23[BANK0 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
  Auto vars:     Size  Location     Type
   last_stage      2   27[BANK0 ] PTR struct Stage
-		 -> stage_stash(320), NULL(0), 
+		 -> stage_stash(768), NULL(0), 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
