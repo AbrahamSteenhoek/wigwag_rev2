@@ -109,11 +109,9 @@ void PIN_MANAGER_Initialize(void)
     //interrupt on change for group IOCCP - positive
     IOCCPbits.IOCCP0 = 1;
 
-
-
     // register default IOC callback functions at runtime; use these methods to register a custom function
-    IOCCF0_SetInterruptHandler(IOCCF0_DefaultInterruptHandler);
-   
+//    IOCCF0_SetInterruptHandler(IOCCF0_DefaultInterruptHandler);
+    IOCCF0_SetInterruptHandler( TripTurnSignal );
     // Enable IOCI interrupt 
     PIE0bits.IOCIE = 1; 
     

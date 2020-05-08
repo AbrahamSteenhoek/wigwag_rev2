@@ -1,13 +1,4 @@
-/*
- * File:   PatternSelector.c
- * Author: Abraham
- *
- * Created on April 23, 2020, 12:59 PM
- */
-
 #include "PatternSelector.h"
-
-#include <stdio.h>
 
 void InitPatternSelector( struct PatternSelector* p_selector )
 {
@@ -23,6 +14,13 @@ void InitPatternSelector( struct PatternSelector* p_selector )
     InitUpperLowerPattern( p_selector->patterns[UPPER_LOWER] );
     InitLowerPattern( p_selector->patterns[LOWER] );
     p_selector->current_stage = p_selector->patterns[ p_selector->active ]->first_stage;
+    
+    p_selector->start_time = 0;
+}
+
+struct Pattern* ActivePattern( struct PatternSelector* p )
+{
+    return p->patterns[ p->active ];
 }
 
 struct Pattern* NextPattern( struct PatternSelector* p_selector )
@@ -45,6 +43,8 @@ struct Pattern* NextPattern( struct PatternSelector* p_selector )
             p_selector->active = WIGWAG;
             break;
     }
+    
+    p_selector->current_stage = p_selector->patterns[ p_selector->active ]->first_stage;
     
     return p_selector->patterns[ p_selector->active ];
 }

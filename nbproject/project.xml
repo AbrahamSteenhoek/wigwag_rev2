@@ -15,6 +15,7 @@
             <sourceRootList>
                 <sourceRootElem>../../Downloads</sourceRootElem>
                 <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>../wigwag_REV2_ATmega328P.X</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

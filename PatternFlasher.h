@@ -12,6 +12,6 @@ bool update_stage = false;
 
 uint start_time = 0;
 
-void FlashPattern( struct Pattern* pattern );
+void FlashPattern();
 
 #endif

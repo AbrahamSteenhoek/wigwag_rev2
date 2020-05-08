@@ -33,7 +33,7 @@
 
 #include "Types.h"
 
-#define DEFAULT_INTERVAL    80UL
+#define DEFAULT_INTERVAL    60UL
 
 enum { NUM_LIGHTS = 4 };
 enum { MAX_STAGES = 96 };
@@ -45,7 +45,6 @@ struct Stage {
     uint time_ms; // time in milliseconds
     struct Stage* next;
 };
-
 
 struct Pattern {
     enum PatternName name;
