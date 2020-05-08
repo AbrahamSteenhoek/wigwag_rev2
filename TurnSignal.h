@@ -37,10 +37,7 @@
 #include "Time.h"
 #include "Types.h"
 
-#include <xc.h> // include processor files - each processor file is guarded.  
-
-
-#define TS_WAIT = 1500;
+#define TS_WAIT     2000;
 volatile bool ts_trigger;
 
 bool cur_pc_input_state;
@@ -48,44 +45,10 @@ bool last_pc_input_state;
 
 void TripTurnSignal();
 
+const bool TurnSignalDone();
+
 // Test if the pattern_cycle input pin has changed state
 // Test for debounce to remove some noise
 const bool PatternCycleInputChanged();
 
-// Comment a function and leverage automatic documentation with slash star star
-/**
-    <p><b>Function prototype:</b></p>
-  
-    <p><b>Summary:</b></p>
-
-    <p><b>Description:</b></p>
-
-    <p><b>Precondition:</b></p>
-
-    <p><b>Parameters:</b></p>
-
-    <p><b>Returns:</b></p>
-
-    <p><b>Example:</b></p>
-    <code>
- 
-    </code>
-
-    <p><b>Remarks:</b></p>
- */
-// TODO Insert declarations or function prototypes (right here) to leverage 
-// live documentation
-
-#ifdef	__cplusplus
-extern "C" {
-#endif /* __cplusplus */
-
-    // TODO If C++ is being used, regular C code needs function names to have C 
-    // linkage so the functions can be used by the c code. 
-
-#ifdef	__cplusplus
-}
-#endif /* __cplusplus */
-
-#endif	/* XC_HEADER_TEMPLATE_H */
-
+#endif

@@ -35,6 +35,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+typedef unsigned long ulong;
 typedef uint16_t uint;
 typedef bool state;
 

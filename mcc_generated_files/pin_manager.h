@@ -54,7 +54,6 @@
 
 #include <xc.h>
 
-
 // get/set turn_signal aliases
 #define turn_signal_TRIS                 TRISCbits.TRISC0
 #define turn_signal_LAT                  LATCbits.LATC0

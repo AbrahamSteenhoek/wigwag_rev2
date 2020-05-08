@@ -8,14 +8,14 @@
 
 #include "PatternFlasher.h"
 
-void FlashPattern( struct Pattern* pattern )
+void FlashPattern()
 {
-    uint current_time = cur_ms;
+    uint current_time = ms();
     
-    if ( current_time - start_time > pattern_selector.current_stage->time_ms )
+    if ( current_time - pattern_selector.start_time > pattern_selector.current_stage->time_ms )
     {
         pattern_selector.current_stage = pattern_selector.current_stage->next;
-        start_time = current_time;
+        pattern_selector.start_time = current_time;
         update_stage = true;
     }
 

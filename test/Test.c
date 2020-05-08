@@ -571,5 +571,22 @@ void testInitPatternSelector( void )
 
 void testNextPattern( void )
 {
+    FlushPatternStash();
+    FlushStageStash();
+    struct PatternSelector p;
+    InitPatternSelector( &p );
 
+    CU_ASSERT( ActivePattern( &p )->name == WIGWAG );
+    NextPattern( &p );
+
+    CU_ASSERT( ActivePattern( &p )->name == XSTROBE );
+    NextPattern( &p );
+
+    CU_ASSERT( ActivePattern( &p )->name == UPPER_LOWER );
+    NextPattern( &p );
+
+    CU_ASSERT( ActivePattern( &p )->name == LOWER );
+    NextPattern( &p );
+
+    CU_ASSERT( ActivePattern( &p )->name == WIGWAG );
 }

@@ -3,35 +3,35 @@
 [d edition pro ]
 [d chip 16F18325 ]
 [d frameptr 6 ]
-"58 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
-[e E6393 PatternName `uc
+"57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+[e E6394 PatternName `uc
 WIGWAG 0
 XSTROBE 1
 UPPER_LOWER 2
 LOWER 3
 LAST 3
 ]
-[e E51 PatternName `uc
+[e E52 PatternName `uc
 WIGWAG 0
 XSTROBE 1
 UPPER_LOWER 2
 LOWER 3
 LAST 3
 ]
-"13 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
-[e E49 . `uc
+"6 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
+[e E50 . `uc
 MAX_PATTERNS 6
 ]
 "12 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
-[e E6336 Light `uc
+[e E6337 Light `uc
 L1 0
 L2 1
 L3 2
 L4 3
 ERROR 0
 ]
-"58 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
-[e E369 PatternName `uc
+"57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+[e E370 PatternName `uc
 WIGWAG 0
 XSTROBE 1
 UPPER_LOWER 2
@@ -39,19 +39,19 @@ LOWER 3
 LAST 3
 ]
 "16 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[e E363 . `uc
+[e E364 . `uc
 NUM_LIGHTS 4
 ]
 "24
-[e E365 . `uc
+[e E366 . `uc
 MAX_STAGES 96
 ]
 "38
-[e E367 . `uc
+[e E368 . `uc
 MAX_PATTERNS 6
 ]
-"58 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
-[e E6393 PatternName `uc
+"57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+[e E6394 PatternName `uc
 WIGWAG 0
 XSTROBE 1
 UPPER_LOWER 2
@@ -59,13 +59,15 @@ LOWER 3
 LAST 3
 ]
 "25 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternFlasher.c
-[e E6336 Light `uc
+[e E6337 Light `uc
 L1 0
 L2 1
 L3 2
 L4 3
 ERROR 0
 ]
+"1 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
@@ -78,11 +80,13 @@ ERROR 0
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "12 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 [v _SetLight SetLight `(v  1 e 1 0 ]
+[v i1_SetLight SetLight `(v  1 e 1 0 ]
 "38
 [v _SetOutputs SetOutputs `(v  1 e 1 0 ]
-"13 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
+[v i1_SetOutputs SetOutputs `(v  1 e 1 0 ]
+"12 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
-"33
+"32
 [v _main main `(v  1 e 1 0 ]
 "52 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -96,14 +100,12 @@ ERROR 0
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"122
+"120
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
-"134
+"132
 [v _IOCCF0_ISR IOCCF0_ISR `(v  1 e 1 0 ]
-"149
+"147
 [v _IOCCF0_SetInterruptHandler IOCCF0_SetInterruptHandler `(v  1 e 1 0 ]
-"156
-[v _IOCCF0_DefaultInterruptHandler IOCCF0_DefaultInterruptHandler `(v  1 e 1 0 ]
 "64 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 "93
@@ -120,22 +122,22 @@ ERROR 0
 [v _AssignLightStates AssignLightStates `(v  1 e 1 0 ]
 "43 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 "22 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v _NewStage NewStage `(*.39S454  1 e 1 0 ]
-"50 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v _NewStage NewStage `(*.39S447  1 e 1 0 ]
+"49 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 "43
 "36 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[s S464 Pattern 3 `E6393 1 name 1 0 `*.39S454 1 first_stage 2 1 ]
-[v _NewPattern NewPattern `(*.39S464  1 e 1 0 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[v _NewPattern NewPattern `(*.39S457  1 e 1 0 ]
 "43 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 "49 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v _ConstructStage ConstructStage `(*.39S454  1 e 1 0 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v _ConstructStage ConstructStage `(*.39S447  1 e 1 0 ]
 "43 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 "58 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v _CopyStageData CopyStageData `(*.39S454  1 e 1 0 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v _CopyStageData CopyStageData `(*.39S447  1 e 1 0 ]
 "66
 [v _AppendStage AppendStage `(v  1 e 1 0 ]
 "85
@@ -148,48 +150,53 @@ ERROR 0
 [v _InitLowerPattern InitLowerPattern `(v  1 e 1 0 ]
 "11 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternFlasher.c
 [v _FlashPattern FlashPattern `(v  1 e 1 0 ]
-"10 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
+"3 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
 [v _InitPatternSelector InitPatternSelector `(v  1 e 1 0 ]
-"21 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
+"49 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+"43
+"26 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[v _NextPattern NextPattern `(*.39S457  1 e 1 0 ]
+"7 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Time.c
+[v _ms ms `(ul  1 e 4 0 ]
+[v i1_ms ms `(ul  1 e 4 0 ]
+"8 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
+[v _TripTurnSignal TripTurnSignal `(v  1 e 1 0 ]
+"14
+[v _TurnSignalDone TurnSignalDone `(DCa  1 e 1 0 ]
+"27
 [v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]
-"44 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/TurnSignal.h
+"41 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/TurnSignal.h
 [v _ts_trigger ts_trigger `VEa  1 e 1 0 ]
-"46
+"43
 [v _cur_pc_input_state cur_pc_input_state `a  1 e 1 0 ]
-"47
+"44
 [v _last_pc_input_state last_pc_input_state `a  1 e 1 0 ]
-"55 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v _stage_stash stage_stash `[96]S454  1 e 768 @8432 ]
-"56
+"54 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v _stage_stash stage_stash `[96]S447  1 e 768 @8432 ]
+"55
 [v _stage_list_iter stage_list_iter `us  1 e 2 0 ]
+"57
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[v _pattern_stash pattern_stash `[6]S457  1 e 18 0 ]
 "58
-[s S464 Pattern 3 `E6393 1 name 1 0 `*.39S454 1 first_stage 2 1 ]
-[v _pattern_stash pattern_stash `[6]S464  1 e 18 0 ]
-"59
 [v _pattern_list_iter pattern_list_iter `us  1 e 2 0 ]
 "11 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/PatternFlasher.h
 [v _update_stage update_stage `a  1 e 1 0 ]
-"13
-[v _start_time start_time `us  1 e 2 0 ]
-"12 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/PatternSelector.h
-[s S467 PatternSelector 15 `[6]*.39S464 1 patterns 12 0 `E6393 1 active 1 12 `*.39S454 1 current_stage 2 13 ]
-[v _pattern_selector pattern_selector `S467  1 e 15 0 ]
-"40 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Time.h
-[v _cur_ms cur_ms `VEus  1 e 2 0 ]
-"41
-[v _cur_hsec cur_hsec `VEus  1 e 2 0 ]
-"42
-[v _cur_sec cur_sec `VEus  1 e 2 0 ]
-[s S224 . 1 `uc 1 INTEDG 1 0 :1:0 
+"13 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/PatternSelector.h
+[s S460 PatternSelector 19 `[6]*.39S457 1 patterns 12 0 `E6394 1 active 1 12 `*.39S447 1 current_stage 2 13 `VEul 1 start_time 4 15 ]
+[v _pattern_selector pattern_selector `VES460  1 e 19 0 ]
+[s S221 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "364 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f18325.h
-[u S229 . 1 `S224 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES229  1 e 1 @11 ]
-[s S492 . 1 `uc 1 RC0 1 0 :1:0 
+[u S226 . 1 `S221 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES226  1 e 1 @11 ]
+[s S618 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -197,17 +204,17 @@ ERROR 0
 `uc 1 RC5 1 0 :1:5 
 ]
 "449
-[u S499 . 1 `S492 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES499  1 e 1 @14 ]
-[s S210 . 1 `uc 1 INTF 1 0 :1:0 
+[u S625 . 1 `S618 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES625  1 e 1 @14 ]
+[s S207 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "497
-[u S215 . 1 `S210 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES215  1 e 1 @16 ]
-[s S258 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S212 . 1 `S207 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES212  1 e 1 @16 ]
+[s S255 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 BCL1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -217,13 +224,13 @@ ERROR 0
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "534
-[u S267 . 1 `S258 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES267  1 e 1 @17 ]
+[u S264 . 1 `S255 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES264  1 e 1 @17 ]
 "1206
 [v _TMR1L TMR1L `VEuc  1 e 1 @25 ]
 "1226
 [v _TMR1H TMR1H `VEuc  1 e 1 @26 ]
-[s S358 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S353 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 T1SOSC 1 0 :1:3 
@@ -231,17 +238,17 @@ ERROR 0
 `uc 1 TMR1CS 1 0 :2:6 
 ]
 "1268
-[s S365 . 1 `uc 1 . 1 0 :4:0 
+[s S360 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 `uc 1 TMR1CS0 1 0 :1:6 
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
-[u S371 . 1 `S358 1 . 1 0 `S365 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES371  1 e 1 @27 ]
+[u S366 . 1 `S353 1 . 1 0 `S360 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES366  1 e 1 @27 ]
 "1318
 [v _T1GCON T1GCON `VEuc  1 e 1 @28 ]
-[s S388 . 1 `uc 1 T1GSS 1 0 :2:0 
+[s S383 . 1 `uc 1 T1GSS 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -250,24 +257,24 @@ ERROR 0
 `uc 1 TMR1GE 1 0 :1:7 
 ]
 "1338
-[s S396 . 1 `uc 1 T1GSS0 1 0 :1:0 
+[s S391 . 1 `uc 1 T1GSS0 1 0 :1:0 
 `uc 1 T1GSS1 1 0 :1:1 
 ]
-[u S399 . 1 `S388 1 . 1 0 `S396 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES399  1 e 1 @28 ]
+[u S394 . 1 `S383 1 . 1 0 `S391 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES394  1 e 1 @28 ]
 "1499
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1544
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S141 . 1 `uc 1 INTE 1 0 :1:0 
+[s S140 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "1607
-[u S146 . 1 `S141 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES146  1 e 1 @144 ]
-[s S237 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[u S145 . 1 `S140 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES145  1 e 1 @144 ]
+[s S234 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 BCL1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -277,15 +284,15 @@ ERROR 0
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1644
-[u S246 . 1 `S237 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES246  1 e 1 @145 ]
+[u S243 . 1 `S234 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES243  1 e 1 @145 ]
 "1875
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "2191
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2236
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S640 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S635 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -293,8 +300,8 @@ ERROR 0
 `uc 1 LATC5 1 0 :1:5 
 ]
 "2251
-[u S647 . 1 `S640 1 . 1 0 ]
-[v _LATCbits LATCbits `VES647  1 e 1 @270 ]
+[u S642 . 1 `S635 1 . 1 0 ]
+[v _LATCbits LATCbits `VES642  1 e 1 @270 ]
 "2779
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2824
@@ -315,7 +322,7 @@ ERROR 0
 [v _INLVLA INLVLA `VEuc  1 e 1 @908 ]
 "6906
 [v _INLVLC INLVLC `VEuc  1 e 1 @910 ]
-[s S114 . 1 `uc 1 IOCCP0 1 0 :1:0 
+[s S112 . 1 `uc 1 IOCCP0 1 0 :1:0 
 `uc 1 IOCCP1 1 0 :1:1 
 `uc 1 IOCCP2 1 0 :1:2 
 `uc 1 IOCCP3 1 0 :1:3 
@@ -323,9 +330,9 @@ ERROR 0
 `uc 1 IOCCP5 1 0 :1:5 
 ]
 "7121
-[u S121 . 1 `S114 1 . 1 0 ]
-[v _IOCCPbits IOCCPbits `VES121  1 e 1 @919 ]
-[s S97 . 1 `uc 1 IOCCN0 1 0 :1:0 
+[u S119 . 1 `S112 1 . 1 0 ]
+[v _IOCCPbits IOCCPbits `VES119  1 e 1 @919 ]
+[s S95 . 1 `uc 1 IOCCN0 1 0 :1:0 
 `uc 1 IOCCN1 1 0 :1:1 
 `uc 1 IOCCN2 1 0 :1:2 
 `uc 1 IOCCN3 1 0 :1:3 
@@ -333,9 +340,9 @@ ERROR 0
 `uc 1 IOCCN5 1 0 :1:5 
 ]
 "7171
-[u S104 . 1 `S97 1 . 1 0 ]
-[v _IOCCNbits IOCCNbits `VES104  1 e 1 @920 ]
-[s S80 . 1 `uc 1 IOCCF0 1 0 :1:0 
+[u S102 . 1 `S95 1 . 1 0 ]
+[v _IOCCNbits IOCCNbits `VES102  1 e 1 @920 ]
+[s S78 . 1 `uc 1 IOCCF0 1 0 :1:0 
 `uc 1 IOCCF1 1 0 :1:1 
 `uc 1 IOCCF2 1 0 :1:2 
 `uc 1 IOCCF3 1 0 :1:3 
@@ -343,8 +350,8 @@ ERROR 0
 `uc 1 IOCCF5 1 0 :1:5 
 ]
 "7221
-[u S87 . 1 `S80 1 . 1 0 ]
-[v _IOCCFbits IOCCFbits `VES87  1 e 1 @921 ]
+[u S85 . 1 `S78 1 . 1 0 ]
+[v _IOCCFbits IOCCFbits `VES85  1 e 1 @921 ]
 "11575
 [v _PMD0 PMD0 `VEuc  1 e 1 @2321 ]
 "11620
@@ -373,29 +380,24 @@ ERROR 0
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
-"33 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
+"5 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Time.c
+[v _cur_ms cur_ms `VEul  1 e 4 0 ]
+"4 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
+[v _ts_trigger_time ts_trigger_time `ul  1 e 4 0 ]
+"32 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"69
+"70
 } 0
-"13
+"12
 [v _setup setup `(v  1 e 1 0 ]
 {
-"31
+"30
 } 0
 "93 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/tmr1.c
 [v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
 {
 "97
-} 0
-"38 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
-[v _SetOutputs SetOutputs `(v  1 e 1 0 ]
-{
-[v SetOutputs@state state `DCa  1 a 1 wreg ]
-[v SetOutputs@state state `DCa  1 a 1 wreg ]
-"40
-[v SetOutputs@state state `DCa  1 a 1 7 ]
-"44
 } 0
 "50 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -415,7 +417,7 @@ ERROR 0
 "172
 [v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
 "174
 } 0
 "80 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/mcc.c
@@ -426,75 +428,75 @@ ERROR 0
 "57 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"120
+"118
 } 0
-"149
+"147
 [v _IOCCF0_SetInterruptHandler IOCCF0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v IOCCF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
-"151
+[v IOCCF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"149
 } 0
 "60 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "72
 } 0
-"10 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
+"3 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
 [v _InitPatternSelector InitPatternSelector `(v  1 e 1 0 ]
 {
-"13
-[v InitPatternSelector@i i `i  1 a 2 58 ]
-"10
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[s S464 Pattern 3 `E6393 1 name 1 0 `*.39S454 1 first_stage 2 1 ]
-[s S467 PatternSelector 15 `[6]*.39S464 1 patterns 12 0 `E6393 1 active 1 12 `*.39S454 1 current_stage 2 13 ]
-[v InitPatternSelector@p_selector p_selector `*.39S467  1 p 2 52 ]
-"25
+"6
+[v InitPatternSelector@i i `i  1 a 2 0 ]
+"3
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[s S460 PatternSelector 19 `[6]*.39S457 1 patterns 12 0 `E6394 1 active 1 12 `*.39S447 1 current_stage 2 13 `VEul 1 start_time 4 15 ]
+[v InitPatternSelector@p_selector p_selector `*.39VES460  1 p 2 59 ]
+"19
 } 0
-"50 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+"49 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 "43
 "36 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[s S464 Pattern 3 `E6393 1 name 1 0 `*.39S454 1 first_stage 2 1 ]
-[v _NewPattern NewPattern `(*.39S464  1 e 1 0 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[v _NewPattern NewPattern `(*.39S457  1 e 1 0 ]
 {
 "42
-[v NewPattern@new_pattern new_pattern `*.39S464  1 a 2 14 ]
+[v NewPattern@new_pattern new_pattern `*.39S457  1 a 2 21 ]
 "47
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 6 ]
+[v ___wmul@product product `ui  1 a 2 4 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 2 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 4 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
 "118 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
 [v _InitXStrobePattern InitXStrobePattern `(v  1 e 1 0 ]
 {
 "144
-[v InitXStrobePattern@i_872 i `i  1 a 2 46 ]
+[v InitXStrobePattern@i_880 i `i  1 a 2 53 ]
 "134
-[v InitXStrobePattern@i i `i  1 a 2 44 ]
+[v InitXStrobePattern@i i `i  1 a 2 51 ]
 "126
-[v InitXStrobePattern@diag_2_3_states diag_2_3_states `[4]a  1 a 4 36 ]
+[v InitXStrobePattern@diag_2_3_states diag_2_3_states `[4]a  1 a 4 43 ]
 "123
-[v InitXStrobePattern@diag_1_4_states diag_1_4_states `[4]a  1 a 4 32 ]
+[v InitXStrobePattern@diag_1_4_states diag_1_4_states `[4]a  1 a 4 39 ]
 "131
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v InitXStrobePattern@head head `*.39S454  1 a 2 50 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v InitXStrobePattern@head head `*.39S447  1 a 2 57 ]
 "129
-[v InitXStrobePattern@off off `*.39S454  1 a 2 48 ]
+[v InitXStrobePattern@off off `*.39S447  1 a 2 55 ]
 "127
-[v InitXStrobePattern@diag_2_3 diag_2_3 `*.39S454  1 a 2 42 ]
+[v InitXStrobePattern@diag_2_3 diag_2_3 `*.39S447  1 a 2 49 ]
 "124
-[v InitXStrobePattern@diag_1_4 diag_1_4 `*.39S454  1 a 2 40 ]
+[v InitXStrobePattern@diag_1_4 diag_1_4 `*.39S447  1 a 2 47 ]
 "118
-[s S464 Pattern 3 `E6393 1 name 1 0 `*.39S454 1 first_stage 2 1 ]
-[v InitXStrobePattern@pattern pattern `*.39S464  1 p 2 29 ]
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[v InitXStrobePattern@pattern pattern `*.39S457  1 p 2 36 ]
 "120
 [v InitXStrobePattern@F449 F449 `[4]a  1 s 4 F449 ]
 "124
@@ -505,25 +507,25 @@ ERROR 0
 [v _InitWigwagPattern InitWigwagPattern `(v  1 e 1 0 ]
 {
 "111
-[v InitWigwagPattern@i_846 i `i  1 a 2 46 ]
+[v InitWigwagPattern@i_854 i `i  1 a 2 53 ]
 "101
-[v InitWigwagPattern@i i `i  1 a 2 44 ]
+[v InitWigwagPattern@i i `i  1 a 2 51 ]
 "93
-[v InitWigwagPattern@right_side_states right_side_states `[4]a  1 a 4 36 ]
+[v InitWigwagPattern@right_side_states right_side_states `[4]a  1 a 4 43 ]
 "90
-[v InitWigwagPattern@left_side_states left_side_states `[4]a  1 a 4 32 ]
+[v InitWigwagPattern@left_side_states left_side_states `[4]a  1 a 4 39 ]
 "98
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v InitWigwagPattern@head head `*.39S454  1 a 2 50 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v InitWigwagPattern@head head `*.39S447  1 a 2 57 ]
 "96
-[v InitWigwagPattern@off off `*.39S454  1 a 2 48 ]
+[v InitWigwagPattern@off off `*.39S447  1 a 2 55 ]
 "94
-[v InitWigwagPattern@right_side_on right_side_on `*.39S454  1 a 2 42 ]
+[v InitWigwagPattern@right_side_on right_side_on `*.39S447  1 a 2 49 ]
 "91
-[v InitWigwagPattern@left_side_on left_side_on `*.39S454  1 a 2 40 ]
+[v InitWigwagPattern@left_side_on left_side_on `*.39S447  1 a 2 47 ]
 "85
-[s S464 Pattern 3 `E6393 1 name 1 0 `*.39S454 1 first_stage 2 1 ]
-[v InitWigwagPattern@pattern pattern `*.39S464  1 p 2 29 ]
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[v InitWigwagPattern@pattern pattern `*.39S457  1 p 2 36 ]
 "87
 [v InitWigwagPattern@F437 F437 `[4]a  1 s 4 F437 ]
 "91
@@ -534,25 +536,25 @@ ERROR 0
 [v _InitUpperLowerPattern InitUpperLowerPattern `(v  1 e 1 0 ]
 {
 "178
-[v InitUpperLowerPattern@i_898 i `i  1 a 2 46 ]
+[v InitUpperLowerPattern@i_906 i `i  1 a 2 53 ]
 "168
-[v InitUpperLowerPattern@i i `i  1 a 2 44 ]
+[v InitUpperLowerPattern@i i `i  1 a 2 51 ]
 "159
-[v InitUpperLowerPattern@lower_states lower_states `[4]a  1 a 4 36 ]
+[v InitUpperLowerPattern@lower_states lower_states `[4]a  1 a 4 43 ]
 "156
-[v InitUpperLowerPattern@upper_states upper_states `[4]a  1 a 4 32 ]
+[v InitUpperLowerPattern@upper_states upper_states `[4]a  1 a 4 39 ]
 "165
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v InitUpperLowerPattern@head head `*.39S454  1 a 2 50 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v InitUpperLowerPattern@head head `*.39S447  1 a 2 57 ]
 "162
-[v InitUpperLowerPattern@off off `*.39S454  1 a 2 48 ]
+[v InitUpperLowerPattern@off off `*.39S447  1 a 2 55 ]
 "160
-[v InitUpperLowerPattern@lower lower `*.39S454  1 a 2 42 ]
+[v InitUpperLowerPattern@lower lower `*.39S447  1 a 2 49 ]
 "157
-[v InitUpperLowerPattern@upper upper `*.39S454  1 a 2 40 ]
+[v InitUpperLowerPattern@upper upper `*.39S447  1 a 2 47 ]
 "151
-[s S464 Pattern 3 `E6393 1 name 1 0 `*.39S454 1 first_stage 2 1 ]
-[v InitUpperLowerPattern@pattern pattern `*.39S464  1 p 2 29 ]
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[v InitUpperLowerPattern@pattern pattern `*.39S457  1 p 2 36 ]
 "153
 [v InitUpperLowerPattern@F461 F461 `[4]a  1 s 4 F461 ]
 "157
@@ -563,25 +565,25 @@ ERROR 0
 [v _InitLowerPattern InitLowerPattern `(v  1 e 1 0 ]
 {
 "211
-[v InitLowerPattern@i_924 i `i  1 a 2 46 ]
+[v InitLowerPattern@i_932 i `i  1 a 2 53 ]
 "201
-[v InitLowerPattern@i i `i  1 a 2 44 ]
+[v InitLowerPattern@i i `i  1 a 2 51 ]
 "193
-[v InitLowerPattern@lower_right_states lower_right_states `[4]a  1 a 4 36 ]
+[v InitLowerPattern@lower_right_states lower_right_states `[4]a  1 a 4 43 ]
 "190
-[v InitLowerPattern@lower_left_states lower_left_states `[4]a  1 a 4 32 ]
+[v InitLowerPattern@lower_left_states lower_left_states `[4]a  1 a 4 39 ]
 "198
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v InitLowerPattern@head head `*.39S454  1 a 2 50 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v InitLowerPattern@head head `*.39S447  1 a 2 57 ]
 "196
-[v InitLowerPattern@off off `*.39S454  1 a 2 48 ]
+[v InitLowerPattern@off off `*.39S447  1 a 2 55 ]
 "194
-[v InitLowerPattern@lower_right lower_right `*.39S454  1 a 2 42 ]
+[v InitLowerPattern@lower_right lower_right `*.39S447  1 a 2 49 ]
 "191
-[v InitLowerPattern@lower_left lower_left `*.39S454  1 a 2 40 ]
+[v InitLowerPattern@lower_left lower_left `*.39S447  1 a 2 47 ]
 "185
-[s S464 Pattern 3 `E6393 1 name 1 0 `*.39S454 1 first_stage 2 1 ]
-[v InitLowerPattern@pattern pattern `*.39S464  1 p 2 29 ]
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[v InitLowerPattern@pattern pattern `*.39S457  1 p 2 36 ]
 "187
 [v InitLowerPattern@F473 F473 `[4]a  1 s 4 F473 ]
 "191
@@ -590,91 +592,123 @@ ERROR 0
 } 0
 "43 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 "58 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v _CopyStageData CopyStageData `(*.39S454  1 e 1 0 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v _CopyStageData CopyStageData `(*.39S447  1 e 1 0 ]
 {
 "60
-[v CopyStageData@i i `i  1 a 2 19 ]
+[v CopyStageData@i i `i  1 a 2 26 ]
 "58
-[v CopyStageData@dest dest `*.39S454  1 p 2 12 ]
-[v CopyStageData@source source `*.39S454  1 p 2 14 ]
+[v CopyStageData@dest dest `*.39S447  1 p 2 19 ]
+[v CopyStageData@source source `*.39S447  1 p 2 21 ]
 "64
 } 0
 "43 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 "49 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v _ConstructStage ConstructStage `(*.39S454  1 e 1 0 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v _ConstructStage ConstructStage `(*.39S447  1 e 1 0 ]
 {
 [v ConstructStage@states states `*.4DCa  1 a 1 wreg ]
 "51
-[v ConstructStage@new_stage new_stage `*.39S454  1 a 2 16 ]
+[v ConstructStage@new_stage new_stage `*.39S447  1 a 2 24 ]
 "49
 [v ConstructStage@states states `*.4DCa  1 a 1 wreg ]
-[v ConstructStage@time_ms time_ms `DCus  1 p 2 12 ]
-[v ConstructStage@next next `*.1S454  1 p 1 14 ]
+[v ConstructStage@time_ms time_ms `DCus  1 p 2 19 ]
+[v ConstructStage@next next `*.1S447  1 p 1 21 ]
 "51
-[v ConstructStage@states states `*.4DCa  1 a 1 15 ]
+[v ConstructStage@states states `*.4DCa  1 a 1 23 ]
 "56
 } 0
 "43 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
 "22 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Pattern.c
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v _NewStage NewStage `(*.39S454  1 e 1 0 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v _NewStage NewStage `(*.39S447  1 e 1 0 ]
 {
 "28
-[v NewStage@init_states init_states `[4]a  1 a 4 6 ]
+[v NewStage@init_states init_states `[4]a  1 a 4 13 ]
 "27
-[v NewStage@new_stage new_stage `*.39S454  1 a 2 10 ]
+[v NewStage@new_stage new_stage `*.39S447  1 a 2 17 ]
 "34
 } 0
 "14
 [v _AssignLightStates AssignLightStates `(v  1 e 1 0 ]
 {
 "16
-[v AssignLightStates@i i `us  1 a 2 0 ]
+[v AssignLightStates@i i `us  1 a 2 7 ]
 "14
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v AssignLightStates@stage stage `*.39S454  1 p 2 2 ]
-[v AssignLightStates@states states `*.4DCa  1 p 1 4 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v AssignLightStates@stage stage `*.39S447  1 p 2 0 ]
+[v AssignLightStates@states states `*.4DCa  1 p 1 2 ]
 "20
 } 0
 "66
 [v _AppendStage AppendStage `(v  1 e 1 0 ]
 {
 "75
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v AppendStage@last_stage last_stage `*.39S454  1 a 2 27 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v AppendStage@last_stage last_stage `*.39S447  1 a 2 34 ]
 "66
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[v AppendStage@head head `*.39S454  1 p 2 21 ]
-[v AppendStage@new_stage new_stage `*.39S454  1 p 2 23 ]
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[v AppendStage@head head `*.39S447  1 p 2 28 ]
+[v AppendStage@new_stage new_stage `*.39S447  1 p 2 30 ]
 "83
 } 0
-"21 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
-[v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]
+"14 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
+[v _TurnSignalDone TurnSignalDone `(DCa  1 e 1 0 ]
 {
 "25
-[v PatternCycleInputChanged@delay_count delay_count `us  1 a 2 4 ]
-"41
+} 0
+"1 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 4 ]
+"4
+} 0
+"38 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
+[v _SetOutputs SetOutputs `(v  1 e 1 0 ]
+{
+[v SetOutputs@state state `DCa  1 a 1 wreg ]
+[v SetOutputs@state state `DCa  1 a 1 wreg ]
+"40
+[v SetOutputs@state state `DCa  1 a 1 5 ]
+"44
+} 0
+"27 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
+[v _PatternCycleInputChanged PatternCycleInputChanged `(DCa  1 e 1 0 ]
+{
+"32
+[v PatternCycleInputChanged@delay_count delay_count `us  1 a 2 2 ]
+"50
+} 0
+"49 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X/Pattern.h
+"43
+"26 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternSelector.c
+[s S447 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S447 1 next 2 6 ]
+[s S457 Pattern 3 `E6394 1 name 1 0 `*.39S447 1 first_stage 2 1 ]
+[v _NextPattern NextPattern `(*.39S457  1 e 1 0 ]
+{
+[s S460 PatternSelector 19 `[6]*.39S457 1 patterns 12 0 `E6394 1 active 1 12 `*.39S447 1 current_stage 2 13 `VEul 1 start_time 4 15 ]
+[v NextPattern@p_selector p_selector `*.39VES460  1 p 2 0 ]
+"50
 } 0
 "11 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\PatternFlasher.c
 [v _FlashPattern FlashPattern `(v  1 e 1 0 ]
 {
 "13
-[v FlashPattern@current_time current_time `us  1 a 2 8 ]
-"11
-[s S454 Stage 8 `[4]a 1 light_states 4 0 `us 1 time_ms 2 4 `*.39S454 1 next 2 6 ]
-[s S464 Pattern 3 `E6393 1 name 1 0 `*.39S454 1 first_stage 2 1 ]
-[v FlashPattern@pattern pattern `*.39S464  1 p 2 6 ]
+[v FlashPattern@current_time current_time `us  1 a 2 14 ]
 "31
+} 0
+"7 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Time.c
+[v _ms ms `(ul  1 e 4 0 ]
+{
+"10
 } 0
 "12 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 [v _SetLight SetLight `(v  1 e 1 0 ]
 {
-[v SetLight@light light `DCE6336  1 a 1 wreg ]
-[v SetLight@light light `DCE6336  1 a 1 wreg ]
-[v SetLight@state state `DCa  1 p 1 2 ]
-[v SetLight@light light `DCE6336  1 a 1 5 ]
+[v SetLight@light light `DCE6337  1 a 1 wreg ]
+[v SetLight@light light `DCE6337  1 a 1 wreg ]
+[v SetLight@state state `DCa  1 p 1 0 ]
+[v SetLight@light light `DCE6337  1 a 1 3 ]
 "36
 } 0
 "52 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/interrupt_manager.c
@@ -698,18 +732,41 @@ ERROR 0
 {
 "180
 } 0
-"122 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
+"120 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
-"129
+"127
 } 0
-"134
+"132
 [v _IOCCF0_ISR IOCCF0_ISR `(v  1 e 1 0 ]
 {
-"144
+"142
 } 0
-"156
-[v _IOCCF0_DefaultInterruptHandler IOCCF0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"8 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\TurnSignal.c
+[v _TripTurnSignal TripTurnSignal `(v  1 e 1 0 ]
 {
-"159
+"12
+} 0
+"7 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Time.c
+[v i1_ms ms `(ul  1 e 4 0 ]
+{
+"10
+} 0
+"38 C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
+[v i1_SetOutputs SetOutputs `(v  1 e 1 0 ]
+{
+[v i1SetOutputs@state state `DCa  1 a 1 wreg ]
+[v i1SetOutputs@state state `DCa  1 a 1 wreg ]
+"40
+[v i1SetOutputs@state state `DCa  1 a 1 5 ]
+"44
+} 0
+"12
+[v i1_SetLight SetLight `(v  1 e 1 0 ]
+{
+[v i1SetLight@light light `DCE6337  1 a 1 wreg ]
+[v i1SetLight@light light `DCE6337  1 a 1 wreg ]
+[v i1SetLight@state state `DCa  1 p 1 0 ]
+[v i1SetLight@light light `DCE6337  1 a 1 3 ]
+"36
 } 0
