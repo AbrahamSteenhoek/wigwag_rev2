@@ -1,6 +1,7 @@
 #ifndef PATTERNSELECTOR_H
 #define	PATTERNSELECTOR_H
 
+#include "EEPROM.h"
 #include "Pattern.h"
 
 struct PatternSelector {

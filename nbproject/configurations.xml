@@ -20,6 +20,7 @@
       <itemPath>Pattern.h</itemPath>
       <itemPath>Types.h</itemPath>
       <itemPath>PatternFlasher.h</itemPath>
+      <itemPath>EEPROM.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -44,6 +45,7 @@
       <itemPath>Pattern.c</itemPath>
       <itemPath>PatternFlasher.c</itemPath>
       <itemPath>Time.c</itemPath>
+      <itemPath>EEPROM.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

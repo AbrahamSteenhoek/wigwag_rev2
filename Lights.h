@@ -7,7 +7,7 @@
 // setters for L
 #define SET( pin, state )       do { pin = state; } while(0)
 
-void SetLight( const enum Light light, const bool state );
+void SetLight( const enum Light light, const bool _state );
 void SetOutputs( const bool state );
 
 #endif

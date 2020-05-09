@@ -7,8 +7,8 @@ void InitPatternSelector( struct PatternSelector* p_selector )
     {
         p_selector->patterns[i] = NewPattern();
     }
-    p_selector->active = WIGWAG;
-    
+    p_selector->active = EEPROM_GetSavedPattern();
+
     InitWigwagPattern( p_selector->patterns[WIGWAG] );
     InitXStrobePattern( p_selector->patterns[XSTROBE] );
     InitUpperLowerPattern( p_selector->patterns[UPPER_LOWER] );
@@ -43,8 +43,10 @@ struct Pattern* NextPattern( struct PatternSelector* p_selector )
             p_selector->active = WIGWAG;
             break;
     }
-    
+
     p_selector->current_stage = p_selector->patterns[ p_selector->active ]->first_stage;
+
+    EEPROM_SavePattern( p_selector->active );
     
     return p_selector->patterns[ p_selector->active ];
 }

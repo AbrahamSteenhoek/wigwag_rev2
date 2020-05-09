@@ -9,8 +9,9 @@
 #include "Lights.h"
 
 // Uses a mapping from light enumeration to pin
-void SetLight( const enum Light light, const bool state )
+void SetLight( const enum Light light, const bool _state )
 {
+    bool state = ( _state ); // reverse _state if the logic for the lights needs to be switched.
     // important: The switch statement is necessary because the pin# and the Light# are not always in correspondence
     switch ( light )
     {
