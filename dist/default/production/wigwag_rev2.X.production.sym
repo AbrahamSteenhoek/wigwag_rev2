@@ -631,7 +631,7 @@ text4 190E 1915 CODE 190E 0
 text2 1908 190D CODE 1908 0
 %locals
 dist/default/production\wigwag_rev2.X.production.o
-C:\Users\abrah\AppData\Local\Temp\s8cc.s
+C:\Users\abrah\AppData\Local\Temp\s6tc.s
 9140 2A 0 CODE 0
 9143 2A 0 CODE 0
 9267 2A 0 CODE 0
@@ -1047,8 +1047,8 @@ Lights.c
 19 6D8 0 CODE 0
 20 6DF 0 CODE 0
 23 6EC 0 CODE 0
-24 6F4 0 CODE 0
-27 701 0 CODE 0
+24 6F6 0 CODE 0
+27 703 0 CODE 0
 28 70B 0 CODE 0
 32 718 0 CODE 0
 33 71F 0 CODE 0
@@ -1117,8 +1117,8 @@ Lights.c
 19 662 0 CODE 0
 20 66A 0 CODE 0
 23 677 0 CODE 0
-24 680 0 CODE 0
-27 68D 0 CODE 0
+24 682 0 CODE 0
+27 68F 0 CODE 0
 28 698 0 CODE 0
 32 6A5 0 CODE 0
 33 6AD 0 CODE 0

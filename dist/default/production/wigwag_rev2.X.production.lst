@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Fri May 08 21:29:47 2020
+                                                                                               Sun May 10 20:48:25 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	16F18325
@@ -9676,1521 +9676,1531 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   9452  0EE8  0020               	movlb	0	; select bank0
   9453  0EE9  00A1               	movwf	eeprom_write@addr
   9454  0EEA                     l738:	
-  9455  0EEA                     l739:	
-  9456  0EEA  0031               	movlb	17	; select bank17
-  9457  0EEB  1895               	btfsc	21,1	;volsfr
-  9458  0EEC  2EEE               	goto	u1571
-  9459  0EED  2EEF               	goto	u1570
-  9460  0EEE                     u1571:	
-  9461  0EEE  2EEA               	goto	l739
-  9462  0EEF                     u1570:	
-  9463  0EEF                     l741:	
-  9464  0EEF  1715               	bsf	21,6	;volsfr
-  9465  0EF0                     l2741:	
-  9466  0EF0  0020               	movlb	0	; select bank0
-  9467  0EF1  0821               	movf	eeprom_write@addr,w
-  9468  0EF2  0031               	movlb	17	; select bank17
-  9469  0EF3  0091               	movwf	17	;volatile
-  9470  0EF4  3070               	movlw	112
-  9471  0EF5  0092               	movwf	18	;volatile
-  9472  0EF6                     l2743:	
-  9473  0EF6  0194               	clrf	20	;volatile
-  9474  0EF7                     l2745:	
-  9475  0EF7  0020               	movlb	0	; select bank0
-  9476  0EF8  0820               	movf	eeprom_write@value,w
-  9477  0EF9  0031               	movlb	17	; select bank17
-  9478  0EFA  0093               	movwf	19	;volatile
-  9479  0EFB                     l2747:	
-  9480  0EFB  0020               	movlb	0	; select bank0
-  9481  0EFC  1003               	bcf	3,0	;volatile
-  9482  0EFD                     l2749:	
-  9483  0EFD  1F8B               	btfss	11,7	;volatile
-  9484  0EFE  2F00               	goto	u1581
-  9485  0EFF  2F01               	goto	u1580
-  9486  0F00                     u1581:	
-  9487  0F00  2F02               	goto	l742
-  9488  0F01                     u1580:	
-  9489  0F01                     l2751:	
-  9490  0F01  1403               	bsf	3,0	;volatile
-  9491  0F02                     l742:	
-  9492  0F02  138B               	bcf	11,7	;volatile
-  9493  0F03  0031               	movlb	17	; select bank17
-  9494  0F04  1515               	bsf	21,2	;volsfr
-  9495  0F05                     l2753:	
-  9496  0F05  3055               	movlw	85
-  9497  0F06  0096               	movwf	22	;volsfr
-  9498  0F07  30AA               	movlw	170
-  9499  0F08  0096               	movwf	22	;volsfr
-  9500  0F09                     l2755:	
-  9501  0F09  1495               	bsf	21,1	;volsfr
-  9502  0F0A                     l743:	
-  9503  0F0A  1895               	btfsc	21,1	;volsfr
-  9504  0F0B  2F0D               	goto	u1591
-  9505  0F0C  2F0E               	goto	u1590
-  9506  0F0D                     u1591:	
-  9507  0F0D  2F0A               	goto	l743
-  9508  0F0E                     u1590:	
-  9509  0F0E                     l745:	
-  9510  0F0E  1115               	bcf	21,2	;volsfr
-  9511  0F0F  0020               	movlb	0	; select bank0
-  9512  0F10  1C03               	btfss	3,0	;volatile
-  9513  0F11  2F13               	goto	u1601
-  9514  0F12  2F14               	goto	u1600
-  9515  0F13                     u1601:	
-  9516  0F13  2F15               	goto	l748
-  9517  0F14                     u1600:	
-  9518  0F14                     l2757:	
-  9519  0F14  178B               	bsf	11,7	;volatile
-  9520  0F15                     l748:	
-  9521  0F15  0008               	return
-  9522  0F16                     __end_of_eeprom_write:	
-  9523                           
-  9524                           	psect	text32
-  9525  0532                     __ptext32:	
-  9526 ;; *************** function _FlashPattern *****************
-  9527 ;; Defined at:
-  9528 ;;		line 11 in file "PatternFlasher.c"
-  9529 ;; Parameters:    Size  Location     Type
-  9530 ;;		None
-  9531 ;; Auto vars:     Size  Location     Type
-  9532 ;;  current_time    2   15[BANK0 ] unsigned short 
-  9533 ;; Return value:  Size  Location     Type
-  9534 ;;                  1    wreg      void 
-  9535 ;; Registers used:
-  9536 ;;		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
-  9537 ;; Tracked objects:
-  9538 ;;		On entry : 0/0
-  9539 ;;		On exit  : 0/0
-  9540 ;;		Unchanged: 0/0
-  9541 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+  9455                           ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\pic\__eewrite.c: 6: eeprom_w
+      +                          rite(unsigned char addr, unsigned char value);C:\Program Files (x86)\Microchip\xc8\v2.10
+      +                          \pic\sources\c99\pic\__eewrite.c: 7: {;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\so
+      +                          urces\c99\pic\__eewrite.c: 8:  do { while (NVMCON1bits.WR) { continue; } NVMCON1bits.NVM
+      +                          REGS = 1; NVMADRL = (addr) & 0xFFU; NVMADRH = 0x70; NVMDATH = 0; NVMDATL = (value) & 0xF
+      +                          FU; STATUSbits.CARRY = 0; if (INTCONbits.GIE) { STATUSbits.CARRY = 1; } INTCONbits.GIE =
+      +                           0; NVMCON1bits.WREN = 1; NVMCON2 = 0x55; NVMCON2 = 0xAA; NVMCON1bits.WR = 1; while (NVM
+      +                          CON1bits.WR) { continue; } NVMCON1bits.WREN = 0; if (STATUSbits.CARRY) { INTCONbits.GIE 
+      +                          = 1; } } while (0);
+  9456                           
+  9457  0EEA                     l739:	
+  9458  0EEA  0031               	movlb	17	; select bank17
+  9459  0EEB  1895               	btfsc	21,1	;volsfr
+  9460  0EEC  2EEE               	goto	u1571
+  9461  0EED  2EEF               	goto	u1570
+  9462  0EEE                     u1571:	
+  9463  0EEE  2EEA               	goto	l739
+  9464  0EEF                     u1570:	
+  9465  0EEF                     l741:	
+  9466  0EEF  1715               	bsf	21,6	;volsfr
+  9467  0EF0                     l2741:	
+  9468  0EF0  0020               	movlb	0	; select bank0
+  9469  0EF1  0821               	movf	eeprom_write@addr,w
+  9470  0EF2  0031               	movlb	17	; select bank17
+  9471  0EF3  0091               	movwf	17	;volatile
+  9472  0EF4  3070               	movlw	112
+  9473  0EF5  0092               	movwf	18	;volatile
+  9474  0EF6                     l2743:	
+  9475  0EF6  0194               	clrf	20	;volatile
+  9476  0EF7                     l2745:	
+  9477  0EF7  0020               	movlb	0	; select bank0
+  9478  0EF8  0820               	movf	eeprom_write@value,w
+  9479  0EF9  0031               	movlb	17	; select bank17
+  9480  0EFA  0093               	movwf	19	;volatile
+  9481  0EFB                     l2747:	
+  9482  0EFB  0020               	movlb	0	; select bank0
+  9483  0EFC  1003               	bcf	3,0	;volatile
+  9484  0EFD                     l2749:	
+  9485  0EFD  1F8B               	btfss	11,7	;volatile
+  9486  0EFE  2F00               	goto	u1581
+  9487  0EFF  2F01               	goto	u1580
+  9488  0F00                     u1581:	
+  9489  0F00  2F02               	goto	l742
+  9490  0F01                     u1580:	
+  9491  0F01                     l2751:	
+  9492  0F01  1403               	bsf	3,0	;volatile
+  9493  0F02                     l742:	
+  9494  0F02  138B               	bcf	11,7	;volatile
+  9495  0F03  0031               	movlb	17	; select bank17
+  9496  0F04  1515               	bsf	21,2	;volsfr
+  9497  0F05                     l2753:	
+  9498  0F05  3055               	movlw	85
+  9499  0F06  0096               	movwf	22	;volsfr
+  9500  0F07  30AA               	movlw	170
+  9501  0F08  0096               	movwf	22	;volsfr
+  9502  0F09                     l2755:	
+  9503  0F09  1495               	bsf	21,1	;volsfr
+  9504  0F0A                     l743:	
+  9505  0F0A  1895               	btfsc	21,1	;volsfr
+  9506  0F0B  2F0D               	goto	u1591
+  9507  0F0C  2F0E               	goto	u1590
+  9508  0F0D                     u1591:	
+  9509  0F0D  2F0A               	goto	l743
+  9510  0F0E                     u1590:	
+  9511  0F0E                     l745:	
+  9512  0F0E  1115               	bcf	21,2	;volsfr
+  9513  0F0F  0020               	movlb	0	; select bank0
+  9514  0F10  1C03               	btfss	3,0	;volatile
+  9515  0F11  2F13               	goto	u1601
+  9516  0F12  2F14               	goto	u1600
+  9517  0F13                     u1601:	
+  9518  0F13  2F15               	goto	l748
+  9519  0F14                     u1600:	
+  9520  0F14                     l2757:	
+  9521  0F14  178B               	bsf	11,7	;volatile
+  9522  0F15                     l748:	
+  9523  0F15  0008               	return
+  9524  0F16                     __end_of_eeprom_write:	
+  9525                           
+  9526                           	psect	text32
+  9527  0532                     __ptext32:	
+  9528 ;; *************** function _FlashPattern *****************
+  9529 ;; Defined at:
+  9530 ;;		line 11 in file "PatternFlasher.c"
+  9531 ;; Parameters:    Size  Location     Type
+  9532 ;;		None
+  9533 ;; Auto vars:     Size  Location     Type
+  9534 ;;  current_time    2   15[BANK0 ] unsigned short 
+  9535 ;; Return value:  Size  Location     Type
+  9536 ;;                  1    wreg      void 
+  9537 ;; Registers used:
+  9538 ;;		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+  9539 ;; Tracked objects:
+  9540 ;;		On entry : 0/0
+  9541 ;;		On exit  : 0/0
+  9542 ;;		Unchanged: 0/0
+  9543 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
-  9542 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+  9544 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9543 ;;      Locals:         0       2       0       0       0       0       0       0       0       0       0       0       
+  9545 ;;      Locals:         0       2       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9544 ;;      Temps:          0      10       0       0       0       0       0       0       0       0       0       0       
+  9546 ;;      Temps:          0      10       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9545 ;;      Totals:         0      12       0       0       0       0       0       0       0       0       0       0       
+  9547 ;;      Totals:         0      12       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9546 ;;Total ram usage:       12 bytes
-  9547 ;; Hardware stack levels used:    1
-  9548 ;; Hardware stack levels required when called:    7
-  9549 ;; This function calls:
-  9550 ;;		_SetLight
-  9551 ;;		_ms
-  9552 ;; This function is called by:
-  9553 ;;		_main
-  9554 ;; This function uses a non-reentrant model
-  9555 ;;
-  9556                           
-  9557                           
-  9558                           ;psect for function _FlashPattern
-  9559  0532                     _FlashPattern:	
-  9560  0532                     l2857:	
-  9561                           ;incstack = 0
-  9562                           ; Regs used in _FlashPattern: [wreg-fsr1h+status,2+status,0+pclath+cstack]
-  9563                           
-  9564                           
-  9565                           ;PatternFlasher.c: 13:     uint current_time = ms();
-  9566  0532  318C  24CB  3185   	fcall	_ms
-  9567  0535  0020               	movlb	0	; select bank0
-  9568  0536  0821               	movf	?_ms+1,w
-  9569  0537  00B0               	movwf	FlashPattern@current_time+1
-  9570  0538  0820               	movf	?_ms,w
-  9571  0539  00AF               	movwf	FlashPattern@current_time
-  9572  053A                     l2859:	
-  9573                           
-  9574                           ;PatternFlasher.c: 15:     if ( current_time - pattern_selector.start_time > pattern_sel
+  9548 ;;Total ram usage:       12 bytes
+  9549 ;; Hardware stack levels used:    1
+  9550 ;; Hardware stack levels required when called:    7
+  9551 ;; This function calls:
+  9552 ;;		_SetLight
+  9553 ;;		_ms
+  9554 ;; This function is called by:
+  9555 ;;		_main
+  9556 ;; This function uses a non-reentrant model
+  9557 ;;
+  9558                           
+  9559                           
+  9560                           ;psect for function _FlashPattern
+  9561  0532                     _FlashPattern:	
+  9562  0532                     l2857:	
+  9563                           ;incstack = 0
+  9564                           ; Regs used in _FlashPattern: [wreg-fsr1h+status,2+status,0+pclath+cstack]
+  9565                           
+  9566                           
+  9567                           ;PatternFlasher.c: 13:     uint current_time = ms();
+  9568  0532  318C  24CB  3185   	fcall	_ms
+  9569  0535  0020               	movlb	0	; select bank0
+  9570  0536  0821               	movf	?_ms+1,w
+  9571  0537  00B0               	movwf	FlashPattern@current_time+1
+  9572  0538  0820               	movf	?_ms,w
+  9573  0539  00AF               	movwf	FlashPattern@current_time
+  9574  053A                     l2859:	
+  9575                           
+  9576                           ;PatternFlasher.c: 15:     if ( current_time - pattern_selector.start_time > pattern_sel
       +                          ector.current_stage->time_ms )
-  9575  053A  082F               	movf	FlashPattern@current_time,w
-  9576  053B  00A5               	movwf	??_FlashPattern
-  9577  053C  0830               	movf	FlashPattern@current_time+1,w
-  9578  053D  00A6               	movwf	??_FlashPattern+1
-  9579  053E  01A7               	clrf	??_FlashPattern+2
-  9580  053F  01A8               	clrf	??_FlashPattern+3
-  9581  0540  0021               	movlb	1	; select bank1
-  9582  0541  0857               	movf	(_pattern_selector^(0+128)+15),w	;volatile
-  9583  0542  0020               	movlb	0	; select bank0
-  9584  0543  02A5               	subwf	??_FlashPattern,f
-  9585  0544  0021               	movlb	1	; select bank1
-  9586  0545  0858               	movf	((_pattern_selector+1)^(0+128)+15),w	;volatile
-  9587  0546  0020               	movlb	0	; select bank0
-  9588  0547  3BA6               	subwfb	??_FlashPattern+1,f
-  9589  0548  0021               	movlb	1	; select bank1
-  9590  0549  0859               	movf	((_pattern_selector+2)^(0+128)+15),w	;volatile
-  9591  054A  0020               	movlb	0	; select bank0
-  9592  054B  3BA7               	subwfb	??_FlashPattern+2,f
-  9593  054C  0021               	movlb	1	; select bank1
-  9594  054D  085A               	movf	((_pattern_selector+3)^(0+128)+15),w	;volatile
-  9595  054E  0020               	movlb	0	; select bank0
-  9596  054F  3BA8               	subwfb	??_FlashPattern+3,f
-  9597  0550  0021               	movlb	1	; select bank1
-  9598  0551  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
-  9599  0552  0086               	movwf	6
-  9600  0553  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
-  9601  0554  0087               	movwf	7
-  9602  0555  3144               	addfsr 1,4
-  9603  0556  3F40               	moviw [0]fsr1
-  9604  0557  0020               	movlb	0	; select bank0
-  9605  0558  00A9               	movwf	??_FlashPattern+4
-  9606  0559  3F41               	moviw [1]fsr1
-  9607  055A  00AA               	movwf	??_FlashPattern+5
-  9608  055B  0829               	movf	??_FlashPattern+4,w
-  9609  055C  00AB               	movwf	??_FlashPattern+6
-  9610  055D  082A               	movf	??_FlashPattern+5,w
-  9611  055E  00AC               	movwf	??_FlashPattern+7
-  9612  055F  01AD               	clrf	??_FlashPattern+8
-  9613  0560  01AE               	clrf	??_FlashPattern+9
-  9614  0561  0828               	movf	??_FlashPattern+3,w
-  9615  0562  022E               	subwf	??_FlashPattern+9,w
-  9616  0563  1D03               	skipz
-  9617  0564  2D6F               	goto	u1655
-  9618  0565  0827               	movf	??_FlashPattern+2,w
-  9619  0566  022D               	subwf	??_FlashPattern+8,w
-  9620  0567  1D03               	skipz
-  9621  0568  2D6F               	goto	u1655
-  9622  0569  0826               	movf	??_FlashPattern+1,w
-  9623  056A  022C               	subwf	??_FlashPattern+7,w
-  9624  056B  1D03               	skipz
-  9625  056C  2D6F               	goto	u1655
-  9626  056D  0825               	movf	??_FlashPattern,w
-  9627  056E  022B               	subwf	??_FlashPattern+6,w
-  9628  056F                     u1655:	
-  9629  056F  1803               	skipnc
-  9630  0570  2D72               	goto	u1651
-  9631  0571  2D73               	goto	u1650
-  9632  0572                     u1651:	
-  9633  0572  2D8A               	goto	l2867
-  9634  0573                     u1650:	
-  9635  0573                     l2861:	
-  9636                           
-  9637                           ;PatternFlasher.c: 16:     {;PatternFlasher.c: 17:         pattern_selector.current_stag
+  9577  053A  082F               	movf	FlashPattern@current_time,w
+  9578  053B  00A5               	movwf	??_FlashPattern
+  9579  053C  0830               	movf	FlashPattern@current_time+1,w
+  9580  053D  00A6               	movwf	??_FlashPattern+1
+  9581  053E  01A7               	clrf	??_FlashPattern+2
+  9582  053F  01A8               	clrf	??_FlashPattern+3
+  9583  0540  0021               	movlb	1	; select bank1
+  9584  0541  0857               	movf	(_pattern_selector^(0+128)+15),w	;volatile
+  9585  0542  0020               	movlb	0	; select bank0
+  9586  0543  02A5               	subwf	??_FlashPattern,f
+  9587  0544  0021               	movlb	1	; select bank1
+  9588  0545  0858               	movf	((_pattern_selector+1)^(0+128)+15),w	;volatile
+  9589  0546  0020               	movlb	0	; select bank0
+  9590  0547  3BA6               	subwfb	??_FlashPattern+1,f
+  9591  0548  0021               	movlb	1	; select bank1
+  9592  0549  0859               	movf	((_pattern_selector+2)^(0+128)+15),w	;volatile
+  9593  054A  0020               	movlb	0	; select bank0
+  9594  054B  3BA7               	subwfb	??_FlashPattern+2,f
+  9595  054C  0021               	movlb	1	; select bank1
+  9596  054D  085A               	movf	((_pattern_selector+3)^(0+128)+15),w	;volatile
+  9597  054E  0020               	movlb	0	; select bank0
+  9598  054F  3BA8               	subwfb	??_FlashPattern+3,f
+  9599  0550  0021               	movlb	1	; select bank1
+  9600  0551  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
+  9601  0552  0086               	movwf	6
+  9602  0553  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
+  9603  0554  0087               	movwf	7
+  9604  0555  3144               	addfsr 1,4
+  9605  0556  3F40               	moviw [0]fsr1
+  9606  0557  0020               	movlb	0	; select bank0
+  9607  0558  00A9               	movwf	??_FlashPattern+4
+  9608  0559  3F41               	moviw [1]fsr1
+  9609  055A  00AA               	movwf	??_FlashPattern+5
+  9610  055B  0829               	movf	??_FlashPattern+4,w
+  9611  055C  00AB               	movwf	??_FlashPattern+6
+  9612  055D  082A               	movf	??_FlashPattern+5,w
+  9613  055E  00AC               	movwf	??_FlashPattern+7
+  9614  055F  01AD               	clrf	??_FlashPattern+8
+  9615  0560  01AE               	clrf	??_FlashPattern+9
+  9616  0561  0828               	movf	??_FlashPattern+3,w
+  9617  0562  022E               	subwf	??_FlashPattern+9,w
+  9618  0563  1D03               	skipz
+  9619  0564  2D6F               	goto	u1655
+  9620  0565  0827               	movf	??_FlashPattern+2,w
+  9621  0566  022D               	subwf	??_FlashPattern+8,w
+  9622  0567  1D03               	skipz
+  9623  0568  2D6F               	goto	u1655
+  9624  0569  0826               	movf	??_FlashPattern+1,w
+  9625  056A  022C               	subwf	??_FlashPattern+7,w
+  9626  056B  1D03               	skipz
+  9627  056C  2D6F               	goto	u1655
+  9628  056D  0825               	movf	??_FlashPattern,w
+  9629  056E  022B               	subwf	??_FlashPattern+6,w
+  9630  056F                     u1655:	
+  9631  056F  1803               	skipnc
+  9632  0570  2D72               	goto	u1651
+  9633  0571  2D73               	goto	u1650
+  9634  0572                     u1651:	
+  9635  0572  2D8A               	goto	l2867
+  9636  0573                     u1650:	
+  9637  0573                     l2861:	
+  9638                           
+  9639                           ;PatternFlasher.c: 16:     {;PatternFlasher.c: 17:         pattern_selector.current_stag
       +                          e = pattern_selector.current_stage->next;
-  9638  0573  0021               	movlb	1	; select bank1
-  9639  0574  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
-  9640  0575  0086               	movwf	6
-  9641  0576  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
-  9642  0577  0087               	movwf	7
-  9643  0578  3146               	addfsr 1,6
-  9644  0579  3F40               	moviw [0]fsr1
-  9645  057A  00D5               	movwf	(_pattern_selector^(0+128)+13)	;volatile
-  9646  057B  3F41               	moviw [1]fsr1
-  9647  057C  00D6               	movwf	((_pattern_selector+1)^(0+128)+13)	;volatile
-  9648  057D                     l2863:	
-  9649                           
-  9650                           ;PatternFlasher.c: 18:         pattern_selector.start_time = current_time;
-  9651  057D  0020               	movlb	0	; select bank0
-  9652  057E  082F               	movf	FlashPattern@current_time,w
-  9653  057F  0021               	movlb	1	; select bank1
-  9654  0580  00D7               	movwf	(_pattern_selector^(0+128)+15)	;volatile
-  9655  0581  0020               	movlb	0	; select bank0
-  9656  0582  0830               	movf	FlashPattern@current_time+1,w
-  9657  0583  0021               	movlb	1	; select bank1
-  9658  0584  00D8               	movwf	(_pattern_selector^(0+128)+16)	;volatile
-  9659  0585  01D9               	clrf	(_pattern_selector^(0+128)+17)	;volatile
-  9660  0586  01DA               	clrf	(_pattern_selector^(0+128)+18)	;volatile
-  9661  0587                     l2865:	
-  9662                           
-  9663                           ;PatternFlasher.c: 19:         update_stage = 1;
-  9664  0587  0020               	movlb	0	; select bank0
-  9665  0588  01EC               	clrf	_update_stage
-  9666  0589  0AEC               	incf	_update_stage,f
-  9667  058A                     l2867:	
-  9668                           
-  9669                           ;PatternFlasher.c: 23:     if ( update_stage == 1 )
-  9670  058A  036C               	decf	_update_stage,w
-  9671  058B  1D03               	btfss	3,2
-  9672  058C  2D8E               	goto	u1661
-  9673  058D  2D8F               	goto	u1660
-  9674  058E                     u1661:	
-  9675  058E  2DCC               	goto	l528
-  9676  058F                     u1660:	
-  9677  058F                     l2869:	
-  9678                           
-  9679                           ;PatternFlasher.c: 24:     {;PatternFlasher.c: 25:         SetLight( L1, pattern_selecto
+  9640  0573  0021               	movlb	1	; select bank1
+  9641  0574  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
+  9642  0575  0086               	movwf	6
+  9643  0576  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
+  9644  0577  0087               	movwf	7
+  9645  0578  3146               	addfsr 1,6
+  9646  0579  3F40               	moviw [0]fsr1
+  9647  057A  00D5               	movwf	(_pattern_selector^(0+128)+13)	;volatile
+  9648  057B  3F41               	moviw [1]fsr1
+  9649  057C  00D6               	movwf	((_pattern_selector+1)^(0+128)+13)	;volatile
+  9650  057D                     l2863:	
+  9651                           
+  9652                           ;PatternFlasher.c: 18:         pattern_selector.start_time = current_time;
+  9653  057D  0020               	movlb	0	; select bank0
+  9654  057E  082F               	movf	FlashPattern@current_time,w
+  9655  057F  0021               	movlb	1	; select bank1
+  9656  0580  00D7               	movwf	(_pattern_selector^(0+128)+15)	;volatile
+  9657  0581  0020               	movlb	0	; select bank0
+  9658  0582  0830               	movf	FlashPattern@current_time+1,w
+  9659  0583  0021               	movlb	1	; select bank1
+  9660  0584  00D8               	movwf	(_pattern_selector^(0+128)+16)	;volatile
+  9661  0585  01D9               	clrf	(_pattern_selector^(0+128)+17)	;volatile
+  9662  0586  01DA               	clrf	(_pattern_selector^(0+128)+18)	;volatile
+  9663  0587                     l2865:	
+  9664                           
+  9665                           ;PatternFlasher.c: 19:         update_stage = 1;
+  9666  0587  0020               	movlb	0	; select bank0
+  9667  0588  01EC               	clrf	_update_stage
+  9668  0589  0AEC               	incf	_update_stage,f
+  9669  058A                     l2867:	
+  9670                           
+  9671                           ;PatternFlasher.c: 23:     if ( update_stage == 1 )
+  9672  058A  036C               	decf	_update_stage,w
+  9673  058B  1D03               	btfss	3,2
+  9674  058C  2D8E               	goto	u1661
+  9675  058D  2D8F               	goto	u1660
+  9676  058E                     u1661:	
+  9677  058E  2DCC               	goto	l528
+  9678  058F                     u1660:	
+  9679  058F                     l2869:	
+  9680                           
+  9681                           ;PatternFlasher.c: 24:     {;PatternFlasher.c: 25:         SetLight( L1, pattern_selecto
       +                          r.current_stage->light_states[L1] );
-  9680  058F  0021               	movlb	1	; select bank1
-  9681  0590  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
-  9682  0591  0086               	movwf	6
-  9683  0592  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
-  9684  0593  0087               	movwf	7
-  9685  0594  0801               	movf	1,w
-  9686  0595  0020               	movlb	0	; select bank0
-  9687  0596  00A5               	movwf	??_FlashPattern
-  9688  0597  0825               	movf	??_FlashPattern,w
-  9689  0598  00A0               	movwf	SetLight@_state
-  9690  0599  3000               	movlw	0
-  9691  059A  3186  26D1  3185   	fcall	_SetLight
-  9692                           
-  9693                           ;PatternFlasher.c: 26:         SetLight( L2, pattern_selector.current_stage->light_state
+  9682  058F  0021               	movlb	1	; select bank1
+  9683  0590  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
+  9684  0591  0086               	movwf	6
+  9685  0592  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
+  9686  0593  0087               	movwf	7
+  9687  0594  0801               	movf	1,w
+  9688  0595  0020               	movlb	0	; select bank0
+  9689  0596  00A5               	movwf	??_FlashPattern
+  9690  0597  0825               	movf	??_FlashPattern,w
+  9691  0598  00A0               	movwf	SetLight@_state
+  9692  0599  3000               	movlw	0
+  9693  059A  3186  26D1  3185   	fcall	_SetLight
+  9694                           
+  9695                           ;PatternFlasher.c: 26:         SetLight( L2, pattern_selector.current_stage->light_state
       +                          s[L2] );
-  9694  059D  0021               	movlb	1	; select bank1
-  9695  059E  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
-  9696  059F  0086               	movwf	6
-  9697  05A0  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
-  9698  05A1  0087               	movwf	7
-  9699  05A2  3141               	addfsr 1,1
-  9700  05A3  0801               	movf	1,w
-  9701  05A4  0020               	movlb	0	; select bank0
-  9702  05A5  00A5               	movwf	??_FlashPattern
-  9703  05A6  0825               	movf	??_FlashPattern,w
-  9704  05A7  00A0               	movwf	SetLight@_state
-  9705  05A8  3001               	movlw	1
-  9706  05A9  3186  26D1  3185   	fcall	_SetLight
-  9707                           
-  9708                           ;PatternFlasher.c: 27:         SetLight( L3, pattern_selector.current_stage->light_state
+  9696  059D  0021               	movlb	1	; select bank1
+  9697  059E  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
+  9698  059F  0086               	movwf	6
+  9699  05A0  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
+  9700  05A1  0087               	movwf	7
+  9701  05A2  3141               	addfsr 1,1
+  9702  05A3  0801               	movf	1,w
+  9703  05A4  0020               	movlb	0	; select bank0
+  9704  05A5  00A5               	movwf	??_FlashPattern
+  9705  05A6  0825               	movf	??_FlashPattern,w
+  9706  05A7  00A0               	movwf	SetLight@_state
+  9707  05A8  3001               	movlw	1
+  9708  05A9  3186  26D1  3185   	fcall	_SetLight
+  9709                           
+  9710                           ;PatternFlasher.c: 27:         SetLight( L3, pattern_selector.current_stage->light_state
       +                          s[L3] );
-  9709  05AC  0021               	movlb	1	; select bank1
-  9710  05AD  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
-  9711  05AE  0086               	movwf	6
-  9712  05AF  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
-  9713  05B0  0087               	movwf	7
-  9714  05B1  3142               	addfsr 1,2
-  9715  05B2  0801               	movf	1,w
-  9716  05B3  0020               	movlb	0	; select bank0
-  9717  05B4  00A5               	movwf	??_FlashPattern
-  9718  05B5  0825               	movf	??_FlashPattern,w
-  9719  05B6  00A0               	movwf	SetLight@_state
-  9720  05B7  3002               	movlw	2
-  9721  05B8  3186  26D1  3185   	fcall	_SetLight
-  9722                           
-  9723                           ;PatternFlasher.c: 28:         SetLight( L4, pattern_selector.current_stage->light_state
+  9711  05AC  0021               	movlb	1	; select bank1
+  9712  05AD  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
+  9713  05AE  0086               	movwf	6
+  9714  05AF  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
+  9715  05B0  0087               	movwf	7
+  9716  05B1  3142               	addfsr 1,2
+  9717  05B2  0801               	movf	1,w
+  9718  05B3  0020               	movlb	0	; select bank0
+  9719  05B4  00A5               	movwf	??_FlashPattern
+  9720  05B5  0825               	movf	??_FlashPattern,w
+  9721  05B6  00A0               	movwf	SetLight@_state
+  9722  05B7  3002               	movlw	2
+  9723  05B8  3186  26D1  3185   	fcall	_SetLight
+  9724                           
+  9725                           ;PatternFlasher.c: 28:         SetLight( L4, pattern_selector.current_stage->light_state
       +                          s[L4] );
-  9724  05BB  0021               	movlb	1	; select bank1
-  9725  05BC  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
-  9726  05BD  0086               	movwf	6
-  9727  05BE  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
-  9728  05BF  0087               	movwf	7
-  9729  05C0  3143               	addfsr 1,3
-  9730  05C1  0801               	movf	1,w
-  9731  05C2  0020               	movlb	0	; select bank0
-  9732  05C3  00A5               	movwf	??_FlashPattern
-  9733  05C4  0825               	movf	??_FlashPattern,w
-  9734  05C5  00A0               	movwf	SetLight@_state
-  9735  05C6  3003               	movlw	3
-  9736  05C7  3186  26D1  3185   	fcall	_SetLight
-  9737  05CA                     l2871:	
-  9738                           
-  9739                           ;PatternFlasher.c: 29:         update_stage = 0;
-  9740  05CA  0020               	movlb	0	; select bank0
-  9741  05CB  01EC               	clrf	_update_stage
-  9742  05CC                     l528:	
-  9743  05CC  0008               	return
-  9744  05CD                     __end_of_FlashPattern:	
-  9745                           
-  9746                           	psect	text33
-  9747  0CCB                     __ptext33:	
-  9748 ;; *************** function _ms *****************
-  9749 ;; Defined at:
-  9750 ;;		line 7 in file "Time.c"
-  9751 ;; Parameters:    Size  Location     Type
-  9752 ;;		None
-  9753 ;; Auto vars:     Size  Location     Type
+  9726  05BB  0021               	movlb	1	; select bank1
+  9727  05BC  0855               	movf	(_pattern_selector^(0+128)+13),w	;volatile
+  9728  05BD  0086               	movwf	6
+  9729  05BE  0856               	movf	((_pattern_selector+1)^(0+128)+13),w	;volatile
+  9730  05BF  0087               	movwf	7
+  9731  05C0  3143               	addfsr 1,3
+  9732  05C1  0801               	movf	1,w
+  9733  05C2  0020               	movlb	0	; select bank0
+  9734  05C3  00A5               	movwf	??_FlashPattern
+  9735  05C4  0825               	movf	??_FlashPattern,w
+  9736  05C5  00A0               	movwf	SetLight@_state
+  9737  05C6  3003               	movlw	3
+  9738  05C7  3186  26D1  3185   	fcall	_SetLight
+  9739  05CA                     l2871:	
+  9740                           
+  9741                           ;PatternFlasher.c: 29:         update_stage = 0;
+  9742  05CA  0020               	movlb	0	; select bank0
+  9743  05CB  01EC               	clrf	_update_stage
+  9744  05CC                     l528:	
+  9745  05CC  0008               	return
+  9746  05CD                     __end_of_FlashPattern:	
+  9747                           
+  9748                           	psect	text33
+  9749  0CCB                     __ptext33:	
+  9750 ;; *************** function _ms *****************
+  9751 ;; Defined at:
+  9752 ;;		line 7 in file "Time.c"
+  9753 ;; Parameters:    Size  Location     Type
   9754 ;;		None
-  9755 ;; Return value:  Size  Location     Type
-  9756 ;;                  4    0[BANK0 ] unsigned long 
-  9757 ;; Registers used:
-  9758 ;;		wreg
-  9759 ;; Tracked objects:
-  9760 ;;		On entry : 0/0
-  9761 ;;		On exit  : 0/0
-  9762 ;;		Unchanged: 0/0
-  9763 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+  9755 ;; Auto vars:     Size  Location     Type
+  9756 ;;		None
+  9757 ;; Return value:  Size  Location     Type
+  9758 ;;                  4    0[BANK0 ] unsigned long 
+  9759 ;; Registers used:
+  9760 ;;		wreg
+  9761 ;; Tracked objects:
+  9762 ;;		On entry : 0/0
+  9763 ;;		On exit  : 0/0
+  9764 ;;		Unchanged: 0/0
+  9765 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
-  9764 ;;      Params:         0       4       0       0       0       0       0       0       0       0       0       0       
+  9766 ;;      Params:         0       4       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9765 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+  9767 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9766 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+  9768 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9767 ;;      Totals:         0       4       0       0       0       0       0       0       0       0       0       0       
+  9769 ;;      Totals:         0       4       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9768 ;;Total ram usage:        4 bytes
-  9769 ;; Hardware stack levels used:    1
-  9770 ;; Hardware stack levels required when called:    6
-  9771 ;; This function calls:
-  9772 ;;		Nothing
-  9773 ;; This function is called by:
-  9774 ;;		_TurnSignalDone
-  9775 ;;		_FlashPattern
-  9776 ;; This function uses a non-reentrant model
-  9777 ;;
-  9778                           
-  9779                           
-  9780                           ;psect for function _ms
-  9781  0CCB                     _ms:	
-  9782  0CCB                     l2799:	
-  9783                           ;incstack = 0
-  9784                           ; Regs used in _ms: [wreg]
-  9785                           
-  9786                           
-  9787                           ;Time.c: 9:     return cur_ms;
-  9788  0CCB  0020               	movlb	0	; select bank0
-  9789  0CCC  0867               	movf	_cur_ms+3,w	;volatile
-  9790  0CCD  00A3               	movwf	?_ms+3
-  9791  0CCE  0866               	movf	_cur_ms+2,w	;volatile
-  9792  0CCF  00A2               	movwf	?_ms+2
-  9793  0CD0  0865               	movf	_cur_ms+1,w	;volatile
-  9794  0CD1  00A1               	movwf	?_ms+1
-  9795  0CD2  0864               	movf	_cur_ms,w	;volatile
-  9796  0CD3  00A0               	movwf	?_ms
-  9797  0CD4                     l539:	
-  9798  0CD4  0008               	return
-  9799  0CD5                     __end_of_ms:	
-  9800                           
-  9801                           	psect	text34
-  9802  06D1                     __ptext34:	
-  9803 ;; *************** function _SetLight *****************
-  9804 ;; Defined at:
-  9805 ;;		line 12 in file "Lights.c"
-  9806 ;; Parameters:    Size  Location     Type
-  9807 ;;  light           1    wreg     const enum E6338
-  9808 ;;  _state          1    0[BANK0 ] const _Bool 
-  9809 ;; Auto vars:     Size  Location     Type
-  9810 ;;  light           1    3[BANK0 ] const enum E6338
-  9811 ;;  state           1    4[BANK0 ] _Bool 
-  9812 ;; Return value:  Size  Location     Type
-  9813 ;;                  1    wreg      void 
-  9814 ;; Registers used:
-  9815 ;;		wreg, fsr0l, fsr0h, status,2, status,0
-  9816 ;; Tracked objects:
-  9817 ;;		On entry : 0/0
-  9818 ;;		On exit  : 0/0
-  9819 ;;		Unchanged: 0/0
-  9820 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+  9770 ;;Total ram usage:        4 bytes
+  9771 ;; Hardware stack levels used:    1
+  9772 ;; Hardware stack levels required when called:    6
+  9773 ;; This function calls:
+  9774 ;;		Nothing
+  9775 ;; This function is called by:
+  9776 ;;		_TurnSignalDone
+  9777 ;;		_FlashPattern
+  9778 ;; This function uses a non-reentrant model
+  9779 ;;
+  9780                           
+  9781                           
+  9782                           ;psect for function _ms
+  9783  0CCB                     _ms:	
+  9784  0CCB                     l2799:	
+  9785                           ;incstack = 0
+  9786                           ; Regs used in _ms: [wreg]
+  9787                           
+  9788                           
+  9789                           ;Time.c: 9:     return cur_ms;
+  9790  0CCB  0020               	movlb	0	; select bank0
+  9791  0CCC  0867               	movf	_cur_ms+3,w	;volatile
+  9792  0CCD  00A3               	movwf	?_ms+3
+  9793  0CCE  0866               	movf	_cur_ms+2,w	;volatile
+  9794  0CCF  00A2               	movwf	?_ms+2
+  9795  0CD0  0865               	movf	_cur_ms+1,w	;volatile
+  9796  0CD1  00A1               	movwf	?_ms+1
+  9797  0CD2  0864               	movf	_cur_ms,w	;volatile
+  9798  0CD3  00A0               	movwf	?_ms
+  9799  0CD4                     l539:	
+  9800  0CD4  0008               	return
+  9801  0CD5                     __end_of_ms:	
+  9802                           
+  9803                           	psect	text34
+  9804  06D1                     __ptext34:	
+  9805 ;; *************** function _SetLight *****************
+  9806 ;; Defined at:
+  9807 ;;		line 12 in file "Lights.c"
+  9808 ;; Parameters:    Size  Location     Type
+  9809 ;;  light           1    wreg     const enum E6338
+  9810 ;;  _state          1    0[BANK0 ] const _Bool 
+  9811 ;; Auto vars:     Size  Location     Type
+  9812 ;;  light           1    3[BANK0 ] const enum E6338
+  9813 ;;  state           1    4[BANK0 ] _Bool 
+  9814 ;; Return value:  Size  Location     Type
+  9815 ;;                  1    wreg      void 
+  9816 ;; Registers used:
+  9817 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  9818 ;; Tracked objects:
+  9819 ;;		On entry : 0/0
+  9820 ;;		On exit  : 0/0
+  9821 ;;		Unchanged: 0/0
+  9822 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
-  9821 ;;      Params:         0       1       0       0       0       0       0       0       0       0       0       0       
+  9823 ;;      Params:         0       1       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9822 ;;      Locals:         0       2       0       0       0       0       0       0       0       0       0       0       
+  9824 ;;      Locals:         0       2       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9823 ;;      Temps:          0       2       0       0       0       0       0       0       0       0       0       0       
+  9825 ;;      Temps:          0       2       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9824 ;;      Totals:         0       5       0       0       0       0       0       0       0       0       0       0       
+  9826 ;;      Totals:         0       5       0       0       0       0       0       0       0       0       0       0       
       +0       0
-  9825 ;;Total ram usage:        5 bytes
-  9826 ;; Hardware stack levels used:    1
-  9827 ;; Hardware stack levels required when called:    6
-  9828 ;; This function calls:
-  9829 ;;		Nothing
-  9830 ;; This function is called by:
-  9831 ;;		_SetOutputs
-  9832 ;;		_FlashPattern
-  9833 ;; This function uses a non-reentrant model
-  9834 ;;
-  9835                           
-  9836                           
-  9837                           ;psect for function _SetLight
-  9838  06D1                     _SetLight:	
-  9839                           
-  9840                           ;incstack = 0
-  9841                           ; Regs used in _SetLight: [wreg-fsr0h+status,2+status,0]
-  9842                           ;SetLight@light stored from wreg
-  9843  06D1  0020               	movlb	0	; select bank0
-  9844  06D2  00A3               	movwf	SetLight@light
-  9845  06D3                     l2311:	
-  9846                           
-  9847                           ;Lights.c: 12: void SetLight( const enum Light light, const _Bool _state );Lights.c: 13:
+  9827 ;;Total ram usage:        5 bytes
+  9828 ;; Hardware stack levels used:    1
+  9829 ;; Hardware stack levels required when called:    6
+  9830 ;; This function calls:
+  9831 ;;		Nothing
+  9832 ;; This function is called by:
+  9833 ;;		_SetOutputs
+  9834 ;;		_FlashPattern
+  9835 ;; This function uses a non-reentrant model
+  9836 ;;
+  9837                           
+  9838                           
+  9839                           ;psect for function _SetLight
+  9840  06D1                     _SetLight:	
+  9841                           
+  9842                           ;incstack = 0
+  9843                           ; Regs used in _SetLight: [wreg-fsr0h+status,2+status,0]
+  9844                           ;SetLight@light stored from wreg
+  9845  06D1  0020               	movlb	0	; select bank0
+  9846  06D2  00A3               	movwf	SetLight@light
+  9847  06D3                     l2311:	
+  9848                           
+  9849                           ;Lights.c: 12: void SetLight( const enum Light light, const _Bool _state );Lights.c: 13:
       +                           {;Lights.c: 14:     _Bool state = ( _state );
-  9848  06D3  0820               	movf	SetLight@_state,w
-  9849  06D4  00A1               	movwf	??_SetLight
-  9850  06D5  0821               	movf	??_SetLight,w
-  9851  06D6  00A4               	movwf	SetLight@state
-  9852                           
-  9853                           ;Lights.c: 16:     switch ( light )
-  9854  06D7  2F2C               	goto	l2333
-  9855  06D8                     l2313:	
-  9856                           
-  9857                           ;Lights.c: 19:             if ( PORTCbits.RC1 != state )
-  9858  06D8  0C0E               	rrf	14,w	;volatile
-  9859  06D9  3901               	andlw	1
-  9860  06DA  0624               	xorwf	SetLight@state,w
-  9861  06DB  1903               	skipnz
-  9862  06DC  2EDE               	goto	u1091
-  9863  06DD  2EDF               	goto	u1090
-  9864  06DE                     u1091:	
-  9865  06DE  2F42               	goto	l361
-  9866  06DF                     u1090:	
-  9867  06DF                     l2315:	
-  9868  06DF  1003               	clrc
-  9869  06E0  0022               	movlb	2	; select bank2
-  9870  06E1  1C8E               	btfss	14,1	;volatile
-  9871  06E2  1403               	setc
-  9872  06E3  1803               	btfsc	3,0
-  9873  06E4  2EE6               	goto	u1101
-  9874  06E5  2EE9               	goto	u1100
-  9875  06E6                     u1101:	
-  9876  06E6  0022               	movlb	2	; select bank2
-  9877  06E7  148E               	bsf	14,1	;volatile
-  9878  06E8  2EEB               	goto	u1114
-  9879  06E9                     u1100:	
-  9880  06E9  0022               	movlb	2	; select bank2
-  9881  06EA  108E               	bcf	14,1	;volatile
-  9882  06EB                     u1114:	
-  9883  06EB  2F42               	goto	l361
-  9884  06EC                     l2317:	
-  9885                           
-  9886                           ;Lights.c: 23:             if ( PORTCbits.RC2 != state )
-  9887  06EC  0C0E               	rrf	14,w	;volatile
-  9888  06ED  0C89               	rrf	9,f
-  9889  06EE  3901               	andlw	1
-  9890  06EF  0624               	xorwf	SetLight@state,w
-  9891  06F0  1903               	skipnz
-  9892  06F1  2EF3               	goto	u1121
-  9893  06F2  2EF4               	goto	u1120
-  9894  06F3                     u1121:	
-  9895  06F3  2F42               	goto	l361
-  9896  06F4                     u1120:	
-  9897  06F4                     l2319:	
-  9898  06F4  1003               	clrc
-  9899  06F5  0022               	movlb	2	; select bank2
-  9900  06F6  1D0E               	btfss	14,2	;volatile
-  9901  06F7  1403               	setc
-  9902  06F8  1803               	btfsc	3,0
-  9903  06F9  2EFB               	goto	u1131
-  9904  06FA  2EFE               	goto	u1130
-  9905  06FB                     u1131:	
-  9906  06FB  0022               	movlb	2	; select bank2
-  9907  06FC  150E               	bsf	14,2	;volatile
-  9908  06FD  2F00               	goto	u1144
-  9909  06FE                     u1130:	
-  9910  06FE  0022               	movlb	2	; select bank2
-  9911  06FF  110E               	bcf	14,2	;volatile
-  9912  0700                     u1144:	
-  9913  0700  2F42               	goto	l361
-  9914  0701                     l2321:	
-  9915                           
-  9916                           ;Lights.c: 27:             if ( PORTCbits.RC3 != state )
-  9917  0701  0C0E               	rrf	14,w	;volatile
-  9918  0702  00A1               	movwf	??_SetLight
-  9919  0703  0CA1               	rrf	??_SetLight,f
-  9920  0704  0C21               	rrf	??_SetLight,w
-  9921  0705  3901               	andlw	1
-  9922  0706  0624               	xorwf	SetLight@state,w
-  9923  0707  1903               	skipnz
-  9924  0708  2F0A               	goto	u1151
-  9925  0709  2F0B               	goto	u1150
-  9926  070A                     u1151:	
-  9927  070A  2F42               	goto	l361
-  9928  070B                     u1150:	
-  9929  070B                     l2323:	
-  9930  070B  1003               	clrc
-  9931  070C  0022               	movlb	2	; select bank2
-  9932  070D  1D8E               	btfss	14,3	;volatile
-  9933  070E  1403               	setc
-  9934  070F  1803               	btfsc	3,0
-  9935  0710  2F12               	goto	u1161
-  9936  0711  2F15               	goto	u1160
-  9937  0712                     u1161:	
-  9938  0712  0022               	movlb	2	; select bank2
-  9939  0713  158E               	bsf	14,3	;volatile
-  9940  0714  2F17               	goto	u1174
-  9941  0715                     u1160:	
-  9942  0715  0022               	movlb	2	; select bank2
-  9943  0716  118E               	bcf	14,3	;volatile
-  9944  0717                     u1174:	
-  9945  0717  2F42               	goto	l361
-  9946  0718                     l2325:	
-  9947                           
-  9948                           ;Lights.c: 32:             if ( PORTCbits.RC4 != state )
-  9949  0718  0E0E               	swapf	14,w	;volatile
-  9950  0719  3901               	andlw	1
-  9951  071A  0624               	xorwf	SetLight@state,w
-  9952  071B  1903               	skipnz
-  9953  071C  2F1E               	goto	u1181
-  9954  071D  2F1F               	goto	u1180
-  9955  071E                     u1181:	
-  9956  071E  2F42               	goto	l361
-  9957  071F                     u1180:	
-  9958  071F                     l2327:	
-  9959  071F  1003               	clrc
-  9960  0720  0022               	movlb	2	; select bank2
-  9961  0721  1E0E               	btfss	14,4	;volatile
-  9962  0722  1403               	setc
-  9963  0723  1803               	btfsc	3,0
-  9964  0724  2F26               	goto	u1191
-  9965  0725  2F29               	goto	u1190
-  9966  0726                     u1191:	
-  9967  0726  0022               	movlb	2	; select bank2
-  9968  0727  160E               	bsf	14,4	;volatile
-  9969  0728  2F2B               	goto	u1204
-  9970  0729                     u1190:	
-  9971  0729  0022               	movlb	2	; select bank2
-  9972  072A  120E               	bcf	14,4	;volatile
-  9973  072B                     u1204:	
-  9974  072B  2F42               	goto	l361
-  9975  072C                     l2333:	
-  9976  072C  0823               	movf	SetLight@light,w
-  9977  072D  00A1               	movwf	??_SetLight
-  9978  072E  01A2               	clrf	??_SetLight+1
-  9979                           
-  9980                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+  9850  06D3  0820               	movf	SetLight@_state,w
+  9851  06D4  00A1               	movwf	??_SetLight
+  9852  06D5  0821               	movf	??_SetLight,w
+  9853  06D6  00A4               	movwf	SetLight@state
+  9854                           
+  9855                           ;Lights.c: 16:     switch ( light )
+  9856  06D7  2F2C               	goto	l2333
+  9857  06D8                     l2313:	
+  9858                           
+  9859                           ;Lights.c: 19:             if ( PORTCbits.RC4 != state )
+  9860  06D8  0E0E               	swapf	14,w	;volatile
+  9861  06D9  3901               	andlw	1
+  9862  06DA  0624               	xorwf	SetLight@state,w
+  9863  06DB  1903               	skipnz
+  9864  06DC  2EDE               	goto	u1091
+  9865  06DD  2EDF               	goto	u1090
+  9866  06DE                     u1091:	
+  9867  06DE  2F42               	goto	l361
+  9868  06DF                     u1090:	
+  9869  06DF                     l2315:	
+  9870  06DF  1003               	clrc
+  9871  06E0  0022               	movlb	2	; select bank2
+  9872  06E1  1E0E               	btfss	14,4	;volatile
+  9873  06E2  1403               	setc
+  9874  06E3  1803               	btfsc	3,0
+  9875  06E4  2EE6               	goto	u1101
+  9876  06E5  2EE9               	goto	u1100
+  9877  06E6                     u1101:	
+  9878  06E6  0022               	movlb	2	; select bank2
+  9879  06E7  160E               	bsf	14,4	;volatile
+  9880  06E8  2EEB               	goto	u1114
+  9881  06E9                     u1100:	
+  9882  06E9  0022               	movlb	2	; select bank2
+  9883  06EA  120E               	bcf	14,4	;volatile
+  9884  06EB                     u1114:	
+  9885  06EB  2F42               	goto	l361
+  9886  06EC                     l2317:	
+  9887                           
+  9888                           ;Lights.c: 23:             if ( PORTCbits.RC3 != state )
+  9889  06EC  0C0E               	rrf	14,w	;volatile
+  9890  06ED  00A1               	movwf	??_SetLight
+  9891  06EE  0CA1               	rrf	??_SetLight,f
+  9892  06EF  0C21               	rrf	??_SetLight,w
+  9893  06F0  3901               	andlw	1
+  9894  06F1  0624               	xorwf	SetLight@state,w
+  9895  06F2  1903               	skipnz
+  9896  06F3  2EF5               	goto	u1121
+  9897  06F4  2EF6               	goto	u1120
+  9898  06F5                     u1121:	
+  9899  06F5  2F42               	goto	l361
+  9900  06F6                     u1120:	
+  9901  06F6                     l2319:	
+  9902  06F6  1003               	clrc
+  9903  06F7  0022               	movlb	2	; select bank2
+  9904  06F8  1D8E               	btfss	14,3	;volatile
+  9905  06F9  1403               	setc
+  9906  06FA  1803               	btfsc	3,0
+  9907  06FB  2EFD               	goto	u1131
+  9908  06FC  2F00               	goto	u1130
+  9909  06FD                     u1131:	
+  9910  06FD  0022               	movlb	2	; select bank2
+  9911  06FE  158E               	bsf	14,3	;volatile
+  9912  06FF  2F02               	goto	u1144
+  9913  0700                     u1130:	
+  9914  0700  0022               	movlb	2	; select bank2
+  9915  0701  118E               	bcf	14,3	;volatile
+  9916  0702                     u1144:	
+  9917  0702  2F42               	goto	l361
+  9918  0703                     l2321:	
+  9919                           
+  9920                           ;Lights.c: 27:             if ( PORTCbits.RC2 != state )
+  9921  0703  0C0E               	rrf	14,w	;volatile
+  9922  0704  0C89               	rrf	9,f
+  9923  0705  3901               	andlw	1
+  9924  0706  0624               	xorwf	SetLight@state,w
+  9925  0707  1903               	skipnz
+  9926  0708  2F0A               	goto	u1151
+  9927  0709  2F0B               	goto	u1150
+  9928  070A                     u1151:	
+  9929  070A  2F42               	goto	l361
+  9930  070B                     u1150:	
+  9931  070B                     l2323:	
+  9932  070B  1003               	clrc
+  9933  070C  0022               	movlb	2	; select bank2
+  9934  070D  1D0E               	btfss	14,2	;volatile
+  9935  070E  1403               	setc
+  9936  070F  1803               	btfsc	3,0
+  9937  0710  2F12               	goto	u1161
+  9938  0711  2F15               	goto	u1160
+  9939  0712                     u1161:	
+  9940  0712  0022               	movlb	2	; select bank2
+  9941  0713  150E               	bsf	14,2	;volatile
+  9942  0714  2F17               	goto	u1174
+  9943  0715                     u1160:	
+  9944  0715  0022               	movlb	2	; select bank2
+  9945  0716  110E               	bcf	14,2	;volatile
+  9946  0717                     u1174:	
+  9947  0717  2F42               	goto	l361
+  9948  0718                     l2325:	
+  9949                           
+  9950                           ;Lights.c: 32:             if ( PORTCbits.RC1 != state )
+  9951  0718  0C0E               	rrf	14,w	;volatile
+  9952  0719  3901               	andlw	1
+  9953  071A  0624               	xorwf	SetLight@state,w
+  9954  071B  1903               	skipnz
+  9955  071C  2F1E               	goto	u1181
+  9956  071D  2F1F               	goto	u1180
+  9957  071E                     u1181:	
+  9958  071E  2F42               	goto	l361
+  9959  071F                     u1180:	
+  9960  071F                     l2327:	
+  9961  071F  1003               	clrc
+  9962  0720  0022               	movlb	2	; select bank2
+  9963  0721  1C8E               	btfss	14,1	;volatile
+  9964  0722  1403               	setc
+  9965  0723  1803               	btfsc	3,0
+  9966  0724  2F26               	goto	u1191
+  9967  0725  2F29               	goto	u1190
+  9968  0726                     u1191:	
+  9969  0726  0022               	movlb	2	; select bank2
+  9970  0727  148E               	bsf	14,1	;volatile
+  9971  0728  2F2B               	goto	u1204
+  9972  0729                     u1190:	
+  9973  0729  0022               	movlb	2	; select bank2
+  9974  072A  108E               	bcf	14,1	;volatile
+  9975  072B                     u1204:	
+  9976  072B  2F42               	goto	l361
+  9977  072C                     l2333:	
+  9978  072C  0823               	movf	SetLight@light,w
+  9979  072D  00A1               	movwf	??_SetLight
+  9980  072E  01A2               	clrf	??_SetLight+1
+  9981                           
+  9982                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
       +                          itches
-  9981                           ; Switch size 1, requested type "simple"
-  9982                           ; Number of cases is 1, Range of values is 0 to 0
-  9983                           ; switch strategies available:
-  9984                           ; Name         Instructions Cycles
-  9985                           ; simple_byte            4     3 (average)
-  9986                           ; direct_byte            8     6 (fixed)
-  9987                           ; jumptable            260     6 (fixed)
-  9988                           ;	Chosen strategy is simple_byte
-  9989  072F  0822               	movf	??_SetLight+1,w
-  9990  0730  3A00               	xorlw	0	; case 0
-  9991  0731  1903               	skipnz
-  9992  0732  2F34               	goto	l2951
-  9993  0733  2F18               	goto	l2325
-  9994  0734                     l2951:	
-  9995                           
-  9996                           ; Switch size 1, requested type "simple"
-  9997                           ; Number of cases is 4, Range of values is 0 to 3
-  9998                           ; switch strategies available:
-  9999                           ; Name         Instructions Cycles
- 10000                           ; simple_byte           13     7 (average)
- 10001                           ; direct_byte           14     6 (fixed)
- 10002                           ; jumptable            260     6 (fixed)
- 10003                           ;	Chosen strategy is simple_byte
- 10004  0734  0821               	movf	??_SetLight,w
- 10005  0735  3A00               	xorlw	0	; case 0
- 10006  0736  1903               	skipnz
- 10007  0737  2ED8               	goto	l2313
- 10008  0738  3A01               	xorlw	1	; case 1
- 10009  0739  1903               	skipnz
- 10010  073A  2EEC               	goto	l2317
- 10011  073B  3A03               	xorlw	3	; case 2
- 10012  073C  1903               	skipnz
- 10013  073D  2F01               	goto	l2321
- 10014  073E  3A01               	xorlw	1	; case 3
- 10015  073F  1903               	skipnz
- 10016  0740  2F18               	goto	l2325
- 10017  0741  2F18               	goto	l2325
- 10018  0742                     l361:	
- 10019  0742  0008               	return
- 10020  0743                     __end_of_SetLight:	
- 10021                           
- 10022                           	psect	intentry
- 10023  0004                     __pintentry:	
- 10024 ;; *************** function _INTERRUPT_InterruptManager *****************
- 10025 ;; Defined at:
- 10026 ;;		line 52 in file "mcc_generated_files/interrupt_manager.c"
- 10027 ;; Parameters:    Size  Location     Type
- 10028 ;;		None
- 10029 ;; Auto vars:     Size  Location     Type
+  9983                           ; Switch size 1, requested type "simple"
+  9984                           ; Number of cases is 1, Range of values is 0 to 0
+  9985                           ; switch strategies available:
+  9986                           ; Name         Instructions Cycles
+  9987                           ; simple_byte            4     3 (average)
+  9988                           ; direct_byte            8     6 (fixed)
+  9989                           ; jumptable            260     6 (fixed)
+  9990                           ;	Chosen strategy is simple_byte
+  9991  072F  0822               	movf	??_SetLight+1,w
+  9992  0730  3A00               	xorlw	0	; case 0
+  9993  0731  1903               	skipnz
+  9994  0732  2F34               	goto	l2951
+  9995  0733  2F18               	goto	l2325
+  9996  0734                     l2951:	
+  9997                           
+  9998                           ; Switch size 1, requested type "simple"
+  9999                           ; Number of cases is 4, Range of values is 0 to 3
+ 10000                           ; switch strategies available:
+ 10001                           ; Name         Instructions Cycles
+ 10002                           ; simple_byte           13     7 (average)
+ 10003                           ; direct_byte           14     6 (fixed)
+ 10004                           ; jumptable            260     6 (fixed)
+ 10005                           ;	Chosen strategy is simple_byte
+ 10006  0734  0821               	movf	??_SetLight,w
+ 10007  0735  3A00               	xorlw	0	; case 0
+ 10008  0736  1903               	skipnz
+ 10009  0737  2ED8               	goto	l2313
+ 10010  0738  3A01               	xorlw	1	; case 1
+ 10011  0739  1903               	skipnz
+ 10012  073A  2EEC               	goto	l2317
+ 10013  073B  3A03               	xorlw	3	; case 2
+ 10014  073C  1903               	skipnz
+ 10015  073D  2F03               	goto	l2321
+ 10016  073E  3A01               	xorlw	1	; case 3
+ 10017  073F  1903               	skipnz
+ 10018  0740  2F18               	goto	l2325
+ 10019  0741  2F18               	goto	l2325
+ 10020  0742                     l361:	
+ 10021  0742  0008               	return
+ 10022  0743                     __end_of_SetLight:	
+ 10023                           
+ 10024                           	psect	intentry
+ 10025  0004                     __pintentry:	
+ 10026 ;; *************** function _INTERRUPT_InterruptManager *****************
+ 10027 ;; Defined at:
+ 10028 ;;		line 52 in file "mcc_generated_files/interrupt_manager.c"
+ 10029 ;; Parameters:    Size  Location     Type
  10030 ;;		None
- 10031 ;; Return value:  Size  Location     Type
- 10032 ;;                  1    wreg      void 
- 10033 ;; Registers used:
- 10034 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- 10035 ;; Tracked objects:
- 10036 ;;		On entry : 0/0
- 10037 ;;		On exit  : 0/0
- 10038 ;;		Unchanged: 0/0
- 10039 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10031 ;; Auto vars:     Size  Location     Type
+ 10032 ;;		None
+ 10033 ;; Return value:  Size  Location     Type
+ 10034 ;;                  1    wreg      void 
+ 10035 ;; Registers used:
+ 10036 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ 10037 ;; Tracked objects:
+ 10038 ;;		On entry : 0/0
+ 10039 ;;		On exit  : 0/0
+ 10040 ;;		Unchanged: 0/0
+ 10041 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10040 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10042 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10041 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10043 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10042 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+ 10044 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10043 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10045 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10044 ;;Total ram usage:        0 bytes
- 10045 ;; Hardware stack levels used:    1
- 10046 ;; Hardware stack levels required when called:    5
- 10047 ;; This function calls:
- 10048 ;;		_PIN_MANAGER_IOC
- 10049 ;;		_TMR1_ISR
- 10050 ;; This function is called by:
- 10051 ;;		Interrupt level 1
- 10052 ;; This function uses a non-reentrant model
- 10053 ;;
- 10054                           
- 10055  0004                     _INTERRUPT_InterruptManager:	
+ 10046 ;;Total ram usage:        0 bytes
+ 10047 ;; Hardware stack levels used:    1
+ 10048 ;; Hardware stack levels required when called:    5
+ 10049 ;; This function calls:
+ 10050 ;;		_PIN_MANAGER_IOC
+ 10051 ;;		_TMR1_ISR
+ 10052 ;; This function is called by:
+ 10053 ;;		Interrupt level 1
+ 10054 ;; This function uses a non-reentrant model
+ 10055 ;;
  10056                           
- 10057                           ;incstack = 0
- 10058  0004  147E               	bsf	int$flags,0	;set compiler interrupt flag (level 1)
- 10059                           
- 10060                           ; Regs used in _INTERRUPT_InterruptManager: [wreg-fsr0h+status,2+status,0+pclath+cstack]
- 10061  0005  3180               	pagesel	$
- 10062  0006                     i1l2539:	
- 10063                           
- 10064                           ;mcc_generated_files/interrupt_manager.c: 55:     if(PIE0bits.IOCIE == 1 && PIR0bits.IOC
+ 10057  0004                     _INTERRUPT_InterruptManager:	
+ 10058                           
+ 10059                           ;incstack = 0
+ 10060  0004  147E               	bsf	int$flags,0	;set compiler interrupt flag (level 1)
+ 10061                           
+ 10062                           ; Regs used in _INTERRUPT_InterruptManager: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+ 10063  0005  3180               	pagesel	$
+ 10064  0006                     i1l2539:	
+ 10065                           
+ 10066                           ;mcc_generated_files/interrupt_manager.c: 55:     if(PIE0bits.IOCIE == 1 && PIR0bits.IOC
       +                          IF == 1)
- 10065  0006  0021               	movlb	1	; select bank1
- 10066  0007  1E10               	btfss	16,4	;volatile
- 10067  0008  280A               	goto	u139_21
- 10068  0009  280B               	goto	u139_20
- 10069  000A                     u139_21:	
- 10070  000A  2814               	goto	i1l156
- 10071  000B                     u139_20:	
- 10072  000B                     i1l2541:	
- 10073  000B  0020               	movlb	0	; select bank0
- 10074  000C  1E10               	btfss	16,4	;volatile
- 10075  000D  280F               	goto	u140_21
- 10076  000E  2810               	goto	u140_20
- 10077  000F                     u140_21:	
- 10078  000F  2814               	goto	i1l156
- 10079  0010                     u140_20:	
- 10080  0010                     i1l2543:	
- 10081                           
- 10082                           ;mcc_generated_files/interrupt_manager.c: 56:     {;mcc_generated_files/interrupt_manage
+ 10067  0006  0021               	movlb	1	; select bank1
+ 10068  0007  1E10               	btfss	16,4	;volatile
+ 10069  0008  280A               	goto	u139_21
+ 10070  0009  280B               	goto	u139_20
+ 10071  000A                     u139_21:	
+ 10072  000A  2814               	goto	i1l156
+ 10073  000B                     u139_20:	
+ 10074  000B                     i1l2541:	
+ 10075  000B  0020               	movlb	0	; select bank0
+ 10076  000C  1E10               	btfss	16,4	;volatile
+ 10077  000D  280F               	goto	u140_21
+ 10078  000E  2810               	goto	u140_20
+ 10079  000F                     u140_21:	
+ 10080  000F  2814               	goto	i1l156
+ 10081  0010                     u140_20:	
+ 10082  0010                     i1l2543:	
+ 10083                           
+ 10084                           ;mcc_generated_files/interrupt_manager.c: 56:     {;mcc_generated_files/interrupt_manage
       +                          r.c: 57:         PIN_MANAGER_IOC();
- 10083  0010  318C  2493  3180   	fcall	_PIN_MANAGER_IOC
- 10084                           
- 10085                           ;mcc_generated_files/interrupt_manager.c: 58:     }
- 10086  0013  2826               	goto	i1l162
- 10087  0014                     i1l156:	
- 10088                           ;mcc_generated_files/interrupt_manager.c: 59:     else if(INTCONbits.PEIE == 1)
- 10089                           
- 10090  0014  1F0B               	btfss	11,6	;volatile
- 10091  0015  2817               	goto	u141_21
- 10092  0016  2818               	goto	u141_20
- 10093  0017                     u141_21:	
- 10094  0017  2826               	goto	i1l162
- 10095  0018                     u141_20:	
- 10096  0018                     i1l2545:	
- 10097                           
- 10098                           ;mcc_generated_files/interrupt_manager.c: 60:     {;mcc_generated_files/interrupt_manage
+ 10085  0010  318C  2493  3180   	fcall	_PIN_MANAGER_IOC
+ 10086                           
+ 10087                           ;mcc_generated_files/interrupt_manager.c: 58:     }
+ 10088  0013  2826               	goto	i1l162
+ 10089  0014                     i1l156:	
+ 10090                           ;mcc_generated_files/interrupt_manager.c: 59:     else if(INTCONbits.PEIE == 1)
+ 10091                           
+ 10092  0014  1F0B               	btfss	11,6	;volatile
+ 10093  0015  2817               	goto	u141_21
+ 10094  0016  2818               	goto	u141_20
+ 10095  0017                     u141_21:	
+ 10096  0017  2826               	goto	i1l162
+ 10097  0018                     u141_20:	
+ 10098  0018                     i1l2545:	
+ 10099                           
+ 10100                           ;mcc_generated_files/interrupt_manager.c: 60:     {;mcc_generated_files/interrupt_manage
       +                          r.c: 61:         if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
- 10099  0018  0021               	movlb	1	; select bank1
- 10100  0019  1C11               	btfss	17,0	;volatile
- 10101  001A  281C               	goto	u142_21
- 10102  001B  281D               	goto	u142_20
- 10103  001C                     u142_21:	
- 10104  001C  2826               	goto	i1l161
- 10105  001D                     u142_20:	
- 10106  001D                     i1l2547:	
- 10107  001D  0020               	movlb	0	; select bank0
- 10108  001E  1C11               	btfss	17,0	;volatile
- 10109  001F  2821               	goto	u143_21
- 10110  0020  2822               	goto	u143_20
- 10111  0021                     u143_21:	
- 10112  0021  2826               	goto	i1l161
- 10113  0022                     u143_20:	
- 10114  0022                     i1l2549:	
- 10115                           
- 10116                           ;mcc_generated_files/interrupt_manager.c: 62:         {;mcc_generated_files/interrupt_ma
+ 10101  0018  0021               	movlb	1	; select bank1
+ 10102  0019  1C11               	btfss	17,0	;volatile
+ 10103  001A  281C               	goto	u142_21
+ 10104  001B  281D               	goto	u142_20
+ 10105  001C                     u142_21:	
+ 10106  001C  2826               	goto	i1l161
+ 10107  001D                     u142_20:	
+ 10108  001D                     i1l2547:	
+ 10109  001D  0020               	movlb	0	; select bank0
+ 10110  001E  1C11               	btfss	17,0	;volatile
+ 10111  001F  2821               	goto	u143_21
+ 10112  0020  2822               	goto	u143_20
+ 10113  0021                     u143_21:	
+ 10114  0021  2826               	goto	i1l161
+ 10115  0022                     u143_20:	
+ 10116  0022                     i1l2549:	
+ 10117                           
+ 10118                           ;mcc_generated_files/interrupt_manager.c: 62:         {;mcc_generated_files/interrupt_ma
       +                          nager.c: 63:             TMR1_ISR();
- 10117  0022  3187  27EA  3180   	fcall	_TMR1_ISR
- 10118                           
- 10119                           ;mcc_generated_files/interrupt_manager.c: 64:         }
- 10120  0025  2826               	goto	i1l162
- 10121  0026                     i1l161:	
- 10122                           ;mcc_generated_files/interrupt_manager.c: 71:     {;mcc_generated_files/interrupt_manage
+ 10119  0022  3187  27EA  3180   	fcall	_TMR1_ISR
+ 10120                           
+ 10121                           ;mcc_generated_files/interrupt_manager.c: 64:         }
+ 10122  0025  2826               	goto	i1l162
+ 10123  0026                     i1l161:	
+ 10124                           ;mcc_generated_files/interrupt_manager.c: 71:     {;mcc_generated_files/interrupt_manage
       +                          r.c: 73:     }
- 10123                           
- 10124  0026                     i1l162:	
- 10125  0026  107E               	bcf	int$flags,0	;clear compiler interrupt flag (level 1)
- 10126  0027  0009               	retfie
- 10127  0028                     __end_of_INTERRUPT_InterruptManager:	
- 10128                           
- 10129                           	psect	text36
- 10130  07EA                     __ptext36:	
- 10131 ;; *************** function _TMR1_ISR *****************
- 10132 ;; Defined at:
- 10133 ;;		line 157 in file "mcc_generated_files/tmr1.c"
- 10134 ;; Parameters:    Size  Location     Type
- 10135 ;;		None
- 10136 ;; Auto vars:     Size  Location     Type
+ 10125                           
+ 10126  0026                     i1l162:	
+ 10127  0026  107E               	bcf	int$flags,0	;clear compiler interrupt flag (level 1)
+ 10128  0027  0009               	retfie
+ 10129  0028                     __end_of_INTERRUPT_InterruptManager:	
+ 10130                           
+ 10131                           	psect	text36
+ 10132  07EA                     __ptext36:	
+ 10133 ;; *************** function _TMR1_ISR *****************
+ 10134 ;; Defined at:
+ 10135 ;;		line 157 in file "mcc_generated_files/tmr1.c"
+ 10136 ;; Parameters:    Size  Location     Type
  10137 ;;		None
- 10138 ;; Return value:  Size  Location     Type
- 10139 ;;                  1    wreg      void 
- 10140 ;; Registers used:
- 10141 ;;		wreg, status,2, status,0, pclath, cstack
- 10142 ;; Tracked objects:
- 10143 ;;		On entry : 0/0
- 10144 ;;		On exit  : 0/0
- 10145 ;;		Unchanged: 0/0
- 10146 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10138 ;; Auto vars:     Size  Location     Type
+ 10139 ;;		None
+ 10140 ;; Return value:  Size  Location     Type
+ 10141 ;;                  1    wreg      void 
+ 10142 ;; Registers used:
+ 10143 ;;		wreg, status,2, status,0, pclath, cstack
+ 10144 ;; Tracked objects:
+ 10145 ;;		On entry : 0/0
+ 10146 ;;		On exit  : 0/0
+ 10147 ;;		Unchanged: 0/0
+ 10148 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10147 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10149 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10148 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10150 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10149 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+ 10151 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10150 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10152 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10151 ;;Total ram usage:        0 bytes
- 10152 ;; Hardware stack levels used:    1
- 10153 ;; Hardware stack levels required when called:    1
- 10154 ;; This function calls:
- 10155 ;;		Absolute function
- 10156 ;;		_TMR1_DefaultInterruptHandler
- 10157 ;;		_TMR1_WriteTimer
- 10158 ;; This function is called by:
- 10159 ;;		_INTERRUPT_InterruptManager
- 10160 ;; This function uses a non-reentrant model
- 10161 ;;
- 10162                           
- 10163                           
- 10164                           ;psect for function _TMR1_ISR
- 10165  07EA                     _TMR1_ISR:	
- 10166  07EA                     i1l2437:	
- 10167                           ;incstack = 0
- 10168                           ; Regs used in _TMR1_ISR: [wreg+status,2+status,0+pclath+cstack]
- 10169                           
- 10170                           
- 10171                           ;mcc_generated_files/tmr1.c: 161:     PIR1bits.TMR1IF = 0;
- 10172  07EA  0020               	movlb	0	; select bank0
- 10173  07EB  1011               	bcf	17,0	;volatile
- 10174  07EC                     i1l2439:	
- 10175                           
- 10176                           ;mcc_generated_files/tmr1.c: 162:     TMR1_WriteTimer(timer1ReloadVal);
- 10177  07EC  087D               	movf	_timer1ReloadVal+1,w	;volatile
- 10178  07ED  00F1               	movwf	TMR1_WriteTimer@timerVal+1
- 10179  07EE  087C               	movf	_timer1ReloadVal,w	;volatile
- 10180  07EF  00F0               	movwf	TMR1_WriteTimer@timerVal
- 10181  07F0  318D  2528  3187   	fcall	_TMR1_WriteTimer
- 10182  07F3                     i1l2441:	
- 10183                           
- 10184                           ;mcc_generated_files/tmr1.c: 165:     if(TMR1_InterruptHandler)
- 10185  07F3  0021               	movlb	1	; select bank1
- 10186  07F4  085B               	movf	_TMR1_InterruptHandler^(0+128),w
- 10187  07F5  045C               	iorwf	(_TMR1_InterruptHandler+1)^(0+128),w
- 10188  07F6  1903               	btfsc	3,2
- 10189  07F7  2FF9               	goto	u130_21
- 10190  07F8  2FFA               	goto	u130_20
- 10191  07F9                     u130_21:	
- 10192  07F9  2FFF               	goto	i1l218
- 10193  07FA                     u130_20:	
- 10194  07FA                     i1l2443:	
- 10195                           
- 10196                           ;mcc_generated_files/tmr1.c: 166:     {;mcc_generated_files/tmr1.c: 167:         TMR1_In
+ 10153 ;;Total ram usage:        0 bytes
+ 10154 ;; Hardware stack levels used:    1
+ 10155 ;; Hardware stack levels required when called:    1
+ 10156 ;; This function calls:
+ 10157 ;;		Absolute function
+ 10158 ;;		_TMR1_DefaultInterruptHandler
+ 10159 ;;		_TMR1_WriteTimer
+ 10160 ;; This function is called by:
+ 10161 ;;		_INTERRUPT_InterruptManager
+ 10162 ;; This function uses a non-reentrant model
+ 10163 ;;
+ 10164                           
+ 10165                           
+ 10166                           ;psect for function _TMR1_ISR
+ 10167  07EA                     _TMR1_ISR:	
+ 10168  07EA                     i1l2437:	
+ 10169                           ;incstack = 0
+ 10170                           ; Regs used in _TMR1_ISR: [wreg+status,2+status,0+pclath+cstack]
+ 10171                           
+ 10172                           
+ 10173                           ;mcc_generated_files/tmr1.c: 161:     PIR1bits.TMR1IF = 0;
+ 10174  07EA  0020               	movlb	0	; select bank0
+ 10175  07EB  1011               	bcf	17,0	;volatile
+ 10176  07EC                     i1l2439:	
+ 10177                           
+ 10178                           ;mcc_generated_files/tmr1.c: 162:     TMR1_WriteTimer(timer1ReloadVal);
+ 10179  07EC  087D               	movf	_timer1ReloadVal+1,w	;volatile
+ 10180  07ED  00F1               	movwf	TMR1_WriteTimer@timerVal+1
+ 10181  07EE  087C               	movf	_timer1ReloadVal,w	;volatile
+ 10182  07EF  00F0               	movwf	TMR1_WriteTimer@timerVal
+ 10183  07F0  318D  2528  3187   	fcall	_TMR1_WriteTimer
+ 10184  07F3                     i1l2441:	
+ 10185                           
+ 10186                           ;mcc_generated_files/tmr1.c: 165:     if(TMR1_InterruptHandler)
+ 10187  07F3  0021               	movlb	1	; select bank1
+ 10188  07F4  085B               	movf	_TMR1_InterruptHandler^(0+128),w
+ 10189  07F5  045C               	iorwf	(_TMR1_InterruptHandler+1)^(0+128),w
+ 10190  07F6  1903               	btfsc	3,2
+ 10191  07F7  2FF9               	goto	u130_21
+ 10192  07F8  2FFA               	goto	u130_20
+ 10193  07F9                     u130_21:	
+ 10194  07F9  2FFF               	goto	i1l218
+ 10195  07FA                     u130_20:	
+ 10196  07FA                     i1l2443:	
+ 10197                           
+ 10198                           ;mcc_generated_files/tmr1.c: 166:     {;mcc_generated_files/tmr1.c: 167:         TMR1_In
       +                          terruptHandler();
- 10197  07FA  085C               	movf	(_TMR1_InterruptHandler+1)^(0+128),w
- 10198  07FB  008A               	movwf	10
- 10199  07FC  085B               	movf	_TMR1_InterruptHandler^(0+128),w
- 10200  07FD  000A               	callw
- 10201  07FE  3187               	pagesel	$
- 10202  07FF                     i1l218:	
- 10203  07FF  0008               	return
- 10204  0800                     __end_of_TMR1_ISR:	
- 10205                           
- 10206                           	psect	text37
- 10207  0D28                     __ptext37:	
- 10208 ;; *************** function _TMR1_WriteTimer *****************
- 10209 ;; Defined at:
- 10210 ;;		line 120 in file "mcc_generated_files/tmr1.c"
- 10211 ;; Parameters:    Size  Location     Type
- 10212 ;;  timerVal        2    0[COMMON] unsigned short 
- 10213 ;; Auto vars:     Size  Location     Type
- 10214 ;;		None
- 10215 ;; Return value:  Size  Location     Type
- 10216 ;;                  1    wreg      void 
- 10217 ;; Registers used:
- 10218 ;;		wreg, status,2
- 10219 ;; Tracked objects:
- 10220 ;;		On entry : 0/0
- 10221 ;;		On exit  : 0/0
- 10222 ;;		Unchanged: 0/0
- 10223 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10199  07FA  085C               	movf	(_TMR1_InterruptHandler+1)^(0+128),w
+ 10200  07FB  008A               	movwf	10
+ 10201  07FC  085B               	movf	_TMR1_InterruptHandler^(0+128),w
+ 10202  07FD  000A               	callw
+ 10203  07FE  3187               	pagesel	$
+ 10204  07FF                     i1l218:	
+ 10205  07FF  0008               	return
+ 10206  0800                     __end_of_TMR1_ISR:	
+ 10207                           
+ 10208                           	psect	text37
+ 10209  0D28                     __ptext37:	
+ 10210 ;; *************** function _TMR1_WriteTimer *****************
+ 10211 ;; Defined at:
+ 10212 ;;		line 120 in file "mcc_generated_files/tmr1.c"
+ 10213 ;; Parameters:    Size  Location     Type
+ 10214 ;;  timerVal        2    0[COMMON] unsigned short 
+ 10215 ;; Auto vars:     Size  Location     Type
+ 10216 ;;		None
+ 10217 ;; Return value:  Size  Location     Type
+ 10218 ;;                  1    wreg      void 
+ 10219 ;; Registers used:
+ 10220 ;;		wreg, status,2
+ 10221 ;; Tracked objects:
+ 10222 ;;		On entry : 0/0
+ 10223 ;;		On exit  : 0/0
+ 10224 ;;		Unchanged: 0/0
+ 10225 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10224 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+ 10226 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10225 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10227 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10226 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+ 10228 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10227 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+ 10229 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10228 ;;Total ram usage:        2 bytes
- 10229 ;; Hardware stack levels used:    1
- 10230 ;; This function calls:
- 10231 ;;		Nothing
- 10232 ;; This function is called by:
- 10233 ;;		_TMR1_ISR
- 10234 ;;		_TMR1_Reload
- 10235 ;; This function uses a non-reentrant model
- 10236 ;;
- 10237                           
- 10238                           
- 10239                           ;psect for function _TMR1_WriteTimer
- 10240  0D28                     _TMR1_WriteTimer:	
- 10241  0D28                     i1l2379:	
- 10242                           ;incstack = 0
- 10243                           ; Regs used in _TMR1_WriteTimer: [wreg+status,2]
- 10244                           
- 10245                           
- 10246                           ;mcc_generated_files/tmr1.c: 120: void TMR1_WriteTimer(uint16_t timerVal);mcc_generated_
+ 10230 ;;Total ram usage:        2 bytes
+ 10231 ;; Hardware stack levels used:    1
+ 10232 ;; This function calls:
+ 10233 ;;		Nothing
+ 10234 ;; This function is called by:
+ 10235 ;;		_TMR1_ISR
+ 10236 ;;		_TMR1_Reload
+ 10237 ;; This function uses a non-reentrant model
+ 10238 ;;
+ 10239                           
+ 10240                           
+ 10241                           ;psect for function _TMR1_WriteTimer
+ 10242  0D28                     _TMR1_WriteTimer:	
+ 10243  0D28                     i1l2379:	
+ 10244                           ;incstack = 0
+ 10245                           ; Regs used in _TMR1_WriteTimer: [wreg+status,2]
+ 10246                           
+ 10247                           
+ 10248                           ;mcc_generated_files/tmr1.c: 120: void TMR1_WriteTimer(uint16_t timerVal);mcc_generated_
       +                          files/tmr1.c: 121: {;mcc_generated_files/tmr1.c: 122:     if (T1CONbits.T1SYNC == 1)
- 10247  0D28  0020               	movlb	0	; select bank0
- 10248  0D29  1D1B               	btfss	27,2	;volatile
- 10249  0D2A  2D2C               	goto	u126_21
- 10250  0D2B  2D2D               	goto	u126_20
- 10251  0D2C                     u126_21:	
- 10252  0D2C  2D34               	goto	i1l2389
- 10253  0D2D                     u126_20:	
- 10254  0D2D                     i1l2381:	
- 10255                           
- 10256                           ;mcc_generated_files/tmr1.c: 123:     {;mcc_generated_files/tmr1.c: 125:         T1CONbi
+ 10249  0D28  0020               	movlb	0	; select bank0
+ 10250  0D29  1D1B               	btfss	27,2	;volatile
+ 10251  0D2A  2D2C               	goto	u126_21
+ 10252  0D2B  2D2D               	goto	u126_20
+ 10253  0D2C                     u126_21:	
+ 10254  0D2C  2D34               	goto	i1l2389
+ 10255  0D2D                     u126_20:	
+ 10256  0D2D                     i1l2381:	
+ 10257                           
+ 10258                           ;mcc_generated_files/tmr1.c: 123:     {;mcc_generated_files/tmr1.c: 125:         T1CONbi
       +                          ts.TMR1ON = 0;
- 10257  0D2D  101B               	bcf	27,0	;volatile
- 10258  0D2E                     i1l2383:	
- 10259                           
- 10260                           ;mcc_generated_files/tmr1.c: 128:         TMR1H = (timerVal >> 8);
- 10261  0D2E  0871               	movf	TMR1_WriteTimer@timerVal+1,w
- 10262  0D2F  009A               	movwf	26	;volatile
- 10263  0D30                     i1l2385:	
- 10264                           
- 10265                           ;mcc_generated_files/tmr1.c: 129:         TMR1L = timerVal;
- 10266  0D30  0870               	movf	TMR1_WriteTimer@timerVal,w
- 10267  0D31  0099               	movwf	25	;volatile
- 10268  0D32                     i1l2387:	
- 10269                           
- 10270                           ;mcc_generated_files/tmr1.c: 132:         T1CONbits.TMR1ON =1;
- 10271  0D32  141B               	bsf	27,0	;volatile
- 10272                           
- 10273                           ;mcc_generated_files/tmr1.c: 133:     }
- 10274  0D33  2D38               	goto	i1l205
- 10275  0D34                     i1l2389:	
- 10276                           
- 10277                           ;mcc_generated_files/tmr1.c: 135:     {;mcc_generated_files/tmr1.c: 137:         TMR1H =
+ 10259  0D2D  101B               	bcf	27,0	;volatile
+ 10260  0D2E                     i1l2383:	
+ 10261                           
+ 10262                           ;mcc_generated_files/tmr1.c: 128:         TMR1H = (timerVal >> 8);
+ 10263  0D2E  0871               	movf	TMR1_WriteTimer@timerVal+1,w
+ 10264  0D2F  009A               	movwf	26	;volatile
+ 10265  0D30                     i1l2385:	
+ 10266                           
+ 10267                           ;mcc_generated_files/tmr1.c: 129:         TMR1L = timerVal;
+ 10268  0D30  0870               	movf	TMR1_WriteTimer@timerVal,w
+ 10269  0D31  0099               	movwf	25	;volatile
+ 10270  0D32                     i1l2387:	
+ 10271                           
+ 10272                           ;mcc_generated_files/tmr1.c: 132:         T1CONbits.TMR1ON =1;
+ 10273  0D32  141B               	bsf	27,0	;volatile
+ 10274                           
+ 10275                           ;mcc_generated_files/tmr1.c: 133:     }
+ 10276  0D33  2D38               	goto	i1l205
+ 10277  0D34                     i1l2389:	
+ 10278                           
+ 10279                           ;mcc_generated_files/tmr1.c: 135:     {;mcc_generated_files/tmr1.c: 137:         TMR1H =
       +                           (timerVal >> 8);
- 10278  0D34  0871               	movf	TMR1_WriteTimer@timerVal+1,w
- 10279  0D35  009A               	movwf	26	;volatile
- 10280  0D36                     i1l2391:	
- 10281                           
- 10282                           ;mcc_generated_files/tmr1.c: 138:         TMR1L = timerVal;
- 10283  0D36  0870               	movf	TMR1_WriteTimer@timerVal,w
- 10284  0D37  0099               	movwf	25	;volatile
- 10285  0D38                     i1l205:	
- 10286  0D38  0008               	return
- 10287  0D39                     __end_of_TMR1_WriteTimer:	
- 10288                           
- 10289                           	psect	text38
- 10290  0CC1                     __ptext38:	
- 10291 ;; *************** function _TMR1_DefaultInterruptHandler *****************
- 10292 ;; Defined at:
- 10293 ;;		line 176 in file "mcc_generated_files/tmr1.c"
- 10294 ;; Parameters:    Size  Location     Type
- 10295 ;;		None
- 10296 ;; Auto vars:     Size  Location     Type
+ 10280  0D34  0871               	movf	TMR1_WriteTimer@timerVal+1,w
+ 10281  0D35  009A               	movwf	26	;volatile
+ 10282  0D36                     i1l2391:	
+ 10283                           
+ 10284                           ;mcc_generated_files/tmr1.c: 138:         TMR1L = timerVal;
+ 10285  0D36  0870               	movf	TMR1_WriteTimer@timerVal,w
+ 10286  0D37  0099               	movwf	25	;volatile
+ 10287  0D38                     i1l205:	
+ 10288  0D38  0008               	return
+ 10289  0D39                     __end_of_TMR1_WriteTimer:	
+ 10290                           
+ 10291                           	psect	text38
+ 10292  0CC1                     __ptext38:	
+ 10293 ;; *************** function _TMR1_DefaultInterruptHandler *****************
+ 10294 ;; Defined at:
+ 10295 ;;		line 176 in file "mcc_generated_files/tmr1.c"
+ 10296 ;; Parameters:    Size  Location     Type
  10297 ;;		None
- 10298 ;; Return value:  Size  Location     Type
- 10299 ;;                  1    wreg      void 
- 10300 ;; Registers used:
- 10301 ;;		wreg
- 10302 ;; Tracked objects:
- 10303 ;;		On entry : 0/0
- 10304 ;;		On exit  : 0/0
- 10305 ;;		Unchanged: 0/0
- 10306 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10298 ;; Auto vars:     Size  Location     Type
+ 10299 ;;		None
+ 10300 ;; Return value:  Size  Location     Type
+ 10301 ;;                  1    wreg      void 
+ 10302 ;; Registers used:
+ 10303 ;;		wreg
+ 10304 ;; Tracked objects:
+ 10305 ;;		On entry : 0/0
+ 10306 ;;		On exit  : 0/0
+ 10307 ;;		Unchanged: 0/0
+ 10308 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10307 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10309 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10308 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10310 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10309 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+ 10311 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10310 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10312 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10311 ;;Total ram usage:        0 bytes
- 10312 ;; Hardware stack levels used:    1
- 10313 ;; This function calls:
- 10314 ;;		Nothing
- 10315 ;; This function is called by:
- 10316 ;;		_TMR1_Initialize
- 10317 ;;		_TMR1_ISR
- 10318 ;; This function uses a non-reentrant model
- 10319 ;;
- 10320                           
- 10321                           
- 10322                           ;psect for function _TMR1_DefaultInterruptHandler
- 10323  0CC1                     _TMR1_DefaultInterruptHandler:	
- 10324  0CC1                     i1l2393:	
- 10325                           ;incstack = 0
- 10326                           ; Regs used in _TMR1_DefaultInterruptHandler: [wreg]
- 10327                           
- 10328                           
- 10329                           ;mcc_generated_files/tmr1.c: 177:     cur_ms++;
- 10330  0CC1  3001               	movlw	1
- 10331  0CC2  0020               	movlb	0	; select bank0
- 10332  0CC3  07E4               	addwf	_cur_ms,f	;volatile
- 10333  0CC4  3000               	movlw	0
- 10334  0CC5  3DE5               	addwfc	_cur_ms+1,f	;volatile
- 10335  0CC6  3000               	movlw	0
- 10336  0CC7  3DE6               	addwfc	_cur_ms+2,f	;volatile
- 10337  0CC8  3000               	movlw	0
- 10338  0CC9  3DE7               	addwfc	_cur_ms+3,f	;volatile
- 10339  0CCA                     i1l224:	
- 10340  0CCA  0008               	return
- 10341  0CCB                     __end_of_TMR1_DefaultInterruptHandler:	
- 10342                           
- 10343                           	psect	text39
- 10344  0C93                     __ptext39:	
- 10345 ;; *************** function _PIN_MANAGER_IOC *****************
- 10346 ;; Defined at:
- 10347 ;;		line 120 in file "mcc_generated_files/pin_manager.c"
- 10348 ;; Parameters:    Size  Location     Type
- 10349 ;;		None
- 10350 ;; Auto vars:     Size  Location     Type
+ 10313 ;;Total ram usage:        0 bytes
+ 10314 ;; Hardware stack levels used:    1
+ 10315 ;; This function calls:
+ 10316 ;;		Nothing
+ 10317 ;; This function is called by:
+ 10318 ;;		_TMR1_Initialize
+ 10319 ;;		_TMR1_ISR
+ 10320 ;; This function uses a non-reentrant model
+ 10321 ;;
+ 10322                           
+ 10323                           
+ 10324                           ;psect for function _TMR1_DefaultInterruptHandler
+ 10325  0CC1                     _TMR1_DefaultInterruptHandler:	
+ 10326  0CC1                     i1l2393:	
+ 10327                           ;incstack = 0
+ 10328                           ; Regs used in _TMR1_DefaultInterruptHandler: [wreg]
+ 10329                           
+ 10330                           
+ 10331                           ;mcc_generated_files/tmr1.c: 177:     cur_ms++;
+ 10332  0CC1  3001               	movlw	1
+ 10333  0CC2  0020               	movlb	0	; select bank0
+ 10334  0CC3  07E4               	addwf	_cur_ms,f	;volatile
+ 10335  0CC4  3000               	movlw	0
+ 10336  0CC5  3DE5               	addwfc	_cur_ms+1,f	;volatile
+ 10337  0CC6  3000               	movlw	0
+ 10338  0CC7  3DE6               	addwfc	_cur_ms+2,f	;volatile
+ 10339  0CC8  3000               	movlw	0
+ 10340  0CC9  3DE7               	addwfc	_cur_ms+3,f	;volatile
+ 10341  0CCA                     i1l224:	
+ 10342  0CCA  0008               	return
+ 10343  0CCB                     __end_of_TMR1_DefaultInterruptHandler:	
+ 10344                           
+ 10345                           	psect	text39
+ 10346  0C93                     __ptext39:	
+ 10347 ;; *************** function _PIN_MANAGER_IOC *****************
+ 10348 ;; Defined at:
+ 10349 ;;		line 120 in file "mcc_generated_files/pin_manager.c"
+ 10350 ;; Parameters:    Size  Location     Type
  10351 ;;		None
- 10352 ;; Return value:  Size  Location     Type
- 10353 ;;                  1    wreg      void 
- 10354 ;; Registers used:
- 10355 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- 10356 ;; Tracked objects:
- 10357 ;;		On entry : 0/0
- 10358 ;;		On exit  : 0/0
- 10359 ;;		Unchanged: 0/0
- 10360 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10352 ;; Auto vars:     Size  Location     Type
+ 10353 ;;		None
+ 10354 ;; Return value:  Size  Location     Type
+ 10355 ;;                  1    wreg      void 
+ 10356 ;; Registers used:
+ 10357 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ 10358 ;; Tracked objects:
+ 10359 ;;		On entry : 0/0
+ 10360 ;;		On exit  : 0/0
+ 10361 ;;		Unchanged: 0/0
+ 10362 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10361 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10363 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10362 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10364 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10363 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+ 10365 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10364 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10366 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10365 ;;Total ram usage:        0 bytes
- 10366 ;; Hardware stack levels used:    1
- 10367 ;; Hardware stack levels required when called:    4
- 10368 ;; This function calls:
- 10369 ;;		_IOCCF0_ISR
- 10370 ;; This function is called by:
- 10371 ;;		_INTERRUPT_InterruptManager
- 10372 ;; This function uses a non-reentrant model
- 10373 ;;
- 10374                           
- 10375                           
- 10376                           ;psect for function _PIN_MANAGER_IOC
- 10377  0C93                     _PIN_MANAGER_IOC:	
- 10378  0C93                     i1l2433:	
- 10379                           ;incstack = 0
- 10380                           ; Regs used in _PIN_MANAGER_IOC: [wreg-fsr0h+status,2+status,0+pclath+cstack]
- 10381                           
- 10382                           
- 10383                           ;mcc_generated_files/pin_manager.c: 123:     if(IOCCFbits.IOCCF0 == 1)
- 10384  0C93  0027               	movlb	7	; select bank7
- 10385  0C94  1C19               	btfss	25,0	;volatile
- 10386  0C95  2C97               	goto	u129_21
- 10387  0C96  2C98               	goto	u129_20
- 10388  0C97                     u129_21:	
- 10389  0C97  2C9B               	goto	i1l117
- 10390  0C98                     u129_20:	
- 10391  0C98                     i1l2435:	
- 10392                           
- 10393                           ;mcc_generated_files/pin_manager.c: 124:     {;mcc_generated_files/pin_manager.c: 125:  
+ 10367 ;;Total ram usage:        0 bytes
+ 10368 ;; Hardware stack levels used:    1
+ 10369 ;; Hardware stack levels required when called:    4
+ 10370 ;; This function calls:
+ 10371 ;;		_IOCCF0_ISR
+ 10372 ;; This function is called by:
+ 10373 ;;		_INTERRUPT_InterruptManager
+ 10374 ;; This function uses a non-reentrant model
+ 10375 ;;
+ 10376                           
+ 10377                           
+ 10378                           ;psect for function _PIN_MANAGER_IOC
+ 10379  0C93                     _PIN_MANAGER_IOC:	
+ 10380  0C93                     i1l2433:	
+ 10381                           ;incstack = 0
+ 10382                           ; Regs used in _PIN_MANAGER_IOC: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+ 10383                           
+ 10384                           
+ 10385                           ;mcc_generated_files/pin_manager.c: 123:     if(IOCCFbits.IOCCF0 == 1)
+ 10386  0C93  0027               	movlb	7	; select bank7
+ 10387  0C94  1C19               	btfss	25,0	;volatile
+ 10388  0C95  2C97               	goto	u129_21
+ 10389  0C96  2C98               	goto	u129_20
+ 10390  0C97                     u129_21:	
+ 10391  0C97  2C9B               	goto	i1l117
+ 10392  0C98                     u129_20:	
+ 10393  0C98                     i1l2435:	
+ 10394                           
+ 10395                           ;mcc_generated_files/pin_manager.c: 124:     {;mcc_generated_files/pin_manager.c: 125:  
       +                                 IOCCF0_ISR();
- 10394  0C98  318C  24F8  318C   	fcall	_IOCCF0_ISR
- 10395  0C9B                     i1l117:	
- 10396  0C9B  0008               	return
- 10397  0C9C                     __end_of_PIN_MANAGER_IOC:	
- 10398                           
- 10399                           	psect	text40
- 10400  0CF8                     __ptext40:	
- 10401 ;; *************** function _IOCCF0_ISR *****************
- 10402 ;; Defined at:
- 10403 ;;		line 132 in file "mcc_generated_files/pin_manager.c"
- 10404 ;; Parameters:    Size  Location     Type
- 10405 ;;		None
- 10406 ;; Auto vars:     Size  Location     Type
+ 10396  0C98  318C  24F8  318C   	fcall	_IOCCF0_ISR
+ 10397  0C9B                     i1l117:	
+ 10398  0C9B  0008               	return
+ 10399  0C9C                     __end_of_PIN_MANAGER_IOC:	
+ 10400                           
+ 10401                           	psect	text40
+ 10402  0CF8                     __ptext40:	
+ 10403 ;; *************** function _IOCCF0_ISR *****************
+ 10404 ;; Defined at:
+ 10405 ;;		line 132 in file "mcc_generated_files/pin_manager.c"
+ 10406 ;; Parameters:    Size  Location     Type
  10407 ;;		None
- 10408 ;; Return value:  Size  Location     Type
- 10409 ;;                  1    wreg      void 
- 10410 ;; Registers used:
- 10411 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- 10412 ;; Tracked objects:
- 10413 ;;		On entry : 0/0
- 10414 ;;		On exit  : 0/0
- 10415 ;;		Unchanged: 0/0
- 10416 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10408 ;; Auto vars:     Size  Location     Type
+ 10409 ;;		None
+ 10410 ;; Return value:  Size  Location     Type
+ 10411 ;;                  1    wreg      void 
+ 10412 ;; Registers used:
+ 10413 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ 10414 ;; Tracked objects:
+ 10415 ;;		On entry : 0/0
+ 10416 ;;		On exit  : 0/0
+ 10417 ;;		Unchanged: 0/0
+ 10418 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10417 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10419 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10418 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10420 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10419 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+ 10421 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10420 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10422 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10421 ;;Total ram usage:        0 bytes
- 10422 ;; Hardware stack levels used:    1
- 10423 ;; Hardware stack levels required when called:    3
- 10424 ;; This function calls:
- 10425 ;;		Absolute function
- 10426 ;;		_TripTurnSignal
- 10427 ;; This function is called by:
- 10428 ;;		_PIN_MANAGER_IOC
- 10429 ;; This function uses a non-reentrant model
- 10430 ;;
- 10431                           
- 10432                           
- 10433                           ;psect for function _IOCCF0_ISR
- 10434  0CF8                     _IOCCF0_ISR:	
- 10435  0CF8                     i1l2371:	
- 10436                           ;incstack = 0
- 10437                           ; Regs used in _IOCCF0_ISR: [wreg-fsr0h+status,2+status,0+pclath+cstack]
- 10438                           
- 10439                           
- 10440                           ;mcc_generated_files/pin_manager.c: 137:     if(IOCCF0_InterruptHandler)
- 10441  0CF8  0021               	movlb	1	; select bank1
- 10442  0CF9  085D               	movf	_IOCCF0_InterruptHandler^(0+128),w
- 10443  0CFA  045E               	iorwf	(_IOCCF0_InterruptHandler+1)^(0+128),w
- 10444  0CFB  1903               	btfsc	3,2
- 10445  0CFC  2CFE               	goto	u125_21
- 10446  0CFD  2CFF               	goto	u125_20
- 10447  0CFE                     u125_21:	
- 10448  0CFE  2D04               	goto	i1l2375
- 10449  0CFF                     u125_20:	
- 10450  0CFF                     i1l2373:	
- 10451                           
- 10452                           ;mcc_generated_files/pin_manager.c: 138:     {;mcc_generated_files/pin_manager.c: 139:  
+ 10423 ;;Total ram usage:        0 bytes
+ 10424 ;; Hardware stack levels used:    1
+ 10425 ;; Hardware stack levels required when called:    3
+ 10426 ;; This function calls:
+ 10427 ;;		Absolute function
+ 10428 ;;		_TripTurnSignal
+ 10429 ;; This function is called by:
+ 10430 ;;		_PIN_MANAGER_IOC
+ 10431 ;; This function uses a non-reentrant model
+ 10432 ;;
+ 10433                           
+ 10434                           
+ 10435                           ;psect for function _IOCCF0_ISR
+ 10436  0CF8                     _IOCCF0_ISR:	
+ 10437  0CF8                     i1l2371:	
+ 10438                           ;incstack = 0
+ 10439                           ; Regs used in _IOCCF0_ISR: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+ 10440                           
+ 10441                           
+ 10442                           ;mcc_generated_files/pin_manager.c: 137:     if(IOCCF0_InterruptHandler)
+ 10443  0CF8  0021               	movlb	1	; select bank1
+ 10444  0CF9  085D               	movf	_IOCCF0_InterruptHandler^(0+128),w
+ 10445  0CFA  045E               	iorwf	(_IOCCF0_InterruptHandler+1)^(0+128),w
+ 10446  0CFB  1903               	btfsc	3,2
+ 10447  0CFC  2CFE               	goto	u125_21
+ 10448  0CFD  2CFF               	goto	u125_20
+ 10449  0CFE                     u125_21:	
+ 10450  0CFE  2D04               	goto	i1l2375
+ 10451  0CFF                     u125_20:	
+ 10452  0CFF                     i1l2373:	
+ 10453                           
+ 10454                           ;mcc_generated_files/pin_manager.c: 138:     {;mcc_generated_files/pin_manager.c: 139:  
       +                                 IOCCF0_InterruptHandler();
- 10453  0CFF  085E               	movf	(_IOCCF0_InterruptHandler+1)^(0+128),w
- 10454  0D00  008A               	movwf	10
- 10455  0D01  085D               	movf	_IOCCF0_InterruptHandler^(0+128),w
- 10456  0D02  000A               	callw
- 10457  0D03  318C               	pagesel	$
- 10458  0D04                     i1l2375:	
- 10459                           
- 10460                           ;mcc_generated_files/pin_manager.c: 141:     IOCCFbits.IOCCF0 = 0;
- 10461  0D04  0027               	movlb	7	; select bank7
- 10462  0D05  1019               	bcf	25,0	;volatile
- 10463  0D06                     i1l121:	
- 10464  0D06  0008               	return
- 10465  0D07                     __end_of_IOCCF0_ISR:	
- 10466                           
- 10467                           	psect	text41
- 10468  0D17                     __ptext41:	
- 10469 ;; *************** function _TripTurnSignal *****************
- 10470 ;; Defined at:
- 10471 ;;		line 8 in file "TurnSignal.c"
- 10472 ;; Parameters:    Size  Location     Type
- 10473 ;;		None
- 10474 ;; Auto vars:     Size  Location     Type
+ 10455  0CFF  085E               	movf	(_IOCCF0_InterruptHandler+1)^(0+128),w
+ 10456  0D00  008A               	movwf	10
+ 10457  0D01  085D               	movf	_IOCCF0_InterruptHandler^(0+128),w
+ 10458  0D02  000A               	callw
+ 10459  0D03  318C               	pagesel	$
+ 10460  0D04                     i1l2375:	
+ 10461                           
+ 10462                           ;mcc_generated_files/pin_manager.c: 141:     IOCCFbits.IOCCF0 = 0;
+ 10463  0D04  0027               	movlb	7	; select bank7
+ 10464  0D05  1019               	bcf	25,0	;volatile
+ 10465  0D06                     i1l121:	
+ 10466  0D06  0008               	return
+ 10467  0D07                     __end_of_IOCCF0_ISR:	
+ 10468                           
+ 10469                           	psect	text41
+ 10470  0D17                     __ptext41:	
+ 10471 ;; *************** function _TripTurnSignal *****************
+ 10472 ;; Defined at:
+ 10473 ;;		line 8 in file "TurnSignal.c"
+ 10474 ;; Parameters:    Size  Location     Type
  10475 ;;		None
- 10476 ;; Return value:  Size  Location     Type
- 10477 ;;                  1    wreg      void 
- 10478 ;; Registers used:
- 10479 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- 10480 ;; Tracked objects:
- 10481 ;;		On entry : 0/0
- 10482 ;;		On exit  : 0/0
- 10483 ;;		Unchanged: 0/0
- 10484 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10476 ;; Auto vars:     Size  Location     Type
+ 10477 ;;		None
+ 10478 ;; Return value:  Size  Location     Type
+ 10479 ;;                  1    wreg      void 
+ 10480 ;; Registers used:
+ 10481 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ 10482 ;; Tracked objects:
+ 10483 ;;		On entry : 0/0
+ 10484 ;;		On exit  : 0/0
+ 10485 ;;		Unchanged: 0/0
+ 10486 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10485 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10487 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10486 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10488 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10487 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+ 10489 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10488 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10490 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10489 ;;Total ram usage:        0 bytes
- 10490 ;; Hardware stack levels used:    1
- 10491 ;; Hardware stack levels required when called:    2
- 10492 ;; This function calls:
- 10493 ;;		i1_SetOutputs
- 10494 ;;		i1_ms
- 10495 ;; This function is called by:
- 10496 ;;		_PIN_MANAGER_Initialize
- 10497 ;;		_IOCCF0_ISR
- 10498 ;; This function uses a non-reentrant model
- 10499 ;;
- 10500                           
- 10501                           
- 10502                           ;psect for function _TripTurnSignal
- 10503  0D17                     _TripTurnSignal:	
- 10504  0D17                     i1l2339:	
- 10505                           ;incstack = 0
- 10506                           ; Regs used in _TripTurnSignal: [wreg-fsr0h+status,2+status,0+pclath+cstack]
- 10507                           
- 10508                           
- 10509                           ;TurnSignal.c: 10:     SetOutputs( 0 );
- 10510  0D17  3000               	movlw	0
- 10511  0D18  318D  25F6  318D   	fcall	i1_SetOutputs
- 10512  0D1B                     i1l2341:	
- 10513                           
- 10514                           ;TurnSignal.c: 11:     ts_trigger_time = ms();
- 10515  0D1B  318C  24B7  318D   	fcall	i1_ms
- 10516  0D1E  0873               	movf	?i1_ms+3,w
- 10517  0D1F  0021               	movlb	1	; select bank1
- 10518  0D20  00C7               	movwf	(_ts_trigger_time+3)^(0+128)
- 10519  0D21  0872               	movf	?i1_ms+2,w
- 10520  0D22  00C6               	movwf	(_ts_trigger_time+2)^(0+128)
- 10521  0D23  0871               	movf	?i1_ms+1,w
- 10522  0D24  00C5               	movwf	(_ts_trigger_time+1)^(0+128)
- 10523  0D25  0870               	movf	?i1_ms,w
- 10524  0D26  00C4               	movwf	_ts_trigger_time^(0+128)
- 10525  0D27                     i1l395:	
- 10526  0D27  0008               	return
- 10527  0D28                     __end_of_TripTurnSignal:	
- 10528                           
- 10529                           	psect	text42
- 10530  0CB7                     __ptext42:	
- 10531 ;; *************** function i1_ms *****************
- 10532 ;; Defined at:
- 10533 ;;		line 7 in file "Time.c"
- 10534 ;; Parameters:    Size  Location     Type
- 10535 ;;		None
- 10536 ;; Auto vars:     Size  Location     Type
+ 10491 ;;Total ram usage:        0 bytes
+ 10492 ;; Hardware stack levels used:    1
+ 10493 ;; Hardware stack levels required when called:    2
+ 10494 ;; This function calls:
+ 10495 ;;		i1_SetOutputs
+ 10496 ;;		i1_ms
+ 10497 ;; This function is called by:
+ 10498 ;;		_PIN_MANAGER_Initialize
+ 10499 ;;		_IOCCF0_ISR
+ 10500 ;; This function uses a non-reentrant model
+ 10501 ;;
+ 10502                           
+ 10503                           
+ 10504                           ;psect for function _TripTurnSignal
+ 10505  0D17                     _TripTurnSignal:	
+ 10506  0D17                     i1l2339:	
+ 10507                           ;incstack = 0
+ 10508                           ; Regs used in _TripTurnSignal: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+ 10509                           
+ 10510                           
+ 10511                           ;TurnSignal.c: 10:     SetOutputs( 0 );
+ 10512  0D17  3000               	movlw	0
+ 10513  0D18  318D  25F6  318D   	fcall	i1_SetOutputs
+ 10514  0D1B                     i1l2341:	
+ 10515                           
+ 10516                           ;TurnSignal.c: 11:     ts_trigger_time = ms();
+ 10517  0D1B  318C  24B7  318D   	fcall	i1_ms
+ 10518  0D1E  0873               	movf	?i1_ms+3,w
+ 10519  0D1F  0021               	movlb	1	; select bank1
+ 10520  0D20  00C7               	movwf	(_ts_trigger_time+3)^(0+128)
+ 10521  0D21  0872               	movf	?i1_ms+2,w
+ 10522  0D22  00C6               	movwf	(_ts_trigger_time+2)^(0+128)
+ 10523  0D23  0871               	movf	?i1_ms+1,w
+ 10524  0D24  00C5               	movwf	(_ts_trigger_time+1)^(0+128)
+ 10525  0D25  0870               	movf	?i1_ms,w
+ 10526  0D26  00C4               	movwf	_ts_trigger_time^(0+128)
+ 10527  0D27                     i1l395:	
+ 10528  0D27  0008               	return
+ 10529  0D28                     __end_of_TripTurnSignal:	
+ 10530                           
+ 10531                           	psect	text42
+ 10532  0CB7                     __ptext42:	
+ 10533 ;; *************** function i1_ms *****************
+ 10534 ;; Defined at:
+ 10535 ;;		line 7 in file "Time.c"
+ 10536 ;; Parameters:    Size  Location     Type
  10537 ;;		None
- 10538 ;; Return value:  Size  Location     Type
- 10539 ;;                  4    0[COMMON] unsigned long 
- 10540 ;; Registers used:
- 10541 ;;		wreg
- 10542 ;; Tracked objects:
- 10543 ;;		On entry : 0/0
- 10544 ;;		On exit  : 0/0
- 10545 ;;		Unchanged: 0/0
- 10546 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10538 ;; Auto vars:     Size  Location     Type
+ 10539 ;;		None
+ 10540 ;; Return value:  Size  Location     Type
+ 10541 ;;                  4    0[COMMON] unsigned long 
+ 10542 ;; Registers used:
+ 10543 ;;		wreg
+ 10544 ;; Tracked objects:
+ 10545 ;;		On entry : 0/0
+ 10546 ;;		On exit  : 0/0
+ 10547 ;;		Unchanged: 0/0
+ 10548 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10547 ;;      Params:         4       0       0       0       0       0       0       0       0       0       0       0       
+ 10549 ;;      Params:         4       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10548 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10550 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10549 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+ 10551 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10550 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+ 10552 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10551 ;;Total ram usage:        4 bytes
- 10552 ;; Hardware stack levels used:    1
- 10553 ;; This function calls:
- 10554 ;;		Nothing
- 10555 ;; This function is called by:
- 10556 ;;		_TripTurnSignal
- 10557 ;; This function uses a non-reentrant model
- 10558 ;;
- 10559                           
- 10560                           
- 10561                           ;psect for function i1_ms
- 10562  0CB7                     i1_ms:	
- 10563  0CB7                     i1l2057:	
- 10564                           ;incstack = 0
- 10565                           ; Regs used in i1_ms: [wreg]
- 10566                           
- 10567                           
- 10568                           ;Time.c: 9:     return cur_ms;
- 10569  0CB7  0020               	movlb	0	; select bank0
- 10570  0CB8  0867               	movf	_cur_ms+3,w	;volatile
- 10571  0CB9  00F3               	movwf	?i1_ms+3
- 10572  0CBA  0866               	movf	_cur_ms+2,w	;volatile
- 10573  0CBB  00F2               	movwf	?i1_ms+2
- 10574  0CBC  0865               	movf	_cur_ms+1,w	;volatile
- 10575  0CBD  00F1               	movwf	?i1_ms+1
- 10576  0CBE  0864               	movf	_cur_ms,w	;volatile
- 10577  0CBF  00F0               	movwf	?i1_ms
- 10578  0CC0                     i1l539:	
- 10579  0CC0  0008               	return
- 10580  0CC1                     __end_ofi1_ms:	
- 10581                           
- 10582                           	psect	text43
- 10583  0DF6                     __ptext43:	
- 10584 ;; *************** function i1_SetOutputs *****************
- 10585 ;; Defined at:
- 10586 ;;		line 39 in file "Lights.c"
- 10587 ;; Parameters:    Size  Location     Type
- 10588 ;;  state           1    wreg     const _Bool 
- 10589 ;; Auto vars:     Size  Location     Type
- 10590 ;;  state           1    6[COMMON] const _Bool 
- 10591 ;; Return value:  Size  Location     Type
- 10592 ;;                  1    wreg      void 
- 10593 ;; Registers used:
- 10594 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- 10595 ;; Tracked objects:
- 10596 ;;		On entry : 0/0
- 10597 ;;		On exit  : 0/0
- 10598 ;;		Unchanged: 0/0
- 10599 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10553 ;;Total ram usage:        4 bytes
+ 10554 ;; Hardware stack levels used:    1
+ 10555 ;; This function calls:
+ 10556 ;;		Nothing
+ 10557 ;; This function is called by:
+ 10558 ;;		_TripTurnSignal
+ 10559 ;; This function uses a non-reentrant model
+ 10560 ;;
+ 10561                           
+ 10562                           
+ 10563                           ;psect for function i1_ms
+ 10564  0CB7                     i1_ms:	
+ 10565  0CB7                     i1l2057:	
+ 10566                           ;incstack = 0
+ 10567                           ; Regs used in i1_ms: [wreg]
+ 10568                           
+ 10569                           
+ 10570                           ;Time.c: 9:     return cur_ms;
+ 10571  0CB7  0020               	movlb	0	; select bank0
+ 10572  0CB8  0867               	movf	_cur_ms+3,w	;volatile
+ 10573  0CB9  00F3               	movwf	?i1_ms+3
+ 10574  0CBA  0866               	movf	_cur_ms+2,w	;volatile
+ 10575  0CBB  00F2               	movwf	?i1_ms+2
+ 10576  0CBC  0865               	movf	_cur_ms+1,w	;volatile
+ 10577  0CBD  00F1               	movwf	?i1_ms+1
+ 10578  0CBE  0864               	movf	_cur_ms,w	;volatile
+ 10579  0CBF  00F0               	movwf	?i1_ms
+ 10580  0CC0                     i1l539:	
+ 10581  0CC0  0008               	return
+ 10582  0CC1                     __end_ofi1_ms:	
+ 10583                           
+ 10584                           	psect	text43
+ 10585  0DF6                     __ptext43:	
+ 10586 ;; *************** function i1_SetOutputs *****************
+ 10587 ;; Defined at:
+ 10588 ;;		line 39 in file "Lights.c"
+ 10589 ;; Parameters:    Size  Location     Type
+ 10590 ;;  state           1    wreg     const _Bool 
+ 10591 ;; Auto vars:     Size  Location     Type
+ 10592 ;;  state           1    6[COMMON] const _Bool 
+ 10593 ;; Return value:  Size  Location     Type
+ 10594 ;;                  1    wreg      void 
+ 10595 ;; Registers used:
+ 10596 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ 10597 ;; Tracked objects:
+ 10598 ;;		On entry : 0/0
+ 10599 ;;		On exit  : 0/0
+ 10600 ;;		Unchanged: 0/0
+ 10601 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10600 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+ 10602 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10601 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+ 10603 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10602 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+ 10604 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10603 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+ 10605 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10604 ;;Total ram usage:        2 bytes
- 10605 ;; Hardware stack levels used:    1
- 10606 ;; Hardware stack levels required when called:    1
- 10607 ;; This function calls:
- 10608 ;;		i1_SetLight
- 10609 ;; This function is called by:
- 10610 ;;		_TripTurnSignal
- 10611 ;; This function uses a non-reentrant model
- 10612 ;;
- 10613                           
- 10614                           
- 10615                           ;psect for function i1_SetOutputs
- 10616  0DF6                     i1_SetOutputs:	
- 10617                           
- 10618                           ;incstack = 0
- 10619                           ; Regs used in i1_SetOutputs: [wreg-fsr0h+status,2+status,0+pclath+cstack]
- 10620                           ;i1SetOutputs@state stored from wreg
- 10621  0DF6  00F6               	movwf	i1SetOutputs@state
- 10622  0DF7                     i1l2055:	
- 10623                           
- 10624                           ;Lights.c: 39: void SetOutputs( const _Bool state );Lights.c: 40: {;Lights.c: 41:     Se
+ 10606 ;;Total ram usage:        2 bytes
+ 10607 ;; Hardware stack levels used:    1
+ 10608 ;; Hardware stack levels required when called:    1
+ 10609 ;; This function calls:
+ 10610 ;;		i1_SetLight
+ 10611 ;; This function is called by:
+ 10612 ;;		_TripTurnSignal
+ 10613 ;; This function uses a non-reentrant model
+ 10614 ;;
+ 10615                           
+ 10616                           
+ 10617                           ;psect for function i1_SetOutputs
+ 10618  0DF6                     i1_SetOutputs:	
+ 10619                           
+ 10620                           ;incstack = 0
+ 10621                           ; Regs used in i1_SetOutputs: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+ 10622                           ;i1SetOutputs@state stored from wreg
+ 10623  0DF6  00F6               	movwf	i1SetOutputs@state
+ 10624  0DF7                     i1l2055:	
+ 10625                           
+ 10626                           ;Lights.c: 39: void SetOutputs( const _Bool state );Lights.c: 40: {;Lights.c: 41:     Se
       +                          tLight( L1, state );
- 10625  0DF7  0876               	movf	i1SetOutputs@state,w
- 10626  0DF8  00F5               	movwf	??i1_SetOutputs
- 10627  0DF9  0875               	movf	??i1_SetOutputs,w
- 10628  0DFA  00F0               	movwf	i1SetLight@_state
- 10629  0DFB  3000               	movlw	0
- 10630  0DFC  3186  265C  318D   	fcall	i1_SetLight
- 10631                           
- 10632                           ;Lights.c: 42:     SetLight( L2, state );
- 10633  0DFF  0876               	movf	i1SetOutputs@state,w
- 10634  0E00  00F5               	movwf	??i1_SetOutputs
- 10635  0E01  0875               	movf	??i1_SetOutputs,w
- 10636  0E02  00F0               	movwf	i1SetLight@_state
- 10637  0E03  3001               	movlw	1
- 10638  0E04  3186  265C  318D   	fcall	i1_SetLight
- 10639                           
- 10640                           ;Lights.c: 43:     SetLight( L3, state );
- 10641  0E07  0876               	movf	i1SetOutputs@state,w
- 10642  0E08  00F5               	movwf	??i1_SetOutputs
- 10643  0E09  0875               	movf	??i1_SetOutputs,w
- 10644  0E0A  00F0               	movwf	i1SetLight@_state
- 10645  0E0B  3002               	movlw	2
- 10646  0E0C  3186  265C  318D   	fcall	i1_SetLight
- 10647                           
- 10648                           ;Lights.c: 44:     SetLight( L4, state );
- 10649  0E0F  0876               	movf	i1SetOutputs@state,w
- 10650  0E10  00F5               	movwf	??i1_SetOutputs
- 10651  0E11  0875               	movf	??i1_SetOutputs,w
- 10652  0E12  00F0               	movwf	i1SetLight@_state
- 10653  0E13  3003               	movlw	3
- 10654  0E14  3186  265C  318D   	fcall	i1_SetLight
- 10655  0E17                     i1l364:	
- 10656  0E17  0008               	return
- 10657  0E18                     __end_ofi1_SetOutputs:	
- 10658                           
- 10659                           	psect	text44
- 10660  065C                     __ptext44:	
- 10661 ;; *************** function i1_SetLight *****************
- 10662 ;; Defined at:
- 10663 ;;		line 12 in file "Lights.c"
- 10664 ;; Parameters:    Size  Location     Type
- 10665 ;;  light           1    wreg     const enum E6338
- 10666 ;;  _state          1    0[COMMON] const _Bool 
- 10667 ;; Auto vars:     Size  Location     Type
- 10668 ;;  light           1    3[COMMON] const enum E6338
- 10669 ;;  SetLight        1    4[COMMON] _Bool 
- 10670 ;; Return value:  Size  Location     Type
- 10671 ;;                  1    wreg      void 
- 10672 ;; Registers used:
- 10673 ;;		wreg, fsr0l, fsr0h, status,2, status,0
- 10674 ;; Tracked objects:
- 10675 ;;		On entry : 0/0
- 10676 ;;		On exit  : 0/0
- 10677 ;;		Unchanged: 0/0
- 10678 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+ 10627  0DF7  0876               	movf	i1SetOutputs@state,w
+ 10628  0DF8  00F5               	movwf	??i1_SetOutputs
+ 10629  0DF9  0875               	movf	??i1_SetOutputs,w
+ 10630  0DFA  00F0               	movwf	i1SetLight@_state
+ 10631  0DFB  3000               	movlw	0
+ 10632  0DFC  3186  265C  318D   	fcall	i1_SetLight
+ 10633                           
+ 10634                           ;Lights.c: 42:     SetLight( L2, state );
+ 10635  0DFF  0876               	movf	i1SetOutputs@state,w
+ 10636  0E00  00F5               	movwf	??i1_SetOutputs
+ 10637  0E01  0875               	movf	??i1_SetOutputs,w
+ 10638  0E02  00F0               	movwf	i1SetLight@_state
+ 10639  0E03  3001               	movlw	1
+ 10640  0E04  3186  265C  318D   	fcall	i1_SetLight
+ 10641                           
+ 10642                           ;Lights.c: 43:     SetLight( L3, state );
+ 10643  0E07  0876               	movf	i1SetOutputs@state,w
+ 10644  0E08  00F5               	movwf	??i1_SetOutputs
+ 10645  0E09  0875               	movf	??i1_SetOutputs,w
+ 10646  0E0A  00F0               	movwf	i1SetLight@_state
+ 10647  0E0B  3002               	movlw	2
+ 10648  0E0C  3186  265C  318D   	fcall	i1_SetLight
+ 10649                           
+ 10650                           ;Lights.c: 44:     SetLight( L4, state );
+ 10651  0E0F  0876               	movf	i1SetOutputs@state,w
+ 10652  0E10  00F5               	movwf	??i1_SetOutputs
+ 10653  0E11  0875               	movf	??i1_SetOutputs,w
+ 10654  0E12  00F0               	movwf	i1SetLight@_state
+ 10655  0E13  3003               	movlw	3
+ 10656  0E14  3186  265C  318D   	fcall	i1_SetLight
+ 10657  0E17                     i1l364:	
+ 10658  0E17  0008               	return
+ 10659  0E18                     __end_ofi1_SetOutputs:	
+ 10660                           
+ 10661                           	psect	text44
+ 10662  065C                     __ptext44:	
+ 10663 ;; *************** function i1_SetLight *****************
+ 10664 ;; Defined at:
+ 10665 ;;		line 12 in file "Lights.c"
+ 10666 ;; Parameters:    Size  Location     Type
+ 10667 ;;  light           1    wreg     const enum E6338
+ 10668 ;;  _state          1    0[COMMON] const _Bool 
+ 10669 ;; Auto vars:     Size  Location     Type
+ 10670 ;;  light           1    3[COMMON] const enum E6338
+ 10671 ;;  SetLight        1    4[COMMON] _Bool 
+ 10672 ;; Return value:  Size  Location     Type
+ 10673 ;;                  1    wreg      void 
+ 10674 ;; Registers used:
+ 10675 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+ 10676 ;; Tracked objects:
+ 10677 ;;		On entry : 0/0
+ 10678 ;;		On exit  : 0/0
+ 10679 ;;		Unchanged: 0/0
+ 10680 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
       +1  BANK12
- 10679 ;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       
+ 10681 ;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10680 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
+ 10682 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10681 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+ 10683 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10682 ;;      Totals:         5       0       0       0       0       0       0       0       0       0       0       0       
+ 10684 ;;      Totals:         5       0       0       0       0       0       0       0       0       0       0       0       
       +0       0
- 10683 ;;Total ram usage:        5 bytes
- 10684 ;; Hardware stack levels used:    1
- 10685 ;; This function calls:
- 10686 ;;		Nothing
- 10687 ;; This function is called by:
- 10688 ;;		i1_SetOutputs
- 10689 ;; This function uses a non-reentrant model
- 10690 ;;
- 10691                           
- 10692                           
- 10693                           ;psect for function i1_SetLight
- 10694  065C                     i1_SetLight:	
- 10695                           
- 10696                           ;incstack = 0
- 10697                           ; Regs used in i1_SetLight: [wreg-fsr0h+status,2+status,0]
- 10698                           ;i1SetLight@light stored from wreg
- 10699  065C  00F3               	movwf	i1SetLight@light
- 10700  065D                     i1l1965:	
- 10701                           
- 10702                           ;Lights.c: 12: void SetLight( const enum Light light, const _Bool _state );Lights.c: 13:
+ 10685 ;;Total ram usage:        5 bytes
+ 10686 ;; Hardware stack levels used:    1
+ 10687 ;; This function calls:
+ 10688 ;;		Nothing
+ 10689 ;; This function is called by:
+ 10690 ;;		i1_SetOutputs
+ 10691 ;; This function uses a non-reentrant model
+ 10692 ;;
+ 10693                           
+ 10694                           
+ 10695                           ;psect for function i1_SetLight
+ 10696  065C                     i1_SetLight:	
+ 10697                           
+ 10698                           ;incstack = 0
+ 10699                           ; Regs used in i1_SetLight: [wreg-fsr0h+status,2+status,0]
+ 10700                           ;i1SetLight@light stored from wreg
+ 10701  065C  00F3               	movwf	i1SetLight@light
+ 10702  065D                     i1l1965:	
+ 10703                           
+ 10704                           ;Lights.c: 12: void SetLight( const enum Light light, const _Bool _state );Lights.c: 13:
       +                           {;Lights.c: 14:     _Bool state = ( _state );
- 10703  065D  0870               	movf	i1SetLight@_state,w
- 10704  065E  00F1               	movwf	??i1_SetLight
- 10705  065F  0871               	movf	??i1_SetLight,w
- 10706  0660  00F4               	movwf	i1SetLight@state
- 10707                           
- 10708                           ;Lights.c: 16:     switch ( light )
- 10709  0661  2EBA               	goto	i1l1987
- 10710  0662                     i1l1967:	
- 10711                           
- 10712                           ;Lights.c: 19:             if ( PORTCbits.RC1 != state )
- 10713  0662  0020               	movlb	0	; select bank0
- 10714  0663  0C0E               	rrf	14,w	;volatile
- 10715  0664  3901               	andlw	1
- 10716  0665  0674               	xorwf	i1SetLight@state,w
- 10717  0666  1903               	skipnz
- 10718  0667  2E69               	goto	u76_21
- 10719  0668  2E6A               	goto	u76_20
- 10720  0669                     u76_21:	
- 10721  0669  2ED0               	goto	i1l361
- 10722  066A                     u76_20:	
- 10723  066A                     i1l1969:	
- 10724  066A  1003               	clrc
- 10725  066B  0022               	movlb	2	; select bank2
- 10726  066C  1C8E               	btfss	14,1	;volatile
- 10727  066D  1403               	setc
- 10728  066E  1803               	btfsc	3,0
- 10729  066F  2E71               	goto	u77_21
- 10730  0670  2E74               	goto	u77_20
- 10731  0671                     u77_21:	
- 10732  0671  0022               	movlb	2	; select bank2
- 10733  0672  148E               	bsf	14,1	;volatile
- 10734  0673  2E76               	goto	u78_24
- 10735  0674                     u77_20:	
- 10736  0674  0022               	movlb	2	; select bank2
- 10737  0675  108E               	bcf	14,1	;volatile
- 10738  0676                     u78_24:	
- 10739  0676  2ED0               	goto	i1l361
- 10740  0677                     i1l1971:	
- 10741                           
- 10742                           ;Lights.c: 23:             if ( PORTCbits.RC2 != state )
- 10743  0677  0020               	movlb	0	; select bank0
- 10744  0678  0C0E               	rrf	14,w	;volatile
- 10745  0679  0C89               	rrf	9,f
- 10746  067A  3901               	andlw	1
- 10747  067B  0674               	xorwf	i1SetLight@state,w
- 10748  067C  1903               	skipnz
- 10749  067D  2E7F               	goto	u79_21
- 10750  067E  2E80               	goto	u79_20
- 10751  067F                     u79_21:	
- 10752  067F  2ED0               	goto	i1l361
- 10753  0680                     u79_20:	
- 10754  0680                     i1l1973:	
- 10755  0680  1003               	clrc
- 10756  0681  0022               	movlb	2	; select bank2
- 10757  0682  1D0E               	btfss	14,2	;volatile
- 10758  0683  1403               	setc
- 10759  0684  1803               	btfsc	3,0
- 10760  0685  2E87               	goto	u80_21
- 10761  0686  2E8A               	goto	u80_20
- 10762  0687                     u80_21:	
- 10763  0687  0022               	movlb	2	; select bank2
- 10764  0688  150E               	bsf	14,2	;volatile
- 10765  0689  2E8C               	goto	u81_24
- 10766  068A                     u80_20:	
- 10767  068A  0022               	movlb	2	; select bank2
- 10768  068B  110E               	bcf	14,2	;volatile
- 10769  068C                     u81_24:	
- 10770  068C  2ED0               	goto	i1l361
- 10771  068D                     i1l1975:	
- 10772                           
- 10773                           ;Lights.c: 27:             if ( PORTCbits.RC3 != state )
- 10774  068D  0020               	movlb	0	; select bank0
- 10775  068E  0C0E               	rrf	14,w	;volatile
- 10776  068F  00F1               	movwf	??i1_SetLight
- 10777  0690  0CF1               	rrf	??i1_SetLight,f
- 10778  0691  0C71               	rrf	??i1_SetLight,w
- 10779  0692  3901               	andlw	1
- 10780  0693  0674               	xorwf	i1SetLight@state,w
- 10781  0694  1903               	skipnz
- 10782  0695  2E97               	goto	u82_21
- 10783  0696  2E98               	goto	u82_20
- 10784  0697                     u82_21:	
- 10785  0697  2ED0               	goto	i1l361
- 10786  0698                     u82_20:	
- 10787  0698                     i1l1977:	
- 10788  0698  1003               	clrc
- 10789  0699  0022               	movlb	2	; select bank2
- 10790  069A  1D8E               	btfss	14,3	;volatile
- 10791  069B  1403               	setc
- 10792  069C  1803               	btfsc	3,0
- 10793  069D  2E9F               	goto	u83_21
- 10794  069E  2EA2               	goto	u83_20
- 10795  069F                     u83_21:	
- 10796  069F  0022               	movlb	2	; select bank2
- 10797  06A0  158E               	bsf	14,3	;volatile
- 10798  06A1  2EA4               	goto	u84_24
- 10799  06A2                     u83_20:	
- 10800  06A2  0022               	movlb	2	; select bank2
- 10801  06A3  118E               	bcf	14,3	;volatile
- 10802  06A4                     u84_24:	
- 10803  06A4  2ED0               	goto	i1l361
- 10804  06A5                     i1l1979:	
- 10805                           
- 10806                           ;Lights.c: 32:             if ( PORTCbits.RC4 != state )
- 10807  06A5  0020               	movlb	0	; select bank0
- 10808  06A6  0E0E               	swapf	14,w	;volatile
- 10809  06A7  3901               	andlw	1
- 10810  06A8  0674               	xorwf	i1SetLight@state,w
- 10811  06A9  1903               	skipnz
- 10812  06AA  2EAC               	goto	u85_21
- 10813  06AB  2EAD               	goto	u85_20
- 10814  06AC                     u85_21:	
- 10815  06AC  2ED0               	goto	i1l361
- 10816  06AD                     u85_20:	
- 10817  06AD                     i1l1981:	
- 10818  06AD  1003               	clrc
- 10819  06AE  0022               	movlb	2	; select bank2
- 10820  06AF  1E0E               	btfss	14,4	;volatile
- 10821  06B0  1403               	setc
- 10822  06B1  1803               	btfsc	3,0
- 10823  06B2  2EB4               	goto	u86_21
- 10824  06B3  2EB7               	goto	u86_20
- 10825  06B4                     u86_21:	
- 10826  06B4  0022               	movlb	2	; select bank2
- 10827  06B5  160E               	bsf	14,4	;volatile
- 10828  06B6  2EB9               	goto	u87_24
- 10829  06B7                     u86_20:	
- 10830  06B7  0022               	movlb	2	; select bank2
- 10831  06B8  120E               	bcf	14,4	;volatile
- 10832  06B9                     u87_24:	
- 10833  06B9  2ED0               	goto	i1l361
- 10834  06BA                     i1l1987:	
- 10835  06BA  0873               	movf	i1SetLight@light,w
- 10836  06BB  00F1               	movwf	??i1_SetLight
- 10837  06BC  01F2               	clrf	??i1_SetLight+1
- 10838                           
- 10839                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+ 10705  065D  0870               	movf	i1SetLight@_state,w
+ 10706  065E  00F1               	movwf	??i1_SetLight
+ 10707  065F  0871               	movf	??i1_SetLight,w
+ 10708  0660  00F4               	movwf	i1SetLight@state
+ 10709                           
+ 10710                           ;Lights.c: 16:     switch ( light )
+ 10711  0661  2EBA               	goto	i1l1987
+ 10712  0662                     i1l1967:	
+ 10713                           
+ 10714                           ;Lights.c: 19:             if ( PORTCbits.RC4 != state )
+ 10715  0662  0020               	movlb	0	; select bank0
+ 10716  0663  0E0E               	swapf	14,w	;volatile
+ 10717  0664  3901               	andlw	1
+ 10718  0665  0674               	xorwf	i1SetLight@state,w
+ 10719  0666  1903               	skipnz
+ 10720  0667  2E69               	goto	u76_21
+ 10721  0668  2E6A               	goto	u76_20
+ 10722  0669                     u76_21:	
+ 10723  0669  2ED0               	goto	i1l361
+ 10724  066A                     u76_20:	
+ 10725  066A                     i1l1969:	
+ 10726  066A  1003               	clrc
+ 10727  066B  0022               	movlb	2	; select bank2
+ 10728  066C  1E0E               	btfss	14,4	;volatile
+ 10729  066D  1403               	setc
+ 10730  066E  1803               	btfsc	3,0
+ 10731  066F  2E71               	goto	u77_21
+ 10732  0670  2E74               	goto	u77_20
+ 10733  0671                     u77_21:	
+ 10734  0671  0022               	movlb	2	; select bank2
+ 10735  0672  160E               	bsf	14,4	;volatile
+ 10736  0673  2E76               	goto	u78_24
+ 10737  0674                     u77_20:	
+ 10738  0674  0022               	movlb	2	; select bank2
+ 10739  0675  120E               	bcf	14,4	;volatile
+ 10740  0676                     u78_24:	
+ 10741  0676  2ED0               	goto	i1l361
+ 10742  0677                     i1l1971:	
+ 10743                           
+ 10744                           ;Lights.c: 23:             if ( PORTCbits.RC3 != state )
+ 10745  0677  0020               	movlb	0	; select bank0
+ 10746  0678  0C0E               	rrf	14,w	;volatile
+ 10747  0679  00F1               	movwf	??i1_SetLight
+ 10748  067A  0CF1               	rrf	??i1_SetLight,f
+ 10749  067B  0C71               	rrf	??i1_SetLight,w
+ 10750  067C  3901               	andlw	1
+ 10751  067D  0674               	xorwf	i1SetLight@state,w
+ 10752  067E  1903               	skipnz
+ 10753  067F  2E81               	goto	u79_21
+ 10754  0680  2E82               	goto	u79_20
+ 10755  0681                     u79_21:	
+ 10756  0681  2ED0               	goto	i1l361
+ 10757  0682                     u79_20:	
+ 10758  0682                     i1l1973:	
+ 10759  0682  1003               	clrc
+ 10760  0683  0022               	movlb	2	; select bank2
+ 10761  0684  1D8E               	btfss	14,3	;volatile
+ 10762  0685  1403               	setc
+ 10763  0686  1803               	btfsc	3,0
+ 10764  0687  2E89               	goto	u80_21
+ 10765  0688  2E8C               	goto	u80_20
+ 10766  0689                     u80_21:	
+ 10767  0689  0022               	movlb	2	; select bank2
+ 10768  068A  158E               	bsf	14,3	;volatile
+ 10769  068B  2E8E               	goto	u81_24
+ 10770  068C                     u80_20:	
+ 10771  068C  0022               	movlb	2	; select bank2
+ 10772  068D  118E               	bcf	14,3	;volatile
+ 10773  068E                     u81_24:	
+ 10774  068E  2ED0               	goto	i1l361
+ 10775  068F                     i1l1975:	
+ 10776                           
+ 10777                           ;Lights.c: 27:             if ( PORTCbits.RC2 != state )
+ 10778  068F  0020               	movlb	0	; select bank0
+ 10779  0690  0C0E               	rrf	14,w	;volatile
+ 10780  0691  0C89               	rrf	9,f
+ 10781  0692  3901               	andlw	1
+ 10782  0693  0674               	xorwf	i1SetLight@state,w
+ 10783  0694  1903               	skipnz
+ 10784  0695  2E97               	goto	u82_21
+ 10785  0696  2E98               	goto	u82_20
+ 10786  0697                     u82_21:	
+ 10787  0697  2ED0               	goto	i1l361
+ 10788  0698                     u82_20:	
+ 10789  0698                     i1l1977:	
+ 10790  0698  1003               	clrc
+ 10791  0699  0022               	movlb	2	; select bank2
+ 10792  069A  1D0E               	btfss	14,2	;volatile
+ 10793  069B  1403               	setc
+ 10794  069C  1803               	btfsc	3,0
+ 10795  069D  2E9F               	goto	u83_21
+ 10796  069E  2EA2               	goto	u83_20
+ 10797  069F                     u83_21:	
+ 10798  069F  0022               	movlb	2	; select bank2
+ 10799  06A0  150E               	bsf	14,2	;volatile
+ 10800  06A1  2EA4               	goto	u84_24
+ 10801  06A2                     u83_20:	
+ 10802  06A2  0022               	movlb	2	; select bank2
+ 10803  06A3  110E               	bcf	14,2	;volatile
+ 10804  06A4                     u84_24:	
+ 10805  06A4  2ED0               	goto	i1l361
+ 10806  06A5                     i1l1979:	
+ 10807                           
+ 10808                           ;Lights.c: 32:             if ( PORTCbits.RC1 != state )
+ 10809  06A5  0020               	movlb	0	; select bank0
+ 10810  06A6  0C0E               	rrf	14,w	;volatile
+ 10811  06A7  3901               	andlw	1
+ 10812  06A8  0674               	xorwf	i1SetLight@state,w
+ 10813  06A9  1903               	skipnz
+ 10814  06AA  2EAC               	goto	u85_21
+ 10815  06AB  2EAD               	goto	u85_20
+ 10816  06AC                     u85_21:	
+ 10817  06AC  2ED0               	goto	i1l361
+ 10818  06AD                     u85_20:	
+ 10819  06AD                     i1l1981:	
+ 10820  06AD  1003               	clrc
+ 10821  06AE  0022               	movlb	2	; select bank2
+ 10822  06AF  1C8E               	btfss	14,1	;volatile
+ 10823  06B0  1403               	setc
+ 10824  06B1  1803               	btfsc	3,0
+ 10825  06B2  2EB4               	goto	u86_21
+ 10826  06B3  2EB7               	goto	u86_20
+ 10827  06B4                     u86_21:	
+ 10828  06B4  0022               	movlb	2	; select bank2
+ 10829  06B5  148E               	bsf	14,1	;volatile
+ 10830  06B6  2EB9               	goto	u87_24
+ 10831  06B7                     u86_20:	
+ 10832  06B7  0022               	movlb	2	; select bank2
+ 10833  06B8  108E               	bcf	14,1	;volatile
+ 10834  06B9                     u87_24:	
+ 10835  06B9  2ED0               	goto	i1l361
+ 10836  06BA                     i1l1987:	
+ 10837  06BA  0873               	movf	i1SetLight@light,w
+ 10838  06BB  00F1               	movwf	??i1_SetLight
+ 10839  06BC  01F2               	clrf	??i1_SetLight+1
+ 10840                           
+ 10841                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
       +                          itches
- 10840                           ; Switch size 1, requested type "simple"
- 10841                           ; Number of cases is 1, Range of values is 0 to 0
- 10842                           ; switch strategies available:
- 10843                           ; Name         Instructions Cycles
- 10844                           ; simple_byte            4     3 (average)
- 10845                           ; direct_byte            8     6 (fixed)
- 10846                           ; jumptable            260     6 (fixed)
- 10847                           ;	Chosen strategy is simple_byte
- 10848  06BD  0872               	movf	??i1_SetLight+1,w
- 10849  06BE  3A00               	xorlw	0	; case 0
- 10850  06BF  1903               	skipnz
- 10851  06C0  2EC2               	goto	i1l2953
- 10852  06C1  2EA5               	goto	i1l1979
- 10853  06C2                     i1l2953:	
- 10854                           
- 10855                           ; Switch size 1, requested type "simple"
- 10856                           ; Number of cases is 4, Range of values is 0 to 3
- 10857                           ; switch strategies available:
- 10858                           ; Name         Instructions Cycles
- 10859                           ; simple_byte           13     7 (average)
- 10860                           ; direct_byte           14     6 (fixed)
- 10861                           ; jumptable            260     6 (fixed)
- 10862                           ;	Chosen strategy is simple_byte
- 10863  06C2  0871               	movf	??i1_SetLight,w
- 10864  06C3  3A00               	xorlw	0	; case 0
- 10865  06C4  1903               	skipnz
- 10866  06C5  2E62               	goto	i1l1967
- 10867  06C6  3A01               	xorlw	1	; case 1
- 10868  06C7  1903               	skipnz
- 10869  06C8  2E77               	goto	i1l1971
- 10870  06C9  3A03               	xorlw	3	; case 2
- 10871  06CA  1903               	skipnz
- 10872  06CB  2E8D               	goto	i1l1975
- 10873  06CC  3A01               	xorlw	1	; case 3
- 10874  06CD  1903               	skipnz
- 10875  06CE  2EA5               	goto	i1l1979
- 10876  06CF  2EA5               	goto	i1l1979
- 10877  06D0                     i1l361:	
- 10878  06D0  0008               	return
- 10879  06D1                     __end_ofi1_SetLight:	
- 10880  007E                     btemp	set	126	;btemp
- 10881  007E                     int$flags	set	126
- 10882  007E                     wtemp0	set	126
+ 10842                           ; Switch size 1, requested type "simple"
+ 10843                           ; Number of cases is 1, Range of values is 0 to 0
+ 10844                           ; switch strategies available:
+ 10845                           ; Name         Instructions Cycles
+ 10846                           ; simple_byte            4     3 (average)
+ 10847                           ; direct_byte            8     6 (fixed)
+ 10848                           ; jumptable            260     6 (fixed)
+ 10849                           ;	Chosen strategy is simple_byte
+ 10850  06BD  0872               	movf	??i1_SetLight+1,w
+ 10851  06BE  3A00               	xorlw	0	; case 0
+ 10852  06BF  1903               	skipnz
+ 10853  06C0  2EC2               	goto	i1l2953
+ 10854  06C1  2EA5               	goto	i1l1979
+ 10855  06C2                     i1l2953:	
+ 10856                           
+ 10857                           ; Switch size 1, requested type "simple"
+ 10858                           ; Number of cases is 4, Range of values is 0 to 3
+ 10859                           ; switch strategies available:
+ 10860                           ; Name         Instructions Cycles
+ 10861                           ; simple_byte           13     7 (average)
+ 10862                           ; direct_byte           14     6 (fixed)
+ 10863                           ; jumptable            260     6 (fixed)
+ 10864                           ;	Chosen strategy is simple_byte
+ 10865  06C2  0871               	movf	??i1_SetLight,w
+ 10866  06C3  3A00               	xorlw	0	; case 0
+ 10867  06C4  1903               	skipnz
+ 10868  06C5  2E62               	goto	i1l1967
+ 10869  06C6  3A01               	xorlw	1	; case 1
+ 10870  06C7  1903               	skipnz
+ 10871  06C8  2E77               	goto	i1l1971
+ 10872  06C9  3A03               	xorlw	3	; case 2
+ 10873  06CA  1903               	skipnz
+ 10874  06CB  2E8F               	goto	i1l1975
+ 10875  06CC  3A01               	xorlw	1	; case 3
+ 10876  06CD  1903               	skipnz
+ 10877  06CE  2EA5               	goto	i1l1979
+ 10878  06CF  2EA5               	goto	i1l1979
+ 10879  06D0                     i1l361:	
+ 10880  06D0  0008               	return
+ 10881  06D1                     __end_ofi1_SetLight:	
+ 10882  007E                     btemp	set	126	;btemp
+ 10883  007E                     int$flags	set	126
+ 10884  007E                     wtemp0	set	126
 
 
 Data Sizes:
@@ -12121,7 +12131,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Fri May 08 21:29:47 2020
+Symbol Table                                                                                   Sun May 10 20:48:25 2020
 
                               _update_stage 006C                                 __CFG_CP$OFF 0000  
                                         l50 0CA4                                          l53 0C8A  
@@ -12170,7 +12180,7 @@ Symbol Table                                                                    
                                       l2029 0762                                        l2213 00FB  
                                       l2205 00C1                                        l2311 06D3  
                                       l2231 0177                                        l2151 038B  
-                                      l2215 0100                                        l2321 0701  
+                                      l2215 0100                                        l2321 0703  
                                       l2313 06D8                                        l2305 0340  
                                       l2241 01BA                                        l2233 017E  
                                       l2161 03CD                                        l2153 0391  
@@ -12186,7 +12196,7 @@ Symbol Table                                                                    
                                       l2245 01CB                                        l2237 019C  
                                       l2173 0418                                        l2165 03DE  
                                       l2157 03AF                                        l2229 0169  
-                                      l2327 071F                                        l2319 06F4  
+                                      l2327 071F                                        l2319 06F6  
                                       l2431 0D87                                        l2271 0281  
                                       l2255 020A                                        l2239 01AC  
                                       l2175 041D                                        l2159 03BF  
@@ -12279,18 +12289,18 @@ Symbol Table                                                                    
                                       u1100 06E9                                        u1020 0493  
                                       u1101 06E6                                        u1021 0492  
                                       u1030 010D                                        u1015 0426  
-                                      u1031 010C                                        u1120 06F4  
-                                      u1040 0176                                        u1121 06F3  
+                                      u1031 010C                                        u1120 06F6  
+                                      u1040 0176                                        u1121 06F5  
                                       u1025 048F                                        u1041 0175  
-                                      u1130 06FE                                        u1114 06EB  
-                                      u1050 0217                                        u1131 06FB  
+                                      u1130 0700                                        u1114 06EB  
+                                      u1050 0217                                        u1131 06FD  
                                       u1051 0216                                        u1035 0109  
                                       u1204 072B                                        u1060 0280  
                                       u1061 027F                                        u1045 0172  
                                       u1150 070B                                        u1070 0321  
                                       u1151 070A                                        u1071 0320  
                                       u1055 0213                                        u1160 0715  
-                                      u1144 0700                                        u1080 038A  
+                                      u1144 0702                                        u1080 038A  
                                       u1161 0712                                        u1081 0389  
                                       u1065 027C                                        u1090 06DF  
                                       u1091 06DE                                        u1075 031D  
@@ -12356,8 +12366,8 @@ Symbol Table                                                                    
                                      i1l539 0CC0                                       i1l395 0D27  
                                      _OSCEN 091D                                       _TMR1H 001A  
                                      _TMR1L 0019                  InitLowerPattern@lower_left 004F  
-                                     u80_20 068A                                       u80_21 0687  
-                                     _TRISA 008C                                       u81_24 068C  
+                                     u80_20 068C                                       u80_21 0689  
+                                     _TRISA 008C                                       u81_24 068E  
                                      _TRISC 008E                                       u82_20 0698  
                                      u82_21 0697                                       u83_20 06A2  
                                      u83_21 069F                                       u76_20 066A  
@@ -12365,8 +12375,8 @@ Symbol Table                                                                    
                                      u85_20 06AD                                       u77_20 0674  
                                      u85_21 06AC                                       u77_21 0671  
                                      u86_20 06B7                                       u86_21 06B4  
-                                     u78_24 0676                                       u79_20 0680  
-                                     u79_21 067F                                       u87_24 06B9  
+                                     u78_24 0676                                       u79_20 0682  
+                                     u79_21 0681                                       u87_24 06B9  
                             SetLight@_state 0020                       ConstructStage@time_ms 0033  
                           __end_of_TMR1_ISR 0800                     __end_of_PIN_MANAGER_IOC 0C9C  
                             _WDT_Initialize 0C87                                       _setup 0D61  
@@ -12406,8 +12416,8 @@ Symbol Table                                                                    
                                     i1l2379 0D28                                      i1l2547 001D  
                                     i1l2539 0006                                      i1l2389 0D34  
                                     i1l2549 0022                                      i1l1971 0677  
-                                    i1l1981 06AD                                      i1l1973 0680  
-                                    i1l1965 065D                                      i1l1975 068D  
+                                    i1l1981 06AD                                      i1l1973 0682  
+                                    i1l1965 065D                                      i1l1975 068F  
                                     i1l1967 0662                                      u140_20 0010  
                                     i1l2953 06C2                                      i1l1977 0698  
                                     i1l1969 066A                                      u140_21 000F  

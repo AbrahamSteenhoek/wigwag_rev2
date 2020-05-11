@@ -4,7 +4,6 @@
 #include "Pattern.h"
 #include "Types.h"
 
-//#include <p16f18325.h>
 #include <xc.h> // include processor files - each processor file is guarded.  
 
 #define PATTERN_SAVE_ADDRESS    0

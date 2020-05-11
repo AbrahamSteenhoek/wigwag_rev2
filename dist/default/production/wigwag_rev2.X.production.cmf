@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\abrah\AppData\Local\Temp\s8cc.o
+$C:\Users\abrah\AppData\Local\Temp\s6tc.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 28 28 2 2
 config CONFIG 0 8007 8007 4 2
@@ -151,65 +151,65 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\wigwag_rev2.X.production.o
-2A cinit CODE >9140:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-2A cinit CODE >9143:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-2A cinit CODE >9267:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-2B cinit CODE >9268:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-2C cinit CODE >9269:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-2D cinit CODE >9270:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-2E cinit CODE >9271:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-2F cinit CODE >9272:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-30 cinit CODE >9273:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-31 cinit CODE >9274:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-32 cinit CODE >9275:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-33 cinit CODE >9276:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-34 cinit CODE >9277:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-35 cinit CODE >9278:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-38 cinit CODE >9301:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-39 cinit CODE >9302:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-3A cinit CODE >9303:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-3B cinit CODE >9304:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-3C cinit CODE >9305:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-3D cinit CODE >9306:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-3E cinit CODE >9307:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-3F cinit CODE >9308:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-40 cinit CODE >9309:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-43 cinit CODE >9313:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-44 cinit CODE >9314:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-45 cinit CODE >9315:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-46 cinit CODE >9316:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-47 cinit CODE >9317:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-48 cinit CODE >9321:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-49 cinit CODE >9322:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-4A cinit CODE >9323:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-4B cinit CODE >9324:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-4C cinit CODE >9325:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-4D cinit CODE >9326:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-4E cinit CODE >9327:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-4F cinit CODE >9328:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-50 cinit CODE >9329:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-53 cinit CODE >9333:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-54 cinit CODE >9334:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-55 cinit CODE >9335:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-56 cinit CODE >9336:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-57 cinit CODE >9337:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-58 cinit CODE >9338:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-59 cinit CODE >9339:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-5A cinit CODE >9340:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-5B cinit CODE >9341:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-5E cinit CODE >9345:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-5F cinit CODE >9346:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-60 cinit CODE >9347:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-61 cinit CODE >9348:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-62 cinit CODE >9349:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-63 cinit CODE >9350:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-64 cinit CODE >9351:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-65 cinit CODE >9352:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-66 cinit CODE >9353:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-69 cinit CODE >9359:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-69 cinit CODE >9361:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-6A cinit CODE >9362:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-6B cinit CODE >9363:C:\Users\abrah\AppData\Local\Temp\s8cc.s
+2A cinit CODE >9140:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+2A cinit CODE >9143:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+2A cinit CODE >9267:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+2B cinit CODE >9268:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+2C cinit CODE >9269:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+2D cinit CODE >9270:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+2E cinit CODE >9271:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+2F cinit CODE >9272:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+30 cinit CODE >9273:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+31 cinit CODE >9274:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+32 cinit CODE >9275:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+33 cinit CODE >9276:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+34 cinit CODE >9277:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+35 cinit CODE >9278:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+38 cinit CODE >9301:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+39 cinit CODE >9302:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+3A cinit CODE >9303:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+3B cinit CODE >9304:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+3C cinit CODE >9305:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+3D cinit CODE >9306:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+3E cinit CODE >9307:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+3F cinit CODE >9308:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+40 cinit CODE >9309:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+43 cinit CODE >9313:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+44 cinit CODE >9314:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+45 cinit CODE >9315:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+46 cinit CODE >9316:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+47 cinit CODE >9317:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+48 cinit CODE >9321:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+49 cinit CODE >9322:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+4A cinit CODE >9323:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+4B cinit CODE >9324:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+4C cinit CODE >9325:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+4D cinit CODE >9326:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+4E cinit CODE >9327:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+4F cinit CODE >9328:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+50 cinit CODE >9329:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+53 cinit CODE >9333:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+54 cinit CODE >9334:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+55 cinit CODE >9335:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+56 cinit CODE >9336:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+57 cinit CODE >9337:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+58 cinit CODE >9338:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+59 cinit CODE >9339:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+5A cinit CODE >9340:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+5B cinit CODE >9341:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+5E cinit CODE >9345:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+5F cinit CODE >9346:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+60 cinit CODE >9347:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+61 cinit CODE >9348:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+62 cinit CODE >9349:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+63 cinit CODE >9350:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+64 cinit CODE >9351:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+65 cinit CODE >9352:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+66 cinit CODE >9353:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+69 cinit CODE >9359:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+69 cinit CODE >9361:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+6A cinit CODE >9362:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+6B cinit CODE >9363:C:\Users\abrah\AppData\Local\Temp\s6tc.s
 4 intentry CODE >52:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/interrupt_manager.c
 10 intentry CODE >57:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_files/interrupt_manager.c
@@ -226,8 +226,8 @@ $dist/default/production\wigwag_rev2.X.production.o
 662 text44 CODE >19:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 66A text44 CODE >20:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 677 text44 CODE >23:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
-680 text44 CODE >24:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
-68D text44 CODE >27:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
+682 text44 CODE >24:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
+68F text44 CODE >27:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 698 text44 CODE >28:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 6A5 text44 CODE >32:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 6AD text44 CODE >33:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
@@ -280,8 +280,8 @@ D38 text37 CODE >140:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\mcc_generated_f
 6D8 text34 CODE >19:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 6DF text34 CODE >20:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 6EC text34 CODE >23:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
-6F4 text34 CODE >24:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
-701 text34 CODE >27:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
+6F6 text34 CODE >24:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
+703 text34 CODE >27:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 70B text34 CODE >28:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 718 text34 CODE >32:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
 71F text34 CODE >33:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\Lights.c
@@ -586,34 +586,34 @@ EA3 maintext CODE >55:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 EA9 maintext CODE >57:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 EB0 maintext CODE >65:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
 EB5 maintext CODE >67:C:\Users\abrah\MPLABXProjects\wigwag_rev2.X\main.c
-CE0 clrtext CODE >9284:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE0 clrtext CODE >9285:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE1 clrtext CODE >9286:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE1 clrtext CODE >9287:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE2 clrtext CODE >9288:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE3 clrtext CODE >9289:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE4 clrtext CODE >9290:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE5 clrtext CODE >9291:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE6 clrtext CODE >9292:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE7 clrtext CODE >9293:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE8 clrtext CODE >9294:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CE9 clrtext CODE >9295:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CEA clrtext CODE >9296:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CEB clrtext CODE >9297:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CEC inittext CODE >9250:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CEC inittext CODE >9251:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CED inittext CODE >9252:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CED inittext CODE >9253:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CEE inittext CODE >9254:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CEF inittext CODE >9255:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CF0 inittext CODE >9256:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CF1 inittext CODE >9257:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CF2 inittext CODE >9258:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CF3 inittext CODE >9259:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CF4 inittext CODE >9260:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CF5 inittext CODE >9261:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CF6 inittext CODE >9262:C:\Users\abrah\AppData\Local\Temp\s8cc.s
-CF7 inittext CODE >9263:C:\Users\abrah\AppData\Local\Temp\s8cc.s
+CE0 clrtext CODE >9284:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE0 clrtext CODE >9285:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE1 clrtext CODE >9286:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE1 clrtext CODE >9287:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE2 clrtext CODE >9288:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE3 clrtext CODE >9289:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE4 clrtext CODE >9290:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE5 clrtext CODE >9291:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE6 clrtext CODE >9292:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE7 clrtext CODE >9293:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE8 clrtext CODE >9294:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CE9 clrtext CODE >9295:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CEA clrtext CODE >9296:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CEB clrtext CODE >9297:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CEC inittext CODE >9250:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CEC inittext CODE >9251:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CED inittext CODE >9252:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CED inittext CODE >9253:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CEE inittext CODE >9254:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CEF inittext CODE >9255:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CF0 inittext CODE >9256:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CF1 inittext CODE >9257:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CF2 inittext CODE >9258:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CF3 inittext CODE >9259:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CF4 inittext CODE >9260:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CF5 inittext CODE >9261:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CF6 inittext CODE >9262:C:\Users\abrah\AppData\Local\Temp\s6tc.s
+CF7 inittext CODE >9263:C:\Users\abrah\AppData\Local\Temp\s6tc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -666,14 +666,14 @@ _PMD4 915 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 _PMD5 916 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 _WPUC 20E 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\abrah\AppData\Local\Temp\s8cc.o
+___sp 0 0 STACK 2 stack C:\Users\abrah\AppData\Local\Temp\s6tc.o
 _main 1D1E 0 CODE 0 maintext dist/default/production\wigwag_rev2.X.production.o
 abs@a 24 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 i1_ms 196E 0 CODE 0 text42 dist/default/production\wigwag_rev2.X.production.o
 _stage_list_iter 6A 0 BANK0 1 bssBANK0 dist/default/production\wigwag_rev2.X.production.o
 EEPROM_SavePattern@pattern_name 23 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
-start 50 0 CODE 0 init C:\Users\abrah\AppData\Local\Temp\s8cc.o
+start 50 0 CODE 0 init C:\Users\abrah\AppData\Local\Temp\s6tc.o
 __size_of_main 0 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 __size_ofi1_ms 0 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
@@ -695,12 +695,12 @@ __size_of_TMR1_StartTimer 0 0 ABS 0 - dist/default/production\wigwag_rev2.X.prod
 __size_of_TMR1_WriteTimer 0 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 __LnvCOMMON 0 0 ABS 0 nvCOMMON -
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s8cc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s8cc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s8cc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s8cc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s8cc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s8cc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s6tc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s6tc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s6tc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s6tc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s6tc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\abrah\AppData\Local\Temp\s6tc.o
 InitWigwagPattern@left_side_states 47 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
 __size_of_ConstructStage 0 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 InitXStrobePattern@i 53 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
@@ -757,8 +757,8 @@ _INLVLC 38E 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 __end_of_EEPROM_GetSavedPattern 1BEC 0 CODE 0 text23 dist/default/production\wigwag_rev2.X.production.o
 InitXStrobePattern@off 57 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
 __end_of_IOCCF0_ISR 1A0E 0 CODE 0 text40 dist/default/production\wigwag_rev2.X.production.o
-___stackhi 20EF 0 ABS 0 - C:\Users\abrah\AppData\Local\Temp\s8cc.o
-___stacklo 20B2 0 ABS 0 - C:\Users\abrah\AppData\Local\Temp\s8cc.o
+___stackhi 20EF 0 ABS 0 - C:\Users\abrah\AppData\Local\Temp\s6tc.o
+___stacklo 20B2 0 ABS 0 - C:\Users\abrah\AppData\Local\Temp\s6tc.o
 InitWigwagPattern@left_side_on 4F 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
 _eeprom_read 1A72 0 CODE 0 text24 dist/default/production\wigwag_rev2.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
@@ -793,7 +793,7 @@ _NewPattern 1F06 0 CODE 0 text12 dist/default/production\wigwag_rev2.X.productio
 InitUpperLowerPattern@F462 AC 0 BANK1 1 dataBANK1 dist/default/production\wigwag_rev2.X.production.o
 InitUpperLowerPattern@F465 A8 0 BANK1 1 dataBANK1 dist/default/production\wigwag_rev2.X.production.o
 InitUpperLowerPattern@head 59 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\abrah\AppData\Local\Temp\s8cc.o
+___int_sp 0 0 STACK 2 stack C:\Users\abrah\AppData\Local\Temp\s6tc.o
 FlashPattern@current_time 2F 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -973,7 +973,7 @@ __CFG_BORV$LOW 0 0 ABS 0 - dist/default/production\wigwag_rev2.X.production.o
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __Lintentry 8 0 CODE 0 intentry -
 CopyStageData@source 35 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\abrah\AppData\Local\Temp\s8cc.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\abrah\AppData\Local\Temp\s6tc.o
 _eeprom_write 1DD0 0 CODE 0 text31 dist/default/production\wigwag_rev2.X.production.o
 AppendStage@new_stage 3E 0 BANK0 1 cstackBANK0 dist/default/production\wigwag_rev2.X.production.o
 __pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\wigwag_rev2.X.production.o
