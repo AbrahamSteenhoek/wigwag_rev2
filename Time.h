@@ -1,48 +1,49 @@
+/* 
+ * File: Time.h
+ * Author: Abraham Steenhoek
+ * Comments: 
+ * Revision history: 
+ */
+
 #ifndef TIME_H
 #define	TIME_H
 
 #include "Types.h"
 
-uint temp_ms;
-
+/*
+variable keeping track of the millisecond clock. DO NOT MODIFY.
+*/
 volatile ulong cur_ms;
 
-ulong ms(); 
-
-// Comment a function and leverage automatic documentation with slash star star
 /**
-    <p><b>Function prototype:</b></p>
+    <p><b>Function prototype: ulong ms() </b></p>
   
-    <p><b>Summary:</b></p>
+    <p><b>Summary: Getter function to read the clock that increments every millisecond </b></p>
 
     <p><b>Description:</b></p>
 
-    <p><b>Precondition:</b></p>
+    <p><b>Precondition: none </b></p>
 
-    <p><b>Parameters:</b></p>
+    <p><b>Parameters: none </b></p>
 
-    <p><b>Returns:</b></p>
+    <p><b>Returns: ulong that represents the # of milliseconds passed since system startup </b></p>
 
     <p><b>Example:</b></p>
     <code>
- 
+        ulong delay_interval = 500;
+        ulong time_mark = ms();
+        while(1)
+        {
+            if ( ms() - time_mark > delay_interval )
+            {
+                break;
+            }
+        }
     </code>
 
-    <p><b>Remarks:</b></p>
+    <p><b>Remarks: Future maintenance: introduce atomic read of the clock, also extract code incrementing time variable into custom subroutine. </b></p>
  */
-// TODO Insert declarations or function prototypes (right here) to leverage 
-// live documentation
+ulong ms(); 
 
-#ifdef	__cplusplus
-extern "C" {
-#endif /* __cplusplus */
-
-    // TODO If C++ is being used, regular C code needs function names to have C 
-    // linkage so the functions can be used by the c code. 
-
-#ifdef	__cplusplus
-}
-#endif /* __cplusplus */
-
-#endif	/* XC_HEADER_TEMPLATE_H */
+#endif
 
